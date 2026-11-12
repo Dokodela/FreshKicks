@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FRESH KICKS &amp; THREADS — Flagship OnCampus Laundry &amp; Sneaker Care</title>
-  <meta name="description" content="Flagship OnCampus Shoe Washing & Garment Care. Fresh Looks. Free Collection & Delivery on Campus." />
+  <title>FRESH KICKS &amp; THREADS — OnCampus Laundry &amp; Sneaker Care</title>
+  <meta name="description" content="Professional Shoe Washing & OnCampus Laundry. Fresh Looks. Free Collection & Delivery on Campus." />
 
-  <!-- Flagship Luxury Typography: Syne, Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Typography: Syne, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
@@ -42,8 +42,6 @@
       --bg-obsidian: #060607;
       --bg-carbon: #111114;
       --text-gallery: #FAFAFA;
-      --border-steel: rgba(255, 255, 255, 0.10);
-      --border-steel-strong: rgba(255, 255, 255, 0.22);
     }
 
     body {
@@ -62,7 +60,6 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* Hairline Glass-Steel Surfaces */
     .steel-border {
       border: 1px solid rgba(255, 255, 255, 0.10);
     }
@@ -73,11 +70,11 @@
 
     .gold-rim {
       border: 1px solid rgba(245, 158, 11, 0.55);
-      box-shadow: 0 24px 60px -15px rgba(245, 158, 11, 0.12), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+      box-shadow: 0 24px 60px -15px rgba(245, 158, 11, 0.14), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
     }
 
     .frosted-nav {
-      background: rgba(6, 6, 7, 0.85);
+      background: rgba(6, 6, 7, 0.86);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
     }
@@ -132,7 +129,7 @@
       transform-style: preserve-3d;
     }
 
-    /* Continuous 3D Levitation, Ken Burns & Specular Sweep for Hero Showcase Cards */
+    /* Continuous 3D Kinetic Showcase Animations */
     @keyframes showcaseFloatA {
       0%, 100% {
         transform: translate3d(0, 0px, 18px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -203,12 +200,7 @@
       left: 0;
       width: 48%;
       height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.16),
-        transparent
-      );
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
       pointer-events: none;
       z-index: 15;
       animation: glassSheenSweep 5.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
@@ -245,7 +237,7 @@
       animation: badgeHaloPulse 2.8s ease-in-out infinite;
     }
 
-    /* 180° 3D Flip Inspection Cards */
+    /* 180-Degree 3D Flip Cards */
     .flip-perspective {
       perspective: 1600px;
     }
@@ -332,7 +324,6 @@
       pointer-events: auto;
     }
 
-    /* Custom Obsidian Scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
     }
@@ -350,16 +341,16 @@
 </head>
 <body class="antialiased selection:bg-gallery selection:text-obsidian">
 
-  <!-- ==================== 0. STICKY FROSTED FLAGSHIP HEADER ==================== -->
+  <!-- ==================== 0. STICKY FROSTED HEADER ==================== -->
   <header class="sticky top-0 z-40 frosted-nav border-b border-white/10">
-    <!-- Ultra-Slim Live Security & Dispatch Telemetry Bar -->
+    <!-- Top Live Telemetry Bar -->
     <div class="border-b border-white/10 bg-black/70">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] sm:text-[11px] tracking-wider uppercase text-neutral-400">
         <div class="flex items-center gap-2">
           <span class="w-1.5 h-1.5 rounded-full bg-whatsapp animate-pulse"></span>
-          <span class="text-gallery font-medium">ONCAMPUS LAUNDRY &amp; SNEAKER ATELIER</span>
-          <span id="securityModeBadge" class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/5 text-cyan text-[9px]">
-            TLS + CSRF PROTECTED
+          <span class="text-gallery font-medium">ONCAMPUS LAUNDRY &amp; SNEAKER CARE</span>
+          <span class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/5 text-cyan text-[9px]">
+            FIREBASE VERIFIED AUTH
           </span>
         </div>
         <div class="flex items-center gap-3">
@@ -373,7 +364,7 @@
 
     <!-- Main Navigation Row -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-3">
-      <!-- Brand Emblem -->
+      <!-- Brand Mark -->
       <a href="#" class="flex items-center gap-3 group focus:outline-none">
         <div class="w-10 h-10 rounded-xl bg-gallery text-obsidian flex items-center justify-center font-display font-extrabold text-lg tracking-tighter shadow-[0_0_25px_rgba(255,255,255,0.2)] group-hover:scale-105 transition-transform">
           FK
@@ -388,25 +379,22 @@
         </div>
       </a>
 
-      <!-- Quick-Jump Navigation Pills -->
+      <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex items-center gap-1 p-1 rounded-full bg-carbon steel-border font-mono text-[11px] uppercase tracking-wider">
         <a href="#pricing-deck" class="px-3.5 py-1.5 rounded-full text-neutral-300 hover:text-obsidian hover:bg-gallery transition-all">
-          01. Rates
+          01. Collection &amp; Pricing
         </a>
         <a href="#command-hub" class="px-3.5 py-1.5 rounded-full text-neutral-300 hover:text-obsidian hover:bg-gallery transition-all">
           02. Campus Delivery
         </a>
-        <a href="#account-portal" class="px-3.5 py-1.5 rounded-full text-neutral-300 hover:text-obsidian hover:bg-gallery transition-all">
-          03. My Orders
-        </a>
         <a href="#team-dispatch" class="px-3.5 py-1.5 rounded-full text-neutral-300 hover:text-obsidian hover:bg-gallery transition-all">
-          04. Contact
+          03. Dispatch Team
         </a>
       </nav>
 
-      <!-- Account Session & BOOK PICKUP Actions -->
+      <!-- Account Badge, My Orders & BOOK NOW CTA -->
       <div class="flex items-center gap-2">
-        <!-- Guest Auth Button -->
+        <!-- Guest Sign In Button -->
         <button type="button" id="navGuestAuthBtn" data-action="open-auth" data-auth-tab="login" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-carbon hover:bg-carbonElevated text-gallery steel-border-strong font-mono font-bold text-[11px] uppercase tracking-wider transition-colors cursor-pointer">
           <svg class="w-3.5 h-3.5 text-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -414,20 +402,20 @@
           <span>SIGN IN</span>
         </button>
 
-        <!-- Authenticated User Badge + Logout -->
+        <!-- Signed-In User Cluster -->
         <div id="navUserCluster" class="hidden items-center gap-1.5">
-          <a href="#account-portal" id="navUserBadge" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-carbon steel-border-strong font-mono text-[11px] text-gallery hover:border-cyan transition-colors">
+          <button type="button" data-action="open-orders-drawer" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-carbon steel-border-strong font-mono text-[11px] text-gallery hover:border-cyan transition-colors cursor-pointer">
             <span class="w-2 h-2 rounded-full bg-whatsapp"></span>
-            <span id="navUserNameLabel">STUDENT</span>
-          </a>
+            <span id="navUserNameLabel">MY ORDERS</span>
+          </button>
           <button type="button" data-action="logout-user" title="Sign Out" class="px-2.5 py-2 rounded-full bg-white/5 hover:bg-red-500/20 text-neutral-300 hover:text-red-300 steel-border font-mono text-[10px] uppercase cursor-pointer">
             EXIT
           </button>
         </div>
 
-        <!-- Primary BOOK PICKUP CTA -->
+        <!-- Primary BOOK NOW Button -->
         <button type="button" data-action="open-booking" data-service="SHOE_24H" class="px-4 sm:px-5 py-2.5 rounded-full bg-gallery hover:bg-white text-obsidian font-display font-bold text-xs sm:text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(255,255,255,0.28)] hover:shadow-[0_0_40px_rgba(255,255,255,0.45)] transition-all cursor-pointer">
-          BOOK PICKUP
+          BOOK NOW
         </button>
 
         <!-- Mobile Menu Toggle -->
@@ -446,28 +434,26 @@
     <div id="mobileNavMenu" class="hidden lg:hidden bg-carbon border-t border-white/10 px-4 py-3 space-y-1.5 font-mono text-xs uppercase">
       <a href="#pricing-deck" data-action="close-mobile-nav" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 text-gallery">01 // Collection &amp; Pricing Deck</a>
       <a href="#command-hub" data-action="close-mobile-nav" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 text-gallery">02 // Free OnCampus Collection &amp; Delivery</a>
-      <a href="#account-portal" data-action="close-mobile-nav" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 text-cyan">03 // My Orders &amp; Account Portal</a>
+      <button type="button" data-action="open-orders-drawer" class="w-full text-left py-2.5 px-3 rounded-lg hover:bg-white/5 text-cyan uppercase cursor-pointer">03 // My Orders &amp; Account Vault</button>
       <a href="#team-dispatch" data-action="close-mobile-nav" class="block py-2.5 px-3 rounded-lg hover:bg-white/5 text-gallery">04 // Choose WhatsApp Contact</a>
     </div>
   </header>
 
-  <!-- ==================== 1. FLAGSHIP 3D HERO STAGE (LIVE 60FPS CANVAS + KINETIC CARDS) ==================== -->
+  <!-- ==================== 1. 3D HERO STAGE ==================== -->
   <section class="relative overflow-hidden border-b border-white/10 bg-obsidian">
-    <!-- Real-Time 60fps HTML5 3D Perspective Wave & Particle Canvas -->
+    <!-- Subtle Interactive 3D Perspective Wave Canvas -->
     <canvas id="hero3DCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80" aria-hidden="true"></canvas>
-
-    <!-- Subtle Vignette Edge Mask -->
     <div class="absolute inset-0 bg-gradient-to-b from-obsidian/40 via-transparent to-obsidian pointer-events-none"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
-        <!-- Left Editorial Monumental Column -->
+        <!-- Left Headline & Actions -->
         <div class="lg:col-span-6 space-y-6">
           <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-carbon/90 steel-border-strong">
             <span class="w-2 h-2 rounded-full bg-cyan"></span>
             <span class="font-mono text-[11px] uppercase tracking-widest text-gallery">
-              FREE COLLECTION &amp; DELIVERY ON CAMPUS
+              Free Collection &amp; Delivery on Campus.
             </span>
           </div>
 
@@ -479,7 +465,7 @@
           </h1>
 
           <p class="text-base sm:text-lg text-neutral-300 max-w-xl leading-relaxed">
-            Professional <strong class="text-gallery font-semibold">OnCampus Shoe Washing &amp; Garment Care</strong>. Fresh Looks. <strong class="text-cyan font-semibold">Free Campus Delivery.</strong>
+            Professional Shoe Washing &amp; OnCampus Laundry. Fresh Looks. Convenient Campus Delivery.
           </p>
 
           <div class="flex flex-wrap items-center gap-3.5 pt-1">
@@ -490,12 +476,12 @@
               </svg>
             </button>
 
-            <a href="#account-portal" class="inline-flex items-center justify-center px-6 py-4 rounded-full bg-carbon/90 hover:bg-carbonElevated text-gallery steel-border-strong font-mono font-medium text-xs sm:text-sm uppercase tracking-wider transition-all">
-              TRACK MY ORDERS &rarr;
-            </a>
+            <button type="button" data-action="open-orders-drawer" class="inline-flex items-center justify-center px-6 py-4 rounded-full bg-carbon/90 hover:bg-carbonElevated text-gallery steel-border-strong font-mono font-medium text-xs sm:text-sm uppercase tracking-wider transition-all cursor-pointer">
+              MY ORDERS &rarr;
+            </button>
           </div>
 
-          <!-- Precision Hardware Telemetry Strip -->
+          <!-- Precision Telemetry Strip -->
           <div class="pt-5 border-t border-white/10 grid grid-cols-3 gap-4 font-mono">
             <div>
               <span class="text-xs text-neutral-500 block">SNEAKER CARE</span>
@@ -512,26 +498,25 @@
           </div>
         </div>
 
-        <!-- Right Interactive 3D Kinetic Showcase -->
+        <!-- Right 3D Kinetic Showcase Cards -->
         <div class="lg:col-span-6 spatial-stage">
           <div data-spatial-card class="spatial-card rounded-3xl bg-carbon/90 steel-border-strong p-4 sm:p-5 shadow-2xl">
-            <!-- Top Telemetry Header -->
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/10 font-mono text-[10px] uppercase tracking-widest text-neutral-400 z-layer-1">
               <span class="flex items-center gap-2 text-gallery font-bold">
                 <span class="w-2 h-2 rounded-full bg-gold"></span>
                 ONCAMPUS LAUNDRY ATELIER
               </span>
-              <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-gallery">3D SPATIAL VIEW</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-gallery">3D KINETIC SHOWCASE</span>
             </div>
 
-            <!-- Dual Continuously Animated Full-Color Studio Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" style="transform-style: preserve-3d;">
-              <!-- Sneaker Studio Card -->
+              <!-- Card 1: SHOE WASHING -->
               <div role="button" tabindex="0" data-action="open-booking" data-service="SHOE_24H" data-tilt-subcard aria-label="Book Shoe Washing Express Service R40" class="showcase-kinetic-card showcase-float-a rounded-2xl bg-obsidian steel-border hover:border-gold/70 overflow-hidden flex flex-col cursor-pointer group shadow-[0_18px_40px_rgba(0,0,0,0.65)]">
                 <div class="relative aspect-[4/3] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
-                    alt="Studio red and white performance sneaker"
+                    onerror="this.onerror=null;this.src='https://placehold.co/900x675/111114/FAFAFA?text=SHOE+WASHING';"
+                    alt="Red performance sneaker"
                     class="ken-burns-media w-full h-full object-cover object-center"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/15 to-transparent"></div>
@@ -552,12 +537,13 @@
                 </div>
               </div>
 
-              <!-- Garment Studio Card -->
-              <div role="button" tabindex="0" data-action="open-booking" data-service="CLOTHES_SAME_DAY" data-tilt-subcard aria-label="Book OnCampus Garment Care Laundry" class="showcase-kinetic-card card-delay-b showcase-float-b rounded-2xl bg-obsidian steel-border hover:border-cyan/70 overflow-hidden flex flex-col cursor-pointer group shadow-[0_18px_40px_rgba(0,0,0,0.65)]">
+              <!-- Card 2: GARMENT CARE -->
+              <div role="button" tabindex="0" data-action="open-booking" data-service="CLOTHES_SAME_DAY" data-tilt-subcard aria-label="Book Garment Care OnCampus Laundry" class="showcase-kinetic-card card-delay-b showcase-float-b rounded-2xl bg-obsidian steel-border hover:border-cyan/70 overflow-hidden flex flex-col cursor-pointer group shadow-[0_18px_40px_rgba(0,0,0,0.65)]">
                 <div class="relative aspect-[4/3] overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=85"
-                    alt="Crisp freshly laundered folded garments"
+                    onerror="this.onerror=null;this.src='https://placehold.co/900x675/111114/FAFAFA?text=GARMENT+CARE';"
+                    alt="Clean folded laundry basket"
                     class="ken-burns-media media-delay-b w-full h-full object-cover object-center"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/15 to-transparent"></div>
@@ -579,14 +565,13 @@
               </div>
             </div>
 
-            <!-- Floating Bottom Telemetry Bar -->
             <div class="mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 z-layer-1">
               <div class="flex items-center gap-2 font-mono text-[11px] text-neutral-300">
                 <span class="w-2 h-2 rounded-full bg-whatsapp"></span>
-                <span>SERVER-VERIFIED RATES &bull; FREE CAMPUS DELIVERY</span>
+                <span>FREE COLLECTION &amp; DELIVERY ON CAMPUS</span>
               </div>
               <button type="button" data-action="open-booking" data-service="SHOE_24H" class="px-4 py-1.5 rounded-full bg-whatsapp hover:bg-whatsappHover text-obsidian font-mono font-bold text-[11px] uppercase tracking-wider transition-colors cursor-pointer">
-                INSTANT BOOKING &rarr;
+                BOOK PICKUP &rarr;
               </button>
             </div>
           </div>
@@ -600,21 +585,20 @@
   <section id="pricing-deck" class="py-12 lg:py-14 bg-obsidian border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- Section Title & Interactive Switcher Pills -->
+      <!-- Section Title & Category Filter Tabs -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 pb-7 border-b border-white/10">
         <div>
           <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan block mb-1.5">
             01 // COLLECTION &amp; PRICING DECK
           </span>
           <h2 class="font-display font-extrabold text-3xl sm:text-5xl uppercase tracking-tight text-gallery leading-none">
-            CURATED CARE TIERS
+            COLLECTION &amp; PRICING
           </h2>
         </div>
 
-        <!-- Crisp Interactive Category Pills -->
         <div class="inline-flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-carbon steel-border" role="tablist" aria-label="Pricing Categories">
           <button type="button" data-action="switch-deck-tab" data-tab="shoes" aria-selected="true" class="deck-pill px-4 sm:px-5 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider bg-gallery text-obsidian transition-all cursor-pointer">
-            SHOE WASHING (3D)
+            SHOE WASHING (3D FLIP)
           </button>
           <button type="button" data-action="switch-deck-tab" data-tab="clothes" aria-selected="false" class="deck-pill px-4 sm:px-5 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider text-neutral-300 hover:text-gallery hover:bg-white/5 transition-all cursor-pointer">
             ONCAMPUS CLOTHES LAUNDRY
@@ -625,11 +609,11 @@
         </div>
       </div>
 
-      <!-- TAB 1: SHOE WASHING (3D FLIP & SPECULAR TILT CARDS) -->
+      <!-- TAB 1: SHOE WASHING (3D FLIP CARDS) -->
       <div id="deckPanelShoes" class="mt-7 stage-enter">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 
-          <!-- OPTION 1: EXPRESS SERVICE (Champagne Gold Rim & Badge + 3D Flip) -->
+          <!-- OPTION 1: EXPRESS SERVICE (Visually Highlighted) -->
           <div class="flip-perspective spatial-stage min-h-[420px]">
             <div id="shoeFlipExpress" data-spatial-card class="flip-rotor spatial-card rounded-3xl">
 
@@ -641,7 +625,7 @@
                       EXPRESS OPTION &bull; PRIORITY
                     </span>
                     <button type="button" data-action="flip-3d-card" data-target="shoeFlipExpress" class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-gallery steel-border font-mono text-[11px] uppercase tracking-wider transition-colors cursor-pointer">
-                      INSPECT PROCESS &#8635;
+                      Flip Specs &#8635;
                     </button>
                   </div>
 
@@ -654,26 +638,26 @@
                     </div>
                     <div class="text-right">
                       <span class="font-mono font-bold text-4xl sm:text-5xl text-gallery">R40</span>
-                      <span class="font-mono text-[11px] text-neutral-400 block mt-0.5">ONE PAIR</span>
+                      <span class="font-mono text-[11px] text-neutral-400 block mt-0.5">One pair</span>
                     </div>
                   </div>
 
                   <ul class="mt-5 space-y-2.5 font-mono text-xs sm:text-sm">
                     <li class="flex items-center justify-between py-2 border-b border-white/5">
-                      <span class="text-neutral-400">TURNAROUND</span>
+                      <span class="text-neutral-400">COLLECTION</span>
                       <span class="text-gallery font-bold">24Hrs Collection</span>
                     </li>
                     <li class="flex items-center justify-between py-2 border-b border-white/5">
-                      <span class="text-neutral-400">ALLOCATION</span>
+                      <span class="text-neutral-400">PAIR COUNT</span>
                       <span class="text-gallery font-bold">One pair</span>
                     </li>
                     <li class="flex items-center justify-between py-2 border-b border-white/5">
-                      <span class="text-neutral-400">MATERIAL &amp; SHADE</span>
-                      <span class="text-gallery font-bold">All colours welcome</span>
+                      <span class="text-neutral-400">COLOURS</span>
+                      <span class="text-gallery font-bold">All colours welcome.</span>
                     </li>
                     <li class="flex items-center justify-between pt-1">
-                      <span class="text-neutral-400">CAMPUS LOGISTICS</span>
-                      <span class="text-cyan font-bold">FREE DELIVERY (R0.00)</span>
+                      <span class="text-neutral-400">CAMPUS DELIVERY</span>
+                      <span class="text-cyan font-bold">FREE (R0.00)</span>
                     </li>
                   </ul>
                 </div>
@@ -683,41 +667,41 @@
                 </button>
               </div>
 
-              <!-- BACK FACE (4-Step Atelier Process) -->
+              <!-- BACK FACE -->
               <div class="flip-pane flip-pane-back rounded-3xl bg-carbon gold-rim p-6 sm:p-8 flex flex-col justify-between h-full">
                 <div>
                   <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-white/10">
-                    <span class="font-mono font-bold text-xs uppercase tracking-wider text-gold">24HRS EXPRESS ATELIER PROTOCOL</span>
+                    <span class="font-mono font-bold text-xs uppercase tracking-wider text-gold">24HRS EXPRESS CARE SPECS</span>
                     <button type="button" data-action="flip-3d-card" data-target="shoeFlipExpress" class="px-3.5 py-1.5 rounded-full bg-gallery text-obsidian font-mono font-bold text-[11px] uppercase cursor-pointer">
-                      &larr; BACK TO CARD
+                      &larr; BACK
                     </button>
                   </div>
 
                   <ol class="space-y-2.5 font-mono text-xs text-neutral-200">
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-gold font-bold">01. DECONSTRUCTION &amp; SANITIZE:</span> Laces &amp; insoles removed for antibacterial ozone deodorizing.
+                      <span class="text-gold font-bold">01. LACES &amp; INSOLES:</span> Removed and sanitized separately for deep freshness.
                     </li>
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-gold font-bold">02. COLOUR-SAFE FOAM WASH:</span> Gentle multi-bristle agitation for white, black &amp; all colours.
+                      <span class="text-gold font-bold">02. COLOUR-SAFE FOAM WASH:</span> Gentle multi-brush cleaning for white, black &amp; all colours.
                     </li>
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-gold font-bold">03. MIDSOLE &amp; TREAD RESTORE:</span> Deep sidewall detailing and outsole groove extraction.
+                      <span class="text-gold font-bold">03. MIDSOLE &amp; OUTSOLE:</span> Sidewall brightening and tread groove extraction.
                     </li>
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-whatsapp font-bold">04. CLIMATE DRY &amp; FREE DROP:</span> Delivered back on campus within 24 hours.
+                      <span class="text-whatsapp font-bold">04. 24HR EXPRESS DROP:</span> Delivered back on campus within 24 hours at zero fee.
                     </li>
                   </ol>
                 </div>
 
                 <button type="button" data-action="open-booking" data-service="SHOE_24H" class="mt-5 w-full py-4 px-6 rounded-2xl bg-gold hover:bg-amber-400 text-obsidian font-display font-extrabold text-base uppercase tracking-wider transition-all cursor-pointer">
-                  BOOK 24HRS EXPRESS (R40) &rarr;
+                  CHOOSE 24HRS (R40) &rarr;
                 </button>
               </div>
 
             </div>
           </div>
 
-          <!-- OPTION 2: STANDARD SERVICE (Brushed Carbon & Steel Rim + 3D Flip) -->
+          <!-- OPTION 2: STANDARD SERVICE -->
           <div class="flip-perspective spatial-stage min-h-[420px]">
             <div id="shoeFlipStandard" data-spatial-card class="flip-rotor spatial-card rounded-3xl">
 
@@ -726,10 +710,10 @@
                 <div>
                   <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
                     <span class="px-3 py-1 rounded-full bg-white/10 text-gallery font-mono font-bold text-[11px] uppercase tracking-wider">
-                      STANDARD EDITION
+                      STANDARD SERVICE
                     </span>
                     <button type="button" data-action="flip-3d-card" data-target="shoeFlipStandard" class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-gallery steel-border font-mono text-[11px] uppercase tracking-wider transition-colors cursor-pointer">
-                      INSPECT PROCESS &#8635;
+                      Flip Specs &#8635;
                     </button>
                   </div>
 
@@ -742,26 +726,26 @@
                     </div>
                     <div class="text-right">
                       <span class="font-mono font-bold text-4xl sm:text-5xl text-gallery">R30</span>
-                      <span class="font-mono text-[11px] text-neutral-400 block mt-0.5">ONE PAIR</span>
+                      <span class="font-mono text-[11px] text-neutral-400 block mt-0.5">One pair</span>
                     </div>
                   </div>
 
                   <ul class="mt-5 space-y-2.5 font-mono text-xs sm:text-sm">
                     <li class="flex items-center justify-between py-2 border-b border-white/5">
-                      <span class="text-neutral-400">TURNAROUND</span>
+                      <span class="text-neutral-400">COLLECTION</span>
                       <span class="text-gallery font-bold">48Hrs Collection</span>
                     </li>
                     <li class="flex items-center justify-between py-2 border-b border-white/5">
-                      <span class="text-neutral-400">ALLOCATION</span>
+                      <span class="text-neutral-400">PAIR COUNT</span>
                       <span class="text-gallery font-bold">One pair</span>
                     </li>
                     <li class="flex items-center justify-between py-2 border-b border-white/5">
-                      <span class="text-neutral-400">MATERIAL &amp; SHADE</span>
-                      <span class="text-gallery font-bold">All colours welcome</span>
+                      <span class="text-neutral-400">COLOURS</span>
+                      <span class="text-gallery font-bold">All colours welcome.</span>
                     </li>
                     <li class="flex items-center justify-between pt-1">
-                      <span class="text-neutral-400">CAMPUS LOGISTICS</span>
-                      <span class="text-cyan font-bold">FREE DELIVERY (R0.00)</span>
+                      <span class="text-neutral-400">CAMPUS DELIVERY</span>
+                      <span class="text-cyan font-bold">FREE (R0.00)</span>
                     </li>
                   </ul>
                 </div>
@@ -771,34 +755,34 @@
                 </button>
               </div>
 
-              <!-- BACK FACE (4-Step Atelier Process) -->
+              <!-- BACK FACE -->
               <div class="flip-pane flip-pane-back rounded-3xl bg-carbon steel-border-strong p-6 sm:p-8 flex flex-col justify-between h-full">
                 <div>
                   <div class="flex items-center justify-between gap-2 pb-4 mb-4 border-b border-white/10">
-                    <span class="font-mono font-bold text-xs uppercase tracking-wider text-cyan">48HRS STANDARD ATELIER PROTOCOL</span>
+                    <span class="font-mono font-bold text-xs uppercase tracking-wider text-cyan">48HRS STANDARD CARE SPECS</span>
                     <button type="button" data-action="flip-3d-card" data-target="shoeFlipStandard" class="px-3.5 py-1.5 rounded-full bg-gallery text-obsidian font-mono font-bold text-[11px] uppercase cursor-pointer">
-                      &larr; BACK TO CARD
+                      &larr; BACK
                     </button>
                   </div>
 
                   <ol class="space-y-2.5 font-mono text-xs text-neutral-200">
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-cyan font-bold">01. LACE &amp; LINER REFRESH:</span> Complete interior sanitization and freshness rinse.
+                      <span class="text-cyan font-bold">01. INTERIOR REFRESH:</span> Complete liner deodorizing and lace wash.
                     </li>
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-cyan font-bold">02. DEEP UPPER CARE:</span> Colour-safe conditioning across canvas, knit, leather &amp; synthetic pairs.
+                      <span class="text-cyan font-bold">02. FULL UPPER WASH:</span> Safe care for canvas, mesh, leather &amp; all colours.
                     </li>
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-cyan font-bold">03. SOLE &amp; WELT SCRUB:</span> Full midsole brightening and tread cleaning.
+                      <span class="text-cyan font-bold">03. SOLE DETAILING:</span> Midsole scrub and outsole dirt removal.
                     </li>
                     <li class="p-3 rounded-xl bg-obsidian/90 steel-border">
-                      <span class="text-whatsapp font-bold">04. NATURAL AIR DRY &amp; DROP:</span> Delivered back on campus within 48 hours.
+                      <span class="text-whatsapp font-bold">04. 48HR CAMPUS DELIVERY:</span> Returned fresh on campus with zero delivery fee.
                     </li>
                   </ol>
                 </div>
 
                 <button type="button" data-action="open-booking" data-service="SHOE_48H" class="mt-5 w-full py-4 px-6 rounded-2xl bg-gallery hover:bg-white text-obsidian font-display font-extrabold text-base uppercase tracking-wider transition-all cursor-pointer">
-                  BOOK 48HRS STANDARD (R30) &rarr;
+                  CHOOSE 48HRS (R30) &rarr;
                 </button>
               </div>
 
@@ -808,7 +792,7 @@
         </div>
       </div>
 
-      <!-- TAB 2: ONCAMPUS CLOTHES LAUNDRY (SLEEK 8-CARD INTERACTIVE GRID) -->
+      <!-- TAB 2: ONCAMPUS CLOTHES LAUNDRY -->
       <div id="deckPanelClothes" class="hidden mt-7 stage-enter">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
@@ -842,30 +826,30 @@
             </button>
           </div>
 
-          <!-- 3. Drop-Off: Same Day Collection -->
+          <!-- 3. Drop off Same Day Collection -->
           <div class="rounded-2xl bg-carbonElevated gold-rim p-5 flex flex-col justify-between transition-all">
             <div>
               <div class="flex items-center justify-between font-mono text-[10px] mb-2">
-                <span class="text-neutral-400">03 // DROP-OFF</span>
+                <span class="text-neutral-400">03 // DROP OFF</span>
                 <span class="px-2 py-0.5 rounded-full bg-gold text-obsidian font-bold">SAME DAY</span>
               </div>
-              <h3 class="font-display font-bold text-xl text-gallery">Drop-Off: Same Day Collection</h3>
-              <p class="font-mono font-bold text-2xl text-gallery mt-2">R70 <span class="text-xs font-normal text-neutral-400">per load</span></p>
+              <h3 class="font-display font-bold text-xl text-gallery">Same Day Collection</h3>
+              <p class="font-mono font-bold text-2xl text-gallery mt-2">R70 <span class="text-xs font-normal text-neutral-400">Per Load</span></p>
             </div>
             <button type="button" data-action="open-booking" data-service="CLOTHES_SAME_DAY" class="mt-5 w-full py-2.5 rounded-xl bg-gold hover:bg-amber-400 text-obsidian font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
               BOOK SAME DAY &rarr;
             </button>
           </div>
 
-          <!-- 4. Drop-Off: Next Day Collection -->
+          <!-- 4. Drop off Next Day Collection -->
           <div class="rounded-2xl bg-carbon steel-border hover:border-white/30 p-5 flex flex-col justify-between transition-all">
             <div>
               <div class="flex items-center justify-between font-mono text-[10px] text-neutral-400 mb-2">
-                <span>04 // DROP-OFF</span>
+                <span>04 // DROP OFF</span>
                 <span class="text-gallery font-bold">NEXT DAY</span>
               </div>
-              <h3 class="font-display font-bold text-xl text-gallery">Drop-Off: Next Day Collection</h3>
-              <p class="font-mono font-bold text-2xl text-gallery mt-2">R50 <span class="text-xs font-normal text-neutral-400">per load</span></p>
+              <h3 class="font-display font-bold text-xl text-gallery">Next Day Collection</h3>
+              <p class="font-mono font-bold text-2xl text-gallery mt-2">R50 <span class="text-xs font-normal text-neutral-400">Per Load</span></p>
             </div>
             <button type="button" data-action="open-booking" data-service="CLOTHES_NEXT_DAY" class="mt-5 w-full py-2.5 rounded-xl bg-white/10 hover:bg-gallery hover:text-obsidian text-gallery font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
               BOOK NEXT DAY &rarr;
@@ -876,25 +860,25 @@
           <div class="rounded-2xl bg-carbon steel-border hover:border-white/30 p-5 flex flex-col justify-between transition-all">
             <div>
               <div class="flex items-center justify-between font-mono text-[10px] text-neutral-400 mb-2">
-                <span>05 // HEAVY BEDDING</span>
-                <span>STANDARD RATE</span>
+                <span>05 // BEDDING</span>
+                <span>BY SIZE</span>
               </div>
               <h3 class="font-display font-bold text-xl text-gallery">Blankets</h3>
-              <p class="font-mono font-bold text-2xl text-gallery mt-2">R60 <span class="text-xs font-normal text-neutral-400">(R30&ndash;R120)</span></p>
+              <p class="font-mono font-bold text-2xl text-gallery mt-2">R30 &ndash; R120</p>
             </div>
             <button type="button" data-action="open-booking" data-service="BLANKET_STD" class="mt-5 w-full py-2.5 rounded-xl bg-white/10 hover:bg-gallery hover:text-obsidian text-gallery font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
               BOOK BLANKETS &rarr;
             </button>
           </div>
 
-          <!-- 6. Mats, Fleece & Comfort -->
+          <!-- 6. Mats, Fleece, & Comfort -->
           <div class="rounded-2xl bg-carbon steel-border hover:border-white/30 p-5 flex flex-col justify-between transition-all">
             <div>
               <div class="flex items-center justify-between font-mono text-[10px] text-neutral-400 mb-2">
-                <span>06 // HOME TEXTILES</span>
+                <span>06 // TEXTILES</span>
                 <span>DEEP WASH</span>
               </div>
-              <h3 class="font-display font-bold text-xl text-gallery">Mats, Fleece &amp; Comfort</h3>
+              <h3 class="font-display font-bold text-xl text-gallery">Mats, Fleece, &amp; Comfort</h3>
               <p class="font-mono font-bold text-2xl text-gallery mt-2">R30</p>
             </div>
             <button type="button" data-action="open-booking" data-service="MATS_FLEECE" class="mt-5 w-full py-2.5 rounded-xl bg-white/10 hover:bg-gallery hover:text-obsidian text-gallery font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
@@ -902,15 +886,15 @@
             </button>
           </div>
 
-          <!-- 7. Ironing -->
+          <!-- 7. Ironing Per Load -->
           <div class="rounded-2xl bg-carbon steel-border hover:border-white/30 p-5 flex flex-col justify-between transition-all">
             <div>
               <div class="flex items-center justify-between font-mono text-[10px] text-neutral-400 mb-2">
-                <span>07 // STEAM PRESS</span>
+                <span>07 // PRESSING</span>
                 <span>CRISP FINISH</span>
               </div>
-              <h3 class="font-display font-bold text-xl text-gallery">Ironing</h3>
-              <p class="font-mono font-bold text-2xl text-gallery mt-2">R30 <span class="text-xs font-normal text-neutral-400">per load</span></p>
+              <h3 class="font-display font-bold text-xl text-gallery">Ironing Per Load</h3>
+              <p class="font-mono font-bold text-2xl text-gallery mt-2">R30</p>
             </div>
             <button type="button" data-action="open-booking" data-service="IRONING" class="mt-5 w-full py-2.5 rounded-xl bg-white/10 hover:bg-gallery hover:text-obsidian text-gallery font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
               BOOK IRONING &rarr;
@@ -922,29 +906,29 @@
             <div>
               <div class="flex items-center justify-between font-mono text-[10px] text-neutral-400 mb-2">
                 <span>08 // DELICATES</span>
-                <span class="text-cyan font-bold">SUITS &amp; GOWNS</span>
+                <span class="text-cyan font-bold">GARMENT CARE</span>
               </div>
               <h3 class="font-display font-bold text-xl text-gallery">Dry Cleaning</h3>
               <p class="font-mono font-bold text-xl text-cyan mt-2.5">Custom Quote</p>
             </div>
             <button type="button" data-action="open-booking" data-service="DRY_CLEANING" class="mt-5 w-full py-2.5 rounded-xl bg-white/10 hover:bg-gallery hover:text-obsidian text-gallery font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
-              REQUEST QUOTE &rarr;
+              BOOK DRY CLEANING &rarr;
             </button>
           </div>
 
         </div>
       </div>
 
-      <!-- TAB 3: VIP MEMBERSHIP (R200 PM SPOTLIGHT CARD) -->
+      <!-- TAB 3: VIP MEMBERSHIP -->
       <div id="deckPanelMembership" class="hidden mt-7 stage-enter">
         <div class="rounded-3xl bg-gradient-to-r from-carbonElevated via-carbon to-carbonElevated gold-rim p-7 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-7">
           <div class="space-y-3 max-w-2xl">
             <div class="inline-flex flex-wrap items-center gap-2">
               <span class="px-3 py-1 rounded-full bg-gold text-obsidian font-mono font-bold text-xs uppercase tracking-wider">
-                VIP CAMPUS MEMBERSHIP
+                BECOME A MEMBER
               </span>
               <span class="px-3 py-1 rounded-full bg-white/5 steel-border font-mono text-xs text-whatsapp uppercase">
-                FREE CAMPUS DELIVERY INCLUDED
+                INC. FREE DELIVERY
               </span>
             </div>
 
@@ -953,17 +937,17 @@
             </h3>
 
             <p class="font-mono text-sm sm:text-base text-neutral-300">
-              4 Pick up and Drop a Month inc. free delivery &bull; Dedicated OnCampus Priority Dispatch
+              4 Pick up and Drop a Month inc. free delivery
             </p>
           </div>
 
           <div class="flex flex-col sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-end gap-4 shrink-0">
             <div class="font-mono lg:text-right">
               <span class="font-bold text-5xl sm:text-6xl text-gold">R200</span>
-              <span class="text-xs uppercase text-neutral-400 block mt-1">PER MONTH (4 PICKUPS &amp; DROPS)</span>
+              <span class="text-xs uppercase text-neutral-400 block mt-1">PM &bull; 4 PICK UP AND DROP A MONTH</span>
             </div>
             <button type="button" data-action="open-booking" data-service="VIP_MEMBER" class="px-8 py-4 rounded-2xl bg-gold hover:bg-amber-400 text-obsidian font-display font-extrabold text-base uppercase tracking-wider shadow-[0_10px_30px_rgba(245,158,11,0.28)] transition-all cursor-pointer">
-              ACTIVATE VIP PLAN &rarr;
+              JOIN MEMBERSHIP &rarr;
             </button>
           </div>
         </div>
@@ -972,137 +956,17 @@
     </div>
   </section>
 
-  <!-- ==================== 3. ROW-LEVEL SECURITY CUSTOMER PORTAL & LOCKED ADMIN CONSOLE ==================== -->
-  <section id="account-portal" class="py-12 lg:py-14 bg-obsidian border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <!-- Portal Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-white/10">
-        <div>
-          <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-whatsapp block mb-1.5">
-            02 // ENCRYPTED STUDENT ACCOUNT &amp; ORDER VAULT
-          </span>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl uppercase tracking-tight text-gallery leading-none">
-            MY ORDERS &amp; LIVE STATUS
-          </h2>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-2.5 font-mono text-xs">
-          <span id="rlsStatusPill" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-carbon steel-border text-neutral-300">
-            <span class="w-2 h-2 rounded-full bg-cyan"></span>
-            <span>RLS ISOLATED: ONLY YOUR ORDERS VISIBLE</span>
-          </span>
-
-          <button type="button" id="refreshOrdersBtn" data-action="refresh-orders" class="hidden px-4 py-2 rounded-xl bg-carbon hover:bg-white/10 text-gallery steel-border-strong uppercase cursor-pointer">
-            REFRESH &#8635;
-          </button>
-        </div>
-      </div>
-
-      <!-- STATE A: SIGNED OUT CALLOUT -->
-      <div id="portalSignedOutState" class="mt-7 rounded-3xl bg-carbon steel-border-strong p-7 sm:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-        <div class="space-y-2.5 max-w-2xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 steel-border font-mono text-[11px] text-cyan uppercase">
-            <span>BCRYPT PASSWORD HASHING &bull; HTTPONLY SESSION COOKIES</span>
-          </div>
-          <h3 class="font-display font-extrabold text-2xl sm:text-3xl uppercase text-gallery">
-            SIGN IN TO VIEW YOUR PRIVATE CAMPUS ORDERS
-          </h3>
-          <p class="text-sm text-neutral-300 leading-relaxed">
-            Every account is protected with bcrypt password hashing, CSRF tokens, and PostgreSQL Row-Level Security so only you can access your pickup history, server-verified receipts, and delivery progress.
-          </p>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-3 shrink-0">
-          <button type="button" data-action="open-auth" data-auth-tab="login" class="px-6 py-3.5 rounded-2xl bg-gallery hover:bg-white text-obsidian font-display font-extrabold text-sm uppercase tracking-wider transition-colors cursor-pointer">
-            SIGN IN &rarr;
-          </button>
-          <button type="button" data-action="open-auth" data-auth-tab="register" class="px-6 py-3.5 rounded-2xl bg-obsidian hover:bg-white/10 text-gallery steel-border-strong font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
-            CREATE ACCOUNT
-          </button>
-        </div>
-      </div>
-
-      <!-- STATE B: AUTHENTICATED CUSTOMER ORDER DASHBOARD -->
-      <div id="portalSignedInState" class="hidden mt-7 space-y-6 stage-enter">
-        <!-- Account Identity Banner -->
-        <div class="rounded-2xl bg-carbon steel-border p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
-          <div class="flex items-center gap-3.5">
-            <div id="portalUserAvatar" class="w-11 h-11 rounded-xl bg-gallery text-obsidian font-display font-extrabold text-lg flex items-center justify-center">
-              ST
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span id="portalUserFullName" class="font-display font-bold text-lg text-gallery">Student Account</span>
-                <span id="portalUserRoleBadge" class="px-2 py-0.5 rounded bg-cyan/15 text-cyan font-mono text-[10px] uppercase font-bold">CUSTOMER</span>
-              </div>
-              <span id="portalUserMeta" class="font-mono text-xs text-neutral-400 block">student@campus.ac.za</span>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap items-center gap-2.5">
-            <button type="button" data-action="open-booking" data-service="SHOE_24H" class="px-5 py-2.5 rounded-xl bg-whatsapp hover:bg-whatsappHover text-obsidian font-display font-extrabold text-xs uppercase tracking-wider cursor-pointer">
-              + NEW CAMPUS BOOKING
-            </button>
-            <button type="button" data-action="logout-user" class="px-4 py-2.5 rounded-xl bg-obsidian hover:bg-red-500/20 text-neutral-300 hover:text-red-300 steel-border font-mono text-xs uppercase cursor-pointer">
-              SIGN OUT
-            </button>
-          </div>
-        </div>
-
-        <!-- Customer Orders Table / Cards -->
-        <div id="customerOrdersContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <!-- Populated dynamically via /api/orders/mine -->
-        </div>
-
-        <!-- LOCKED ADMIN DISPATCH CONSOLE (ONLY RENDERED FOR role === 'admin') -->
-        <div id="adminConsoleSection" class="hidden pt-6 border-t border-gold/40 space-y-4">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center gap-2.5">
-              <span class="px-3 py-1 rounded-full bg-gold text-obsidian font-mono font-bold text-[11px] uppercase tracking-wider">
-                ADMIN DISPATCH CONSOLE &bull; LOCKED ROUTE
-              </span>
-              <span class="font-mono text-xs text-neutral-400">ALL CAMPUS ORDERS</span>
-            </div>
-            <button type="button" data-action="refresh-admin-orders" class="px-3.5 py-1.5 rounded-xl bg-carbon hover:bg-white/10 text-gold border border-gold/40 font-mono text-xs uppercase cursor-pointer">
-              SYNC DISPATCH &#8635;
-            </button>
-          </div>
-
-          <div class="overflow-x-auto rounded-2xl bg-carbon steel-border-strong">
-            <table class="w-full text-left font-mono text-xs">
-              <thead class="bg-obsidian border-b border-white/10 text-neutral-400 uppercase text-[10px]">
-                <tr>
-                  <th class="py-3 px-4">Student &amp; WhatsApp</th>
-                  <th class="py-3 px-4">Service &amp; Qty</th>
-                  <th class="py-3 px-4">Verified Total</th>
-                  <th class="py-3 px-4">Campus Location</th>
-                  <th class="py-3 px-4">Dispatcher</th>
-                  <th class="py-3 px-4">Status Control</th>
-                </tr>
-              </thead>
-              <tbody id="adminOrdersTableBody" class="divide-y divide-white/10 text-gallery">
-                <!-- Populated dynamically via /api/admin/orders -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== 4. COMPACT DUAL-PANEL COMMAND HUB ==================== -->
+  <!-- ==================== 3. COMPACT DUAL-PANEL COMMAND HUB ==================== -->
   <section id="command-hub" class="py-12 lg:py-14 bg-obsidian border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
 
-        <!-- LEFT PANEL (50%): FREE ONCAMPUS COLLECTION & DELIVERY + 3D ISOMETRIC ROUTE MAP -->
+        <!-- LEFT PANEL: FREE CAMPUS COLLECTION & DELIVERY + 5 SERVICE PILLARS -->
         <div class="lg:col-span-6 spatial-stage flex flex-col">
           <div data-spatial-card class="spatial-card rounded-3xl bg-carbon steel-border-strong p-6 sm:p-8 flex flex-col justify-between h-full">
             <div>
               <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan/15 border border-cyan/40 font-mono font-bold text-[11px] uppercase tracking-wider text-cyan mb-4">
-                <span>FREE COLLECTION AND DELIVERY ON CAMPUS</span>
+                <span>FREE COLLECTION AND DELIVERY ON CAMPUS.</span>
               </div>
 
               <h2 class="font-display font-extrabold text-3xl sm:text-4xl xl:text-[42px] uppercase tracking-tight leading-[0.98] text-gallery">
@@ -1110,17 +974,17 @@
               </h2>
 
               <p class="mt-3 text-sm sm:text-base text-neutral-300 leading-relaxed">
-                Students pay <strong class="text-cyan">R0.00 Campus Delivery Fee</strong>. We collect directly from your campus residence or gate, restore your sneakers and garments, and deliver them back fresh at zero extra delivery cost.
+                Customers do <strong class="text-cyan">not pay any additional campus delivery fee (R0.00)</strong>. We collect directly on campus, professionally clean your sneakers and clothes, and deliver them back to you free of charge.
               </p>
 
-              <!-- Interactive 3D-Isometric Campus Logistics Route Illustration -->
-              <div class="mt-6 rounded-2xl bg-obsidian steel-border p-4 sm:p-5 z-layer-1">
-                <div class="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-neutral-400 mb-3">
-                  <span class="text-gallery font-bold">3D-ISOMETRIC CAMPUS LOGISTICS</span>
-                  <span class="text-cyan font-bold">DELIVERY FEE: R0.00</span>
+              <!-- Vector Route Diagram -->
+              <div class="mt-5 rounded-2xl bg-obsidian steel-border p-4 z-layer-1">
+                <div class="flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-neutral-400 mb-2.5">
+                  <span class="text-gallery font-bold">CAMPUS COLLECTION &amp; DELIVERY ROUTE</span>
+                  <span class="text-cyan font-bold">CAMPUS FEE: R0.00</span>
                 </div>
 
-                <svg viewBox="0 0 640 165" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3D Isometric Campus Collection, Atelier Cleaning, and Free Campus Drop-Off">
+                <svg viewBox="0 0 640 165" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Campus Collection, Cleaning, and Free Campus Delivery Route">
                   <path d="M40 125L320 45L600 125L320 158L40 125Z" fill="#111114" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
                   <path d="M115 102L320 64L525 102" stroke="rgba(56,189,248,0.22)" stroke-width="5" stroke-linecap="round" />
                   <path d="M115 102L320 64L525 102" stroke="#38BDF8" stroke-width="3" stroke-dasharray="9 7" stroke-linecap="round" class="iso-route-flow" />
@@ -1131,14 +995,14 @@
                     <polygon points="70,16 35,32 35,54 70,38" fill="#141418" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" />
                     <circle cx="35" cy="16" r="5" fill="#38BDF8" />
                     <text x="35" y="72" text-anchor="middle" fill="#FAFAFA" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. COLLECT</text>
-                    <text x="35" y="85" text-anchor="middle" fill="#9CA3AF" font-family="JetBrains Mono, monospace" font-size="9">CAMPUS RES</text>
+                    <text x="35" y="85" text-anchor="middle" fill="#9CA3AF" font-family="JetBrains Mono, monospace" font-size="9">ON CAMPUS</text>
                   </g>
 
                   <g transform="translate(285, 30)">
                     <polygon points="35,0 70,16 35,32 0,16" fill="#F59E0B" stroke="#FAFAFA" stroke-width="1.5" />
                     <polygon points="0,16 35,32 35,56 0,40" fill="#B45309" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" />
                     <polygon points="70,16 35,32 35,56 70,40" fill="#D97706" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" />
-                    <text x="35" y="74" text-anchor="middle" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. CLEAN LAB</text>
+                    <text x="35" y="74" text-anchor="middle" fill="#F59E0B" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. CLEAN</text>
                     <text x="35" y="87" text-anchor="middle" fill="#9CA3AF" font-family="JetBrains Mono, monospace" font-size="9">SHOES &amp; CLOTHES</text>
                   </g>
 
@@ -1154,119 +1018,115 @@
               </div>
             </div>
 
-            <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between font-mono text-xs">
-              <span class="text-neutral-400">CAMPUS DELIVERY SURCHARGE</span>
-              <span class="px-3 py-1 rounded-full bg-whatsapp/15 text-whatsapp font-bold">R0.00 &mdash; ALWAYS FREE</span>
+            <!-- 5 Service Pillars -->
+            <div class="mt-5 pt-4 border-t border-white/10">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-neutral-400 block mb-2.5">OUR SERVICES</span>
+              <div class="flex flex-wrap gap-2 font-mono text-[11px]">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
+                  <svg class="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Professional shoe washing
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
+                  <svg class="w-3.5 h-3.5 text-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Sneaker &amp; clothes care
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
+                  <svg class="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  All colours accepted
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
+                  <svg class="w-3.5 h-3.5 text-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Convenient oncampus collection
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-whatsapp font-bold">
+                  <svg class="w-3.5 h-3.5 text-whatsapp" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  Free campus delivery
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT PANEL (50%): OUR SERVICES & LIVE TEAM DISPATCH -->
+        <!-- RIGHT PANEL: INTERACTIVE 4-PERSON WHATSAPP CONTACT SWITCHER & DISPATCH CONSOLE -->
         <div id="team-dispatch" class="lg:col-span-6 rounded-3xl bg-carbon steel-border-strong p-6 sm:p-8 flex flex-col justify-between">
           <div>
-            <!-- 5-Pillar Service Badges -->
-            <div class="mb-6 pb-6 border-b border-white/10">
-              <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-neutral-400 block mb-2.5">
-                OUR SERVICES // 5-PILLAR ATELIER STANDARD
-              </span>
-              <div class="flex flex-wrap gap-2 font-mono text-[11px]">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
-                  <svg class="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  Professional Shoe Washing
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
-                  <svg class="w-3.5 h-3.5 text-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  Sneaker &amp; Garment Care
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
-                  <svg class="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  All Colours Accepted
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-gallery">
-                  <svg class="w-3.5 h-3.5 text-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  Convenient OnCampus Collection
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-obsidian steel-border text-whatsapp font-bold">
-                  <svg class="w-3.5 h-3.5 text-whatsapp" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  Free Campus Delivery
-                </span>
-              </div>
-            </div>
-
-            <!-- Interactive 4-Person WhatsApp Dispatch Chooser -->
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-neutral-400">
-                LIVE TEAM DISPATCH // SELECT CONTACT
+                CONTACT DETAILS // CHOOSE TEAM MEMBER
               </span>
               <span class="inline-flex items-center gap-1.5 font-mono text-[11px] text-whatsapp font-bold">
                 <span class="w-2 h-2 rounded-full bg-whatsapp animate-pulse"></span>
-                4 ONLINE
+                4 WHATSAPP CONTACTS
               </span>
             </div>
 
             <h3 class="font-display font-extrabold text-2xl sm:text-3xl uppercase tracking-tight text-gallery">
-              CHOOSE YOUR WHATSAPP DISPATCHER
+              CHOOSE WHO TO CONTACT ON WHATSAPP
             </h3>
             <p class="mt-1 text-xs sm:text-sm text-neutral-400">
-              Select a team member below to update direct WhatsApp/Call actions and assign your booking form recipient.
+              Select any team member below to message directly on WhatsApp, call, or pre-fill your booking drawer.
             </p>
 
-            <!-- 4 Team Member Cards -->
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              <button type="button" data-action="choose-team-contact" data-contact="dokodela" class="team-selector-card p-3.5 rounded-2xl text-left bg-gallery text-obsidian border border-gallery transition-all cursor-pointer">
+            <!-- 4 Team Contact Cards -->
+            <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <!-- 1. Dokodela -->
+              <button type="button" data-action="choose-team-contact" data-contact="dokodela" class="team-selector-card p-4 rounded-2xl text-left bg-gallery text-obsidian border border-gallery transition-all cursor-pointer">
                 <div class="flex items-center justify-between">
                   <span class="team-role-tag font-mono text-[10px] uppercase tracking-wider font-bold text-obsidian/70">01 // SELECTED</span>
                   <span class="team-status-dot w-2 h-2 rounded-full bg-whatsapp"></span>
                 </div>
-                <span class="font-display font-extrabold text-lg uppercase block mt-0.5">Dokodela</span>
-                <span class="team-phone-label font-mono text-xs text-obsidian/80 block">+27 75 380 6251</span>
+                <span class="font-display font-extrabold text-xl uppercase block mt-1">Dokodela</span>
+                <span class="team-phone-label font-mono text-xs text-obsidian/80 block mt-0.5">+27 75 380 6251</span>
               </button>
 
-              <button type="button" data-action="choose-team-contact" data-contact="ndzalama" class="team-selector-card p-3.5 rounded-2xl text-left bg-obsidian text-gallery steel-border hover:border-white/30 transition-all cursor-pointer">
+              <!-- 2. Ndzalama -->
+              <button type="button" data-action="choose-team-contact" data-contact="ndzalama" class="team-selector-card p-4 rounded-2xl text-left bg-obsidian text-gallery steel-border hover:border-white/30 transition-all cursor-pointer">
                 <div class="flex items-center justify-between">
-                  <span class="team-role-tag font-mono text-[10px] uppercase tracking-wider text-neutral-400">02 // DISPATCH</span>
+                  <span class="team-role-tag font-mono text-[10px] uppercase tracking-wider text-neutral-400">02 // WHATSAPP</span>
                   <span class="team-status-dot w-2 h-2 rounded-full bg-neutral-600"></span>
                 </div>
-                <span class="font-display font-extrabold text-lg uppercase block mt-0.5">Ndzalama</span>
-                <span class="team-phone-label font-mono text-xs text-neutral-300 block">+27 71 407 9195</span>
+                <span class="font-display font-extrabold text-xl uppercase block mt-1">Ndzalama</span>
+                <span class="team-phone-label font-mono text-xs text-neutral-300 block mt-0.5">+27 71 407 9195</span>
               </button>
 
-              <button type="button" data-action="choose-team-contact" data-contact="taylor" class="team-selector-card p-3.5 rounded-2xl text-left bg-obsidian text-gallery steel-border hover:border-white/30 transition-all cursor-pointer">
+              <!-- 3. Taylor -->
+              <button type="button" data-action="choose-team-contact" data-contact="taylor" class="team-selector-card p-4 rounded-2xl text-left bg-obsidian text-gallery steel-border hover:border-white/30 transition-all cursor-pointer">
                 <div class="flex items-center justify-between">
-                  <span class="team-role-tag font-mono text-[10px] uppercase tracking-wider text-neutral-400">03 // DISPATCH</span>
+                  <span class="team-role-tag font-mono text-[10px] uppercase tracking-wider text-neutral-400">03 // WHATSAPP</span>
                   <span class="team-status-dot w-2 h-2 rounded-full bg-neutral-600"></span>
                 </div>
-                <span class="font-display font-extrabold text-lg uppercase block mt-0.5">Taylor</span>
-                <span class="team-phone-label font-mono text-xs text-neutral-300 block">+27 66 118 4876</span>
+                <span class="font-display font-extrabold text-xl uppercase block mt-1">Taylor</span>
+                <span class="team-phone-label font-mono text-xs text-neutral-300 block mt-0.5">+27 66 118 4876</span>
               </button>
 
-              <button type="button" data-action="choose-team-contact" data-contact="mahlodi" class="team-selector-card p-3.5 rounded-2xl text-left bg-obsidian text-gallery steel-border hover:border-white/30 transition-all cursor-pointer">
+              <!-- 4. Mahlodi -->
+              <button type="button" data-action="choose-team-contact" data-contact="mahlodi" class="team-selector-card p-4 rounded-2xl text-left bg-obsidian text-gallery steel-border hover:border-white/30 transition-all cursor-pointer">
                 <div class="flex items-center justify-between">
-                  <span class="team-role-tag font-mono text-[10px] uppercase tracking-wider text-neutral-400">04 // DISPATCH</span>
+                  <span class="team-role-tag font-mono text-[10px] uppercase tracking-wider text-neutral-400">04 // WHATSAPP</span>
                   <span class="team-status-dot w-2 h-2 rounded-full bg-neutral-600"></span>
                 </div>
-                <span class="font-display font-extrabold text-lg uppercase block mt-0.5">Mahlodi</span>
-                <span class="team-phone-label font-mono text-xs text-neutral-300 block">+27 66 070 6867</span>
+                <span class="font-display font-extrabold text-xl uppercase block mt-1">Mahlodi</span>
+                <span class="team-phone-label font-mono text-xs text-neutral-300 block mt-0.5">+27 66 070 6867</span>
               </button>
             </div>
           </div>
 
-          <!-- Active Contact Instant Action Bar -->
-          <div class="mt-5 pt-4 border-t border-white/10">
-            <div class="font-mono text-[11px] text-neutral-400 mb-3">
-              ACTIVE DISPATCHER: <strong id="dispatchSummaryLabel" class="text-gallery">DOKODELA (+27 75 380 6251)</strong>
+          <!-- Active Contact Direct Action Bar -->
+          <div class="mt-6 pt-5 border-t border-white/10">
+            <div class="font-mono text-xs text-neutral-400 mb-3">
+              WhatsApp / Call: <strong id="dispatchSummaryLabel" class="text-gallery">DOKODELA (+27 75 380 6251)</strong>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-              <a id="dispatchWhatsAppLink" href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-whatsapp hover:bg-whatsappHover text-obsidian font-display font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-colors">
+              <a id="dispatchWhatsAppLink" href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-3.5 rounded-xl bg-whatsapp hover:bg-whatsappHover text-obsidian font-display font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-colors">
                 WHATSAPP NOW
               </a>
 
-              <a id="dispatchCallLink" href="tel:+27753806251" class="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-obsidian hover:bg-white/10 text-gallery steel-border-strong font-mono font-bold text-xs uppercase tracking-wider transition-colors">
+              <a id="dispatchCallLink" href="tel:+27753806251" class="inline-flex items-center justify-center px-4 py-3.5 rounded-xl bg-obsidian hover:bg-white/10 text-gallery steel-border-strong font-mono font-bold text-xs uppercase tracking-wider transition-colors">
                 CALL DIRECT
               </a>
 
-              <button type="button" data-action="open-booking" data-service="SHOE_24H" class="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-gallery hover:bg-white text-obsidian font-display font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-colors cursor-pointer">
-                BOOKING FORM &rarr;
+              <button type="button" data-action="open-booking" data-service="SHOE_24H" class="inline-flex items-center justify-center px-4 py-3.5 rounded-xl bg-gallery hover:bg-white text-obsidian font-display font-extrabold text-xs sm:text-sm uppercase tracking-wider transition-colors cursor-pointer">
+                BOOK PICKUP &rarr;
               </button>
             </div>
           </div>
@@ -1276,7 +1136,7 @@
     </div>
   </section>
 
-  <!-- ==================== 5. SLEEK FLAGSHIP FOOTER ==================== -->
+  <!-- ==================== 4. FOOTER ==================== -->
   <footer class="bg-obsidian text-gallery py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-white/10 items-start">
@@ -1284,20 +1144,20 @@
         <!-- Brand & Tagline -->
         <div class="md:col-span-5 space-y-2.5">
           <div class="font-display font-extrabold text-2xl sm:text-3xl uppercase tracking-tight text-gallery">
-            FRESH KICKS &amp; THREADS &mdash; OnCampus Laundry
+            FRESH KICKS &amp; THREADS
           </div>
           <p class="text-base text-neutral-300">
-            &ldquo;Clean Shoes. Fresh Clothes. Always Ready.&rdquo;
+            &ldquo;Clean Shoes. Fresh Look. Always Ready.&rdquo;
           </p>
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-carbon steel-border font-mono text-[11px] uppercase tracking-wider text-cyan">
             <span class="w-2 h-2 rounded-full bg-whatsapp"></span>
-            <span>Free Collection &amp; Delivery on Campus</span>
+            <span>Free Collection &amp; Delivery on Campus.</span>
           </div>
         </div>
 
-        <!-- Direct +27 Contact Directory -->
+        <!-- 4 Direct WhatsApp Numbers -->
         <div class="md:col-span-4 space-y-2 font-mono text-xs">
-          <span class="text-neutral-500 uppercase tracking-widest text-[10px] block">DIRECT WHATSAPP CONTACTS</span>
+          <span class="text-neutral-500 uppercase tracking-widest text-[10px] block">WHATSAPP CONTACTS</span>
           <div class="space-y-1.5">
             <div class="flex justify-between border-b border-white/5 pb-1">
               <span class="text-gallery font-medium">Dokodela</span>
@@ -1318,10 +1178,10 @@
           </div>
         </div>
 
-        <!-- Synchronized Quick-Contact Switcher -->
+        <!-- Quick Contact Selector -->
         <div class="md:col-span-3 space-y-2.5">
           <label for="footerTeamSwitcher" class="block font-mono text-[10px] uppercase tracking-widest text-neutral-400">
-            QUICK CONTACT SWITCHER
+            CHOOSE WHO TO CONTACT
           </label>
           <select id="footerTeamSwitcher" class="w-full px-3.5 py-2.5 rounded-xl bg-carbon steel-border-strong text-gallery font-mono text-xs focus:outline-none focus:border-gallery">
             <option value="dokodela">Dokodela (+27 75 380 6251)</option>
@@ -1337,23 +1197,22 @@
       </div>
 
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 font-mono text-[11px] text-neutral-500">
-        <p>&copy; <span id="currentYear"></span> FRESH KICKS &amp; THREADS &mdash; OnCampus Laundry.</p>
+        <p>&copy; <span id="currentYear"></span> FRESH KICKS &amp; THREADS &mdash; OnCampus Laundry &amp; Sneaker Care.</p>
         <p class="text-neutral-300">Free Collection &amp; Delivery on Campus.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== AUTHENTICATION MODAL (LOGIN / REGISTER / EXPIRING RESET) ==================== -->
+  <!-- ==================== FIREBASE AUTHENTICATION MODAL ==================== -->
   <div id="authModal" class="modal-center fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="authModalTitle">
     <div data-action="close-auth" class="fixed inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"></div>
 
     <div class="relative z-10 w-full max-w-md rounded-3xl bg-carbon steel-border-strong shadow-2xl overflow-hidden">
-      <!-- Modal Top Header -->
       <div class="px-6 py-4 bg-obsidian border-b border-white/10 flex items-center justify-between">
         <div>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan block">BCRYPT + CSRF PROTECTED</span>
+          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan block">EMAIL VERIFIED ACCESS</span>
           <h3 id="authModalTitle" class="font-display font-extrabold text-xl uppercase tracking-tight text-gallery">
-            STUDENT ACCOUNT ACCESS
+            STUDENT ACCOUNT
           </h3>
         </div>
         <button type="button" data-action="close-auth" aria-label="Close Account Modal" class="w-9 h-9 rounded-xl bg-carbon hover:bg-gallery hover:text-obsidian text-gallery steel-border flex items-center justify-center font-mono font-bold text-xl cursor-pointer">
@@ -1361,7 +1220,7 @@
         </button>
       </div>
 
-      <!-- Auth Mode Switcher Tabs -->
+      <!-- Auth Tabs -->
       <div class="grid grid-cols-3 border-b border-white/10 bg-obsidian/60 font-mono text-[11px] uppercase">
         <button type="button" data-action="switch-auth-tab" data-tab="login" class="auth-tab-btn py-3 font-bold bg-gallery text-obsidian cursor-pointer">
           SIGN IN
@@ -1375,10 +1234,13 @@
       </div>
 
       <div class="p-6 space-y-4">
-        <!-- Global Auth Feedback Banner -->
-        <div id="authFeedbackBanner" class="hidden p-3 rounded-xl font-mono text-xs"></div>
+        <div id="authFeedbackBanner" class="hidden p-3 rounded-xl font-mono text-xs leading-relaxed"></div>
 
-        <!-- TAB 1: LOGIN FORM -->
+        <button type="button" id="resendVerificationBtn" data-action="resend-verification" class="hidden w-full py-2.5 px-4 rounded-xl bg-gold hover:bg-amber-400 text-obsidian font-mono font-bold text-xs uppercase tracking-wider cursor-pointer">
+          RESEND VERIFICATION EMAIL &rarr;
+        </button>
+
+        <!-- LOGIN FORM -->
         <form id="loginForm" class="space-y-3.5" novalidate>
           <div>
             <label for="loginEmail" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">Email Address *</label>
@@ -1386,14 +1248,14 @@
           </div>
           <div>
             <label for="loginPassword" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">Password *</label>
-            <input type="password" id="loginPassword" required autocomplete="current-password" placeholder="Min 10 characters" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
+            <input type="password" id="loginPassword" required autocomplete="current-password" placeholder="Your password" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
           </div>
-          <button type="submit" class="w-full py-3.5 rounded-xl bg-gallery hover:bg-white text-obsidian font-display font-extrabold text-sm uppercase tracking-wider transition-colors cursor-pointer">
-            SIGN IN SECURELY &rarr;
+          <button type="submit" id="loginSubmitBtn" class="w-full py-3.5 rounded-xl bg-gallery hover:bg-white text-obsidian font-display font-extrabold text-sm uppercase tracking-wider transition-colors cursor-pointer">
+            SIGN IN &rarr;
           </button>
         </form>
 
-        <!-- TAB 2: REGISTER FORM -->
+        <!-- REGISTER FORM -->
         <form id="registerForm" class="hidden space-y-3.5" novalidate>
           <div>
             <label for="regFullName" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">Full Name *</label>
@@ -1408,87 +1270,137 @@
             <input type="tel" id="regWhatsapp" required autocomplete="tel" placeholder="+27 72 456 7890" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
           </div>
           <div>
-            <label for="regPassword" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">Password (Min 10 Characters) *</label>
-            <input type="password" id="regPassword" required minlength="10" autocomplete="new-password" placeholder="Use letters, numbers & symbols" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
+            <label for="regPassword" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">Password (Min 8 Characters) *</label>
+            <input type="password" id="regPassword" required minlength="8" autocomplete="new-password" placeholder="Create a strong password" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
           </div>
-          <button type="submit" class="w-full py-3.5 rounded-xl bg-whatsapp hover:bg-whatsappHover text-obsidian font-display font-extrabold text-sm uppercase tracking-wider transition-colors cursor-pointer">
-            CREATE ENCRYPTED ACCOUNT &rarr;
+          <button type="submit" id="registerSubmitBtn" class="w-full py-3.5 rounded-xl bg-whatsapp hover:bg-whatsappHover text-obsidian font-display font-extrabold text-sm uppercase tracking-wider transition-colors cursor-pointer">
+            REGISTER &amp; SEND VERIFICATION EMAIL &rarr;
           </button>
         </form>
 
-        <!-- TAB 3: FORGOT / 15-MINUTE EXPIRING PASSWORD RESET -->
-        <div id="resetPanel" class="hidden space-y-4">
-          <form id="forgotPasswordForm" class="space-y-3" novalidate>
-            <p class="font-mono text-[11px] text-neutral-400">
-              Request a single-use reset token that automatically expires after <strong class="text-gold">15 minutes</strong>.
-            </p>
-            <div>
-              <label for="forgotEmail" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">Account Email *</label>
-              <input type="email" id="forgotEmail" required placeholder="student@campus.ac.za" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
-            </div>
-            <button type="submit" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-gallery hover:text-obsidian text-gallery font-mono font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer">
-              SEND 15-MIN RESET LINK
-            </button>
-          </form>
-
-          <form id="completeResetForm" class="pt-3 border-t border-white/10 space-y-3" novalidate>
-            <div>
-              <label for="resetTokenInput" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">64-Char Reset Token *</label>
-              <input type="text" id="resetTokenInput" required placeholder="Paste hex reset token from email" class="w-full px-3.5 py-2 rounded-xl bg-obsidian steel-border-strong text-gallery font-mono text-xs focus:outline-none focus:border-gallery" />
-            </div>
-            <div>
-              <label for="resetNewPassword" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">New Password (Min 10 Chars) *</label>
-              <input type="password" id="resetNewPassword" required minlength="10" placeholder="New strong password" class="w-full px-3.5 py-2 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
-            </div>
-            <button type="submit" class="w-full py-3 rounded-xl bg-gold hover:bg-amber-400 text-obsidian font-display font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer">
-              UPDATE PASSWORD &rarr;
-            </button>
-          </form>
-        </div>
-
+        <!-- PASSWORD RESET FORM -->
+        <form id="forgotPasswordForm" class="hidden space-y-3.5" novalidate>
+          <p class="font-mono text-[11px] text-neutral-400">
+            Enter your account email to receive an expiring password reset link from Firebase.
+          </p>
+          <div>
+            <label for="forgotEmail" class="block font-mono text-[11px] uppercase text-neutral-300 mb-1">Account Email *</label>
+            <input type="email" id="forgotEmail" required placeholder="student@campus.ac.za" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm focus:outline-none focus:border-gallery" />
+          </div>
+          <button type="submit" id="resetSubmitBtn" class="w-full py-3.5 rounded-xl bg-gold hover:bg-amber-400 text-obsidian font-display font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer">
+            SEND PASSWORD RESET LINK &rarr;
+          </button>
+        </form>
       </div>
     </div>
   </div>
 
-  <!-- ==================== INTERACTIVE SLIDE-OVER BOOKING DRAWER ==================== -->
-  <div id="bookingDrawer" class="drawer-backdrop fixed inset-0 z-50" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="drawerModalTitle">
-    <div data-action="close-booking" class="fixed inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"></div>
+  <!-- ==================== MY ORDERS & ADMIN DISPATCH SLIDE-OVER DRAWER ==================== -->
+  <div id="ordersDrawer" class="drawer-backdrop fixed inset-0 z-50" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="ordersDrawerTitle">
+    <div data-action="close-orders-drawer" class="fixed inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"></div>
 
-    <div id="bookingDrawerSheet" class="drawer-sheet fixed inset-y-0 right-0 z-10 w-full max-w-xl bg-carbon border-l border-white/15 flex flex-col shadow-2xl">
-
-      <!-- Drawer Header -->
+    <div class="drawer-sheet fixed inset-y-0 right-0 z-10 w-full max-w-2xl bg-carbon border-l border-white/15 flex flex-col shadow-2xl">
       <div class="px-6 py-4 bg-obsidian border-b border-white/10 flex items-center justify-between shrink-0">
         <div>
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-whatsapp block">SERVER-VERIFIED &amp; WHATSAPP DISPATCH</span>
-          <h3 id="drawerModalTitle" class="font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-gallery">
-            BOOK CAMPUS COLLECTION
+          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan block">FIRESTORE ISOLATED ORDER VAULT</span>
+          <h3 id="ordersDrawerTitle" class="font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-gallery">
+            MY ORDERS &amp; STATUS
           </h3>
         </div>
-        <button type="button" data-action="close-booking" aria-label="Close Booking Drawer" class="w-9 h-9 rounded-xl bg-carbon hover:bg-gallery hover:text-obsidian text-gallery steel-border flex items-center justify-center font-mono font-bold text-xl transition-colors cursor-pointer">
+        <button type="button" data-action="close-orders-drawer" aria-label="Close Orders Drawer" class="w-9 h-9 rounded-xl bg-carbon hover:bg-gallery hover:text-obsidian text-gallery steel-border flex items-center justify-center font-mono font-bold text-xl cursor-pointer">
           &times;
         </button>
       </div>
 
-      <!-- Booking Form -->
-      <form id="whatsappBookingForm" class="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1" novalidate>
-
-        <!-- Validation Error Alert -->
-        <div id="formValidationError" class="hidden p-3 rounded-xl bg-red-500/15 border border-red-500/50 text-red-200 font-mono text-xs">
-          Please complete all required fields marked with * before submitting.
+      <div class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-6">
+        <!-- Signed Out View -->
+        <div id="ordersDrawerSignedOut" class="rounded-2xl bg-obsidian steel-border p-6 text-center space-y-4">
+          <p class="font-mono text-xs text-neutral-300">
+            Sign in with your verified email account to view your private campus orders and live delivery status.
+          </p>
+          <div class="flex justify-center gap-3">
+            <button type="button" data-action="open-auth" data-auth-tab="login" class="px-5 py-2.5 rounded-xl bg-gallery text-obsidian font-display font-extrabold text-xs uppercase cursor-pointer">
+              SIGN IN &rarr;
+            </button>
+            <button type="button" data-action="open-auth" data-auth-tab="register" class="px-5 py-2.5 rounded-xl bg-carbon steel-border-strong text-gallery font-mono text-xs uppercase cursor-pointer">
+              REGISTER
+            </button>
+          </div>
         </div>
 
-        <!-- Server Persistence Notice -->
+        <!-- Signed In View -->
+        <div id="ordersDrawerSignedIn" class="hidden space-y-6">
+          <div class="rounded-2xl bg-obsidian steel-border p-4 flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
+            <div>
+              <span id="drawerUserEmail" class="text-gallery font-bold block">student@campus.ac.za</span>
+              <span id="drawerUserRole" class="text-cyan text-[10px] uppercase">VERIFIED CUSTOMER</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" data-action="refresh-orders" class="px-3 py-1.5 rounded-lg bg-carbon hover:bg-white/10 text-gallery steel-border uppercase cursor-pointer">
+                REFRESH &#8635;
+              </button>
+              <button type="button" data-action="logout-user" class="px-3 py-1.5 rounded-lg bg-red-500/15 text-red-300 border border-red-500/40 uppercase cursor-pointer">
+                SIGN OUT
+              </button>
+            </div>
+          </div>
+
+          <!-- Customer's Own Orders -->
+          <div class="space-y-3">
+            <h4 class="font-mono text-xs uppercase tracking-wider text-neutral-400">YOUR CAMPUS ORDERS</h4>
+            <div id="customerOrdersList" class="space-y-3"></div>
+          </div>
+
+          <!-- Admin Dispatch Console (Only visible when email === ADMIN_EMAIL) -->
+          <div id="adminConsolePanel" class="hidden pt-5 border-t border-gold/40 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold text-obsidian font-mono font-bold text-[10px] uppercase tracking-wider">
+                ADMIN DISPATCH CONSOLE
+              </span>
+              <button type="button" data-action="refresh-admin-orders" class="px-3 py-1 rounded-lg bg-obsidian text-gold border border-gold/40 font-mono text-[11px] uppercase cursor-pointer">
+                SYNC ALL &#8635;
+              </button>
+            </div>
+            <div id="adminOrdersList" class="space-y-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== INTERACTIVE SLIDE-OVER WHATSAPP BOOKING DRAWER ==================== -->
+  <div id="bookingDrawer" class="drawer-backdrop fixed inset-0 z-50" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="drawerModalTitle">
+    <div data-action="close-booking" class="fixed inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"></div>
+
+    <div class="drawer-sheet fixed inset-y-0 right-0 z-10 w-full max-w-xl bg-carbon border-l border-white/15 flex flex-col shadow-2xl">
+      <div class="px-6 py-4 bg-obsidian border-b border-white/10 flex items-center justify-between shrink-0">
+        <div>
+          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-whatsapp block">FIRESTORE + WHATSAPP DISPATCH</span>
+          <h3 id="drawerModalTitle" class="font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-gallery">
+            BOOK CAMPUS COLLECTION
+          </h3>
+        </div>
+        <button type="button" data-action="close-booking" aria-label="Close Booking Drawer" class="w-9 h-9 rounded-xl bg-carbon hover:bg-gallery hover:text-obsidian text-gallery steel-border flex items-center justify-center font-mono font-bold text-xl cursor-pointer">
+          &times;
+        </button>
+      </div>
+
+      <form id="whatsappBookingForm" class="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1" novalidate>
+        <div id="formValidationError" class="hidden p-3 rounded-xl bg-red-500/15 border border-red-500/50 text-red-200 font-mono text-xs">
+          Please complete all required fields marked with * before dispatching.
+        </div>
+
         <div id="bookingAuthStatusNote" class="p-3 rounded-xl bg-obsidian steel-border flex items-center justify-between gap-2 font-mono text-[11px]">
-          <span class="text-neutral-300">Sign in to save order to your private vault</span>
+          <span class="text-neutral-300">Sign in to save order to your account</span>
           <button type="button" data-action="open-auth" data-auth-tab="login" class="px-2.5 py-1 rounded bg-cyan text-obsidian font-bold uppercase cursor-pointer">
             SIGN IN
           </button>
         </div>
 
-        <!-- 01. Preferred Team Contact -->
+        <!-- Selected WhatsApp Contact -->
         <div>
           <label for="bookingContactSelect" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
-            01. Preferred Team Dispatcher *
+            01. Selected WhatsApp Contact *
           </label>
           <select id="bookingContactSelect" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm font-medium focus:outline-none focus:border-gallery">
             <option value="dokodela">Dokodela (+27 75 380 6251)</option>
@@ -1498,7 +1410,7 @@
           </select>
         </div>
 
-        <!-- 02 & 03. Full Name & Customer WhatsApp Number -->
+        <!-- Customer Full Name & WhatsApp Number -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
           <div>
             <label for="bookingNameInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
@@ -1508,72 +1420,68 @@
           </div>
           <div>
             <label for="bookingPhoneInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
-              03. Customer WhatsApp Number *
+              03. WhatsApp Number *
             </label>
             <input type="tel" id="bookingPhoneInput" required placeholder="e.g. +27 72 456 7890" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm placeholder:text-neutral-600 focus:outline-none focus:border-gallery" />
           </div>
         </div>
 
-        <!-- 04. Selected Service Option (Server Catalog Codes) -->
+        <!-- Selected Collection Option -->
         <div>
           <label for="bookingServiceSelect" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
-            04. Selected Service Option (Server-Verified Rate) *
+            04. Selected Collection Option *
           </label>
           <select id="bookingServiceSelect" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm font-medium focus:outline-none focus:border-gallery">
-            <optgroup label="SHOE WASHING (All Colours Welcome)">
-              <option value="SHOE_24H">Express Service — 24Hrs Collection (R40 / pair)</option>
-              <option value="SHOE_48H">Standard Service — 48Hrs Collection (R30 / pair)</option>
+            <optgroup label="SHOE WASHING (All colours welcome)">
+              <option value="SHOE_24H">Option 1: Express Service — 24Hrs Collection (R40 / pair)</option>
+              <option value="SHOE_48H">Option 2: Standard Service — 48Hrs Collection (R30 / pair)</option>
             </optgroup>
             <optgroup label="ONCAMPUS CLOTHES LAUNDRY">
-              <option value="SELF_WASH">Self-Service Wash (R25 / load)</option>
-              <option value="SELF_WASH_DRY">Self-Service Wash + Dry (R40 / load)</option>
-              <option value="CLOTHES_SAME_DAY">Drop-Off: Same Day Collection (R70 / load)</option>
-              <option value="CLOTHES_NEXT_DAY">Drop-Off: Next Day Collection (R50 / load)</option>
-              <option value="BLANKET_STD">Blankets — Standard Rate (R60)</option>
-              <option value="MATS_FLEECE">Mats, Fleece &amp; Comfort (R30)</option>
-              <option value="IRONING">Ironing (R30 / load)</option>
+              <option value="SELF_WASH">Self-Service Wash (R25 per load)</option>
+              <option value="SELF_WASH_DRY">Self-Service Wash + Dry (R40 per load)</option>
+              <option value="CLOTHES_SAME_DAY">Drop off: Same Day Collection (R70 Per Load)</option>
+              <option value="CLOTHES_NEXT_DAY">Drop off: Next Day Collection (R50 Per Load)</option>
+              <option value="BLANKET_STD">Blankets (R30 - R120)</option>
+              <option value="MATS_FLEECE">Mats, Fleece, &amp; Comfort (R30)</option>
+              <option value="IRONING">Ironing Per Load (R30)</option>
               <option value="DRY_CLEANING">Dry Cleaning (Custom Quote)</option>
             </optgroup>
-            <optgroup label="VIP MEMBERSHIP">
-              <option value="VIP_MEMBER">Become a Member — R200 pm (4 Pick up &amp; Drop a Month)</option>
+            <optgroup label="MEMBERSHIP">
+              <option value="VIP_MEMBER">Become a Member — R200 pm (4 Pick up and Drop a Month)</option>
             </optgroup>
           </select>
         </div>
 
-        <!-- 05 & 06. Live Quantity Stepper & Item / Shoe / Load Type -->
+        <!-- Quantity & Shoe/Item Type -->
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-3.5">
           <div class="sm:col-span-4">
             <label for="bookingQtyInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
               05. Quantity *
             </label>
             <div class="flex rounded-xl bg-obsidian steel-border-strong overflow-hidden">
-              <button type="button" data-action="adjust-qty" data-delta="-1" aria-label="Decrease Quantity" class="w-9 py-2.5 bg-white/5 hover:bg-white/15 font-mono font-bold text-sm text-gallery cursor-pointer">
-                -
-              </button>
+              <button type="button" data-action="adjust-qty" data-delta="-1" aria-label="Decrease Quantity" class="w-9 py-2.5 bg-white/5 hover:bg-white/15 font-mono font-bold text-sm text-gallery cursor-pointer">-</button>
               <input type="number" id="bookingQtyInput" min="1" max="50" value="1" required class="w-full text-center font-mono font-bold text-sm bg-transparent text-gallery focus:outline-none" />
-              <button type="button" data-action="adjust-qty" data-delta="1" aria-label="Increase Quantity" class="w-9 py-2.5 bg-white/5 hover:bg-white/15 font-mono font-bold text-sm text-gallery cursor-pointer">
-                +
-              </button>
+              <button type="button" data-action="adjust-qty" data-delta="1" aria-label="Increase Quantity" class="w-9 py-2.5 bg-white/5 hover:bg-white/15 font-mono font-bold text-sm text-gallery cursor-pointer">+</button>
             </div>
           </div>
 
           <div class="sm:col-span-8">
             <label for="bookingItemInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
-              06. Item / Shoe / Load Type *
+              06. Shoe / Item Type *
             </label>
-            <input type="text" id="bookingItemInput" required placeholder="e.g. White Air Force 1s / 2 laundry bags" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm placeholder:text-neutral-600 focus:outline-none focus:border-gallery" />
+            <input type="text" id="bookingItemInput" required placeholder="e.g. White Nike Air Force 1 / 2 loads laundry" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm placeholder:text-neutral-600 focus:outline-none focus:border-gallery" />
           </div>
         </div>
 
-        <!-- 07. Campus Collection Location -->
+        <!-- Collection Location on Campus -->
         <div>
           <label for="bookingLocationInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
-            07. Campus Collection Location *
+            07. Collection Location on Campus *
           </label>
-          <input type="text" id="bookingLocationInput" required placeholder="e.g. Campus Residence Block C Room 204 / Main Campus Gate" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm placeholder:text-neutral-600 focus:outline-none focus:border-gallery" />
+          <input type="text" id="bookingLocationInput" required placeholder="e.g. Campus Res Block B Room 104 / Main Campus Gate" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm placeholder:text-neutral-600 focus:outline-none focus:border-gallery" />
         </div>
 
-        <!-- 08 & 09. Preferred Date & Time -->
+        <!-- Preferred Collection Date & Time -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
           <div>
             <label for="bookingDateInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
@@ -1586,36 +1494,25 @@
               09. Preferred Time *
             </label>
             <select id="bookingTimeInput" class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm font-medium focus:outline-none focus:border-gallery">
-              <option value="08:00 AM">08:00 AM (Morning Slot)</option>
-              <option value="10:00 AM" selected>10:00 AM (Mid-Morning Slot)</option>
-              <option value="12:00 PM">12:00 PM (Midday Slot)</option>
-              <option value="02:00 PM">02:00 PM (Afternoon Slot)</option>
-              <option value="04:00 PM">04:00 PM (Late Afternoon Slot)</option>
-              <option value="06:00 PM">06:00 PM (Evening Res Slot)</option>
+              <option value="08:00 AM">08:00 AM</option>
+              <option value="10:00 AM" selected>10:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="02:00 PM">02:00 PM</option>
+              <option value="04:00 PM">04:00 PM</option>
+              <option value="06:00 PM">06:00 PM</option>
             </select>
           </div>
         </div>
 
-        <!-- 10. Restricted Photo Upload (JPG, PNG, WEBP only, max 3MB) -->
-        <div>
-          <label for="bookingPhotoInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
-            10. Optional Item Photo (JPG, PNG, WEBP &le; 3MB)
-          </label>
-          <input type="file" id="bookingPhotoInput" accept="image/jpeg,image/png,image/webp" class="w-full px-3 py-2 rounded-xl bg-obsidian steel-border-strong text-neutral-300 font-mono text-xs file:mr-3 file:py-1 file:px-3 file:rounded-lg file:border-0 file:bg-white/10 file:text-gallery file:font-bold" />
-          <p id="photoUploadError" class="hidden mt-1 font-mono text-[11px] text-red-400">
-            Invalid file. Only JPG, PNG, or WEBP images under 3MB are allowed.
-          </p>
-        </div>
-
-        <!-- 11. Additional Instructions -->
+        <!-- Additional Instructions -->
         <div>
           <label for="bookingNotesInput" class="block font-mono font-bold text-[11px] uppercase tracking-wider text-neutral-300 mb-1.5">
-            11. Additional Instructions (Optional)
+            10. Additional Instructions
           </label>
-          <textarea id="bookingNotesInput" rows="2" maxlength="500" placeholder="e.g. Suede toe-box care, separate white shirts, or call on arrival..." class="w-full px-3.5 py-2 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm placeholder:text-neutral-600 focus:outline-none focus:border-gallery resize-none"></textarea>
+          <textarea id="bookingNotesInput" rows="2" maxlength="500" placeholder="e.g. Delicate suede care, separate whites, call on arrival..." class="w-full px-3.5 py-2 rounded-xl bg-obsidian steel-border-strong text-gallery text-sm placeholder:text-neutral-600 focus:outline-none focus:border-gallery resize-none"></textarea>
         </div>
 
-        <!-- Live Subtotal + FREE (R0.00) Campus Delivery + Formatted Message Preview -->
+        <!-- Rate Summary & WhatsApp Message Preview -->
         <div class="rounded-2xl bg-obsidian steel-border p-4 space-y-2.5 font-mono text-xs">
           <div class="flex items-center justify-between border-b border-white/10 pb-2">
             <span class="text-neutral-400">SUBTOTAL:</span>
@@ -1626,20 +1523,20 @@
             <span class="font-bold text-cyan">FREE (R0.00)</span>
           </div>
           <div class="flex items-center justify-between">
-            <span class="font-bold text-gallery">SERVER-VERIFIED ESTIMATE:</span>
+            <span class="font-bold text-gallery">TOTAL ESTIMATE:</span>
             <span id="liveTotalDisplay" class="font-bold text-lg text-gold">R40.00</span>
           </div>
 
           <div class="pt-2 border-t border-white/10">
-            <span class="text-[10px] uppercase tracking-wider text-neutral-500 block mb-1.5">WHATSAPP DISPATCH MESSAGE PREVIEW:</span>
+            <span class="text-[10px] uppercase tracking-wider text-neutral-500 block mb-1.5">WHATSAPP BOOKING MESSAGE PREVIEW:</span>
             <pre id="whatsappMessagePreview" class="p-2.5 rounded-xl bg-carbon steel-border text-[11px] text-neutral-200 whitespace-pre-wrap break-words leading-snug"></pre>
           </div>
         </div>
 
-        <!-- Submit & One-Click Copy Controls -->
+        <!-- Submit & Copy Controls -->
         <div class="space-y-2 pt-1">
           <button type="submit" id="submitBookingBtn" class="w-full py-4 px-6 rounded-2xl bg-whatsapp hover:bg-whatsappHover text-obsidian font-display font-extrabold text-base uppercase tracking-wider shadow-[0_10px_30px_rgba(37,211,102,0.28)] transition-all flex items-center justify-center gap-2.5 cursor-pointer">
-            <span>SAVE ORDER &amp; SEND VIA WHATSAPP</span>
+            <span>CONFIRM &amp; OPEN WHATSAPP</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
@@ -1650,1111 +1547,1068 @@
           </button>
 
           <div id="copyFeedbackBanner" class="hidden p-2.5 rounded-xl bg-whatsapp/15 border border-whatsapp/40 text-whatsapp font-mono text-xs text-center">
-            Order logged &amp; booking message copied to clipboard!
+            Booking message copied to clipboard!
           </div>
         </div>
-
       </form>
     </div>
   </div>
 
-  <!-- ==================== 100% FUNCTIONAL APPLICATION, AUTH, RLS PORTAL & 3D ENGINE ==================== -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Dynamic Copyright Year
-      const yearEl = document.getElementById('currentYear');
-      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  <!-- ==================== FIREBASE SDK v10.14.1 & APPLICATION LOGIC ==================== -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signOut,
+      sendEmailVerification,
+      sendPasswordResetEmail,
+      updateProfile,
+      onAuthStateChanged
+    } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      getDocs,
+      updateDoc,
+      doc,
+      query,
+      where,
+      orderBy,
+      serverTimestamp
+    } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
 
-      // 2. 60fps HTML5 Canvas 3D Spatial Particle Wave Stage
-      const canvas = document.getElementById('hero3DCanvas');
-      if (canvas && canvas.getContext) {
-        const ctx = canvas.getContext('2d');
-        let width = 0;
-        let height = 0;
-        let pointerX = 0;
-        let pointerY = 0;
+    // =========================================================================
+    // ADMIN EMAIL CONFIGURATION (Update this to match your Firestore rules)
+    // =========================================================================
+    const ADMIN_EMAIL = "admin@freshkicksthreads.co.za";
 
-        function resizeCanvas() {
-          const rect = canvas.parentElement.getBoundingClientRect();
-          const dpr = Math.min(window.devicePixelRatio || 1, 2);
-          width = rect.width;
-          height = rect.height;
-          canvas.width = width * dpr;
-          canvas.height = height * dpr;
-          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        }
+    // Your Firebase Project Configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDvAUZ_clAChGKwY2_Ju7S90cTAhAbVl4U",
+      authDomain: "fresh-kicks-threads.firebaseapp.com",
+      projectId: "fresh-kicks-threads",
+      storageBucket: "fresh-kicks-threads.firebasestorage.app",
+      messagingSenderId: "594632604324",
+      appId: "1:594632604324:web:dcb1cb36a07ef1c7704431",
+      measurementId: "G-4B07VBT9ZV"
+    };
 
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
 
-        window.addEventListener('mousemove', (e) => {
-          pointerX = (e.clientX / Math.max(1, window.innerWidth) - 0.5) * 2;
-          pointerY = (e.clientY / Math.max(1, window.innerHeight) - 0.5) * 2;
-        });
+    // 4-Person WhatsApp Dispatch Directory
+    const TEAM_CONTACTS = {
+      dokodela: {
+        name: 'Dokodela',
+        phone: '+27 75 380 6251',
+        waDigits: '27753806251',
+        waUrl: 'https://wa.me/27753806251',
+        telUrl: 'tel:+27753806251'
+      },
+      ndzalama: {
+        name: 'Ndzalama',
+        phone: '+27 71 407 9195',
+        waDigits: '27714079195',
+        waUrl: 'https://wa.me/27714079195',
+        telUrl: 'tel:+27714079195'
+      },
+      taylor: {
+        name: 'Taylor',
+        phone: '+27 66 118 4876',
+        waDigits: '27661184876',
+        waUrl: 'https://wa.me/27661184876',
+        telUrl: 'tel:+27661184876'
+      },
+      mahlodi: {
+        name: 'Mahlodi',
+        phone: '+27 66 070 6867',
+        waDigits: '27660706867',
+        waUrl: 'https://wa.me/27660706867',
+        telUrl: 'tel:+27660706867'
+      }
+    };
 
-        let time = 0;
-        function render3DField() {
-          ctx.clearRect(0, 0, width, height);
-          time += 0.018;
+    // Authoritative Service & Pricing Catalog
+    const SERVICE_CATALOG = {
+      SHOE_24H: {
+        title: 'Option 1: Express Service — 24Hrs Collection (One pair, All colours welcome)',
+        price: 40,
+        unit: 'pair(s)',
+        priceFormatted: 'R40.00'
+      },
+      SHOE_48H: {
+        title: 'Option 2: Standard Service — 48Hrs Collection (One pair, All colours welcome)',
+        price: 30,
+        unit: 'pair(s)',
+        priceFormatted: 'R30.00'
+      },
+      SELF_WASH: {
+        title: 'Self-Service Wash (R25 per load)',
+        price: 25,
+        unit: 'load(s)',
+        priceFormatted: 'R25.00'
+      },
+      SELF_WASH_DRY: {
+        title: 'Self-Service Wash + Dry (R40 per load)',
+        price: 40,
+        unit: 'load(s)',
+        priceFormatted: 'R40.00'
+      },
+      CLOTHES_SAME_DAY: {
+        title: 'Drop off: Same Day Collection (R70 Per Load)',
+        price: 70,
+        unit: 'load(s)',
+        priceFormatted: 'R70.00'
+      },
+      CLOTHES_NEXT_DAY: {
+        title: 'Drop off: Next Day Collection (R50 Per Load)',
+        price: 50,
+        unit: 'load(s)',
+        priceFormatted: 'R50.00'
+      },
+      BLANKET_STD: {
+        title: 'Blankets (R30 - R120)',
+        price: 60,
+        unit: 'blanket(s)',
+        priceFormatted: 'R30 - R120'
+      },
+      MATS_FLEECE: {
+        title: 'Mats, Fleece, & Comfort (R30)',
+        price: 30,
+        unit: 'item(s)',
+        priceFormatted: 'R30.00'
+      },
+      IRONING: {
+        title: 'Ironing Per Load (R30)',
+        price: 30,
+        unit: 'load(s)',
+        priceFormatted: 'R30.00'
+      },
+      DRY_CLEANING: {
+        title: 'Dry Cleaning (Custom Quote)',
+        price: 0,
+        unit: 'item(s)',
+        priceFormatted: 'Custom Quote'
+      },
+      VIP_MEMBER: {
+        title: 'Become a Member — R200 pm (4 Pick up and Drop a Month inc. free delivery)',
+        price: 200,
+        unit: 'month(s)',
+        priceFormatted: 'R200.00'
+      }
+    };
 
-          const cols = 26;
-          const rows = 14;
-          const fov = 420;
+    let currentUser = null;
+    let pendingUnverifiedUser = null;
+    let selectedContactKey = 'dokodela';
 
-          for (let r = 0; r < rows; r++) {
-            for (let c = 0; c < cols; c++) {
-              const normX = (c / (cols - 1) - 0.5) * 2;
-              const normZ = r / (rows - 1);
+    // DOM References
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-              const worldX = normX * 680 + pointerX * 55 * (1 - normZ);
-              const worldZ = 180 + normZ * 680;
-              const waveY =
-                Math.sin(c * 0.35 + time) * 22 +
-                Math.cos(r * 0.45 + time * 0.8) * 18;
-              const worldY = 135 + waveY + pointerY * 25;
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNavMenu = document.getElementById('mobileNavMenu');
+    const iconMenuOpen = document.getElementById('iconMenuOpen');
+    const iconMenuClose = document.getElementById('iconMenuClose');
 
-              const scale = fov / (fov + worldZ);
-              const screenX = width * 0.5 + worldX * scale;
-              const screenY = height * 0.52 + worldY * scale;
-              const radius = Math.max(0.8, 2.4 * scale);
+    const authModal = document.getElementById('authModal');
+    const authFeedbackBanner = document.getElementById('authFeedbackBanner');
+    const resendVerificationBtn = document.getElementById('resendVerificationBtn');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const forgotPasswordForm = document.getElementById('forgotPasswordForm');
 
-              const alpha = (1 - normZ) * 0.36;
-              ctx.beginPath();
-              ctx.arc(screenX, screenY, radius, 0, Math.PI * 2);
-              ctx.fillStyle =
-                (c + r) % 7 === 0
-                  ? `rgba(56, 189, 248, ${alpha * 1.4})`
-                  : `rgba(250, 250, 250, ${alpha})`;
-              ctx.fill();
-            }
+    const ordersDrawer = document.getElementById('ordersDrawer');
+    const bookingDrawer = document.getElementById('bookingDrawer');
+    const whatsappBookingForm = document.getElementById('whatsappBookingForm');
+    const formValidationError = document.getElementById('formValidationError');
+    const copyFeedbackBanner = document.getElementById('copyFeedbackBanner');
+
+    const bookingContactSelect = document.getElementById('bookingContactSelect');
+    const footerTeamSwitcher = document.getElementById('footerTeamSwitcher');
+    const bookingServiceSelect = document.getElementById('bookingServiceSelect');
+    const bookingQtyInput = document.getElementById('bookingQtyInput');
+    const bookingNameInput = document.getElementById('bookingNameInput');
+    const bookingPhoneInput = document.getElementById('bookingPhoneInput');
+    const bookingItemInput = document.getElementById('bookingItemInput');
+    const bookingLocationInput = document.getElementById('bookingLocationInput');
+    const bookingDateInput = document.getElementById('bookingDateInput');
+    const bookingTimeInput = document.getElementById('bookingTimeInput');
+    const bookingNotesInput = document.getElementById('bookingNotesInput');
+
+    // XSS Sanitization Helper
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function setDefaultPickupDate() {
+      if (!bookingDateInput.value) {
+        const d = new Date();
+        const yyyy = d.getFullYear();
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        bookingDateInput.value = `${yyyy}-${mm}-${dd}`;
+      }
+    }
+    setDefaultPickupDate();
+
+    // 1. 60fps 3D Perspective Wave Canvas
+    const canvas = document.getElementById('hero3DCanvas');
+    if (canvas && canvas.getContext) {
+      const ctx = canvas.getContext('2d');
+      let width = 0;
+      let height = 0;
+      let pointerX = 0;
+      let pointerY = 0;
+
+      function resizeCanvas() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = rect.width;
+        height = rect.height;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      window.addEventListener('mousemove', (e) => {
+        pointerX = (e.clientX / Math.max(1, window.innerWidth) - 0.5) * 2;
+        pointerY = (e.clientY / Math.max(1, window.innerHeight) - 0.5) * 2;
+      });
+
+      let time = 0;
+      function render3DField() {
+        ctx.clearRect(0, 0, width, height);
+        time += 0.018;
+
+        const cols = 26;
+        const rows = 14;
+        const fov = 420;
+
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            const normX = (c / (cols - 1) - 0.5) * 2;
+            const normZ = r / (rows - 1);
+
+            const worldX = normX * 680 + pointerX * 55 * (1 - normZ);
+            const worldZ = 180 + normZ * 680;
+            const waveY =
+              Math.sin(c * 0.35 + time) * 22 +
+              Math.cos(r * 0.45 + time * 0.8) * 18;
+            const worldY = 135 + waveY + pointerY * 25;
+
+            const scale = fov / (fov + worldZ);
+            const screenX = width * 0.5 + worldX * scale;
+            const screenY = height * 0.52 + worldY * scale;
+            const radius = Math.max(0.8, 2.4 * scale);
+
+            const alpha = (1 - normZ) * 0.36;
+            ctx.beginPath();
+            ctx.arc(screenX, screenY, radius, 0, Math.PI * 2);
+            ctx.fillStyle =
+              (c + r) % 7 === 0
+                ? `rgba(56, 189, 248, ${alpha * 1.4})`
+                : `rgba(250, 250, 250, ${alpha})`;
+            ctx.fill();
           }
-
-          requestAnimationFrame(render3DField);
         }
 
-        render3DField();
+        requestAnimationFrame(render3DField);
       }
 
-      // 3. 4-Person WhatsApp Dispatch Directory
-      const TEAM_CONTACTS = {
-        dokodela: {
-          name: 'Dokodela',
-          phone: '+27 75 380 6251',
-          waDigits: '27753806251',
-          waUrl: 'https://wa.me/27753806251',
-          telUrl: 'tel:+27753806251'
-        },
-        ndzalama: {
-          name: 'Ndzalama',
-          phone: '+27 71 407 9195',
-          waDigits: '27714079195',
-          waUrl: 'https://wa.me/27714079195',
-          telUrl: 'tel:+27714079195'
-        },
-        taylor: {
-          name: 'Taylor',
-          phone: '+27 66 118 4876',
-          waDigits: '27661184876',
-          waUrl: 'https://wa.me/27661184876',
-          telUrl: 'tel:+27661184876'
-        },
-        mahlodi: {
-          name: 'Mahlodi',
-          phone: '+27 66 070 6867',
-          waDigits: '27660706867',
-          waUrl: 'https://wa.me/27660706867',
-          telUrl: 'tel:+27660706867'
-        }
-      };
+      render3DField();
+    }
 
-      // 4. Authoritative Service Catalog (Mirrors server.js SERVICE_CATALOG)
-      const SERVICE_CATALOG = {
-        SHOE_24H: {
-          title: 'Shoe Washing — Express 24Hrs (One pair, All colours welcome)',
-          price: 40,
-          unit: 'pair(s)',
-          priceFormatted: 'R40.00'
-        },
-        SHOE_48H: {
-          title: 'Shoe Washing — Standard 48Hrs (One pair, All colours welcome)',
-          price: 30,
-          unit: 'pair(s)',
-          priceFormatted: 'R30.00'
-        },
-        SELF_WASH: {
-          title: 'Self-Service Wash',
-          price: 25,
-          unit: 'load(s)',
-          priceFormatted: 'R25.00'
-        },
-        SELF_WASH_DRY: {
-          title: 'Self-Service Wash + Dry',
-          price: 40,
-          unit: 'load(s)',
-          priceFormatted: 'R40.00'
-        },
-        CLOTHES_SAME_DAY: {
-          title: 'Drop-Off: Same Day Collection',
-          price: 70,
-          unit: 'load(s)',
-          priceFormatted: 'R70.00'
-        },
-        CLOTHES_NEXT_DAY: {
-          title: 'Drop-Off: Next Day Collection',
-          price: 50,
-          unit: 'load(s)',
-          priceFormatted: 'R50.00'
-        },
-        BLANKET_STD: {
-          title: 'Blanket Cleaning (Standard Rate)',
-          price: 60,
-          unit: 'blanket(s)',
-          priceFormatted: 'R60.00'
-        },
-        MATS_FLEECE: {
-          title: 'Mats, Fleece & Comfort',
-          price: 30,
-          unit: 'item(s)',
-          priceFormatted: 'R30.00'
-        },
-        IRONING: {
-          title: 'Ironing Service',
-          price: 30,
-          unit: 'load(s)',
-          priceFormatted: 'R30.00'
-        },
-        DRY_CLEANING: {
-          title: 'Dry Cleaning (Custom Quote)',
-          price: null,
-          unit: 'item(s)',
-          priceFormatted: 'Custom Quote'
-        },
-        VIP_MEMBER: {
-          title: 'Become a Member — R200 pm (4 Pick up & Drop a Month inc. free delivery)',
-          price: 200,
-          unit: 'month(s)',
-          priceFormatted: 'R200.00'
-        }
-      };
+    // 2. Firebase Auth State Listener (Enforces Email Verification)
+    onAuthStateChanged(auth, async (user) => {
+      const navGuestBtn = document.getElementById('navGuestAuthBtn');
+      const navUserCluster = document.getElementById('navUserCluster');
+      const navUserNameLabel = document.getElementById('navUserNameLabel');
+      const ordersSignedOut = document.getElementById('ordersDrawerSignedOut');
+      const ordersSignedIn = document.getElementById('ordersDrawerSignedIn');
+      const bookingAuthNote = document.getElementById('bookingAuthStatusNote');
+      const adminConsolePanel = document.getElementById('adminConsolePanel');
 
-      // Application Security & Session State
-      let csrfToken = '';
-      let currentUser = null;
-      let serverAvailable = false;
-      let selectedContactKey = 'dokodela';
-
-      // Cached DOM Elements
-      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-      const mobileNavMenu = document.getElementById('mobileNavMenu');
-      const iconMenuOpen = document.getElementById('iconMenuOpen');
-      const iconMenuClose = document.getElementById('iconMenuClose');
-
-      const authModal = document.getElementById('authModal');
-      const authFeedbackBanner = document.getElementById('authFeedbackBanner');
-      const loginForm = document.getElementById('loginForm');
-      const registerForm = document.getElementById('registerForm');
-      const resetPanel = document.getElementById('resetPanel');
-      const forgotPasswordForm = document.getElementById('forgotPasswordForm');
-      const completeResetForm = document.getElementById('completeResetForm');
-
-      const bookingDrawer = document.getElementById('bookingDrawer');
-      const whatsappBookingForm = document.getElementById('whatsappBookingForm');
-      const formValidationError = document.getElementById('formValidationError');
-      const copyFeedbackBanner = document.getElementById('copyFeedbackBanner');
-
-      const bookingContactSelect = document.getElementById('bookingContactSelect');
-      const footerTeamSwitcher = document.getElementById('footerTeamSwitcher');
-      const bookingServiceSelect = document.getElementById('bookingServiceSelect');
-      const bookingQtyInput = document.getElementById('bookingQtyInput');
-      const bookingNameInput = document.getElementById('bookingNameInput');
-      const bookingPhoneInput = document.getElementById('bookingPhoneInput');
-      const bookingItemInput = document.getElementById('bookingItemInput');
-      const bookingLocationInput = document.getElementById('bookingLocationInput');
-      const bookingDateInput = document.getElementById('bookingDateInput');
-      const bookingTimeInput = document.getElementById('bookingTimeInput');
-      const bookingPhotoInput = document.getElementById('bookingPhotoInput');
-      const photoUploadError = document.getElementById('photoUploadError');
-      const bookingNotesInput = document.getElementById('bookingNotesInput');
-
-      function setDefaultPickupDate() {
-        if (!bookingDateInput.value) {
-          const d = new Date();
-          const yyyy = d.getFullYear();
-          const mm = String(d.getMonth() + 1).padStart(2, '0');
-          const dd = String(d.getDate()).padStart(2, '0');
-          bookingDateInput.value = `${yyyy}-${mm}-${dd}`;
-        }
-      }
-      setDefaultPickupDate();
-
-      // XSS-Safe Text Escape Helper
-      function escapeHtml(str) {
-        return String(str ?? '')
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;');
-      }
-
-      // 5. Bootstrap Server Session & CSRF Token
-      async function initSession() {
-        try {
-          const res = await fetch('/api/session', { credentials: 'same-origin' });
-          if (res.ok) {
-            const data = await res.json();
-            serverAvailable = true;
-            csrfToken = data.csrfToken || '';
-            setAuthenticatedUser(data.user || null);
-            return;
-          }
-        } catch (_err) {
-          serverAvailable = false;
-        }
-        // Fallback when opened standalone without Express server
-        const savedLocal = sessionStorage.getItem('fkt_demo_user');
-        if (savedLocal) {
-          try {
-            setAuthenticatedUser(JSON.parse(savedLocal));
-          } catch (_e) {
-            setAuthenticatedUser(null);
-          }
-        } else {
-          setAuthenticatedUser(null);
-        }
-      }
-
-      function setAuthenticatedUser(user) {
+      if (user && user.emailVerified) {
         currentUser = user;
+        pendingUnverifiedUser = null;
 
-        const navGuestBtn = document.getElementById('navGuestAuthBtn');
-        const navUserCluster = document.getElementById('navUserCluster');
-        const navUserNameLabel = document.getElementById('navUserNameLabel');
+        const isAdmin = user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+        const displayName = user.displayName || user.email.split('@')[0];
 
-        const signedOutState = document.getElementById('portalSignedOutState');
-        const signedInState = document.getElementById('portalSignedInState');
-        const refreshOrdersBtn = document.getElementById('refreshOrdersBtn');
-        const bookingAuthNote = document.getElementById('bookingAuthStatusNote');
-        const adminSection = document.getElementById('adminConsoleSection');
+        navGuestBtn.classList.add('hidden');
+        navUserCluster.classList.remove('hidden');
+        navUserCluster.classList.add('flex');
+        navUserNameLabel.textContent = displayName.split(' ')[0].toUpperCase();
 
-        if (user) {
-          navGuestBtn.classList.add('hidden');
-          navUserCluster.classList.remove('hidden');
-          navUserCluster.classList.add('flex');
-          navUserNameLabel.textContent = (user.full_name || 'STUDENT').split(' ')[0].toUpperCase();
+        ordersSignedOut.classList.add('hidden');
+        ordersSignedIn.classList.remove('hidden');
+        document.getElementById('drawerUserEmail').textContent = `${displayName} (${user.email})`;
+        document.getElementById('drawerUserRole').textContent = isAdmin
+          ? 'ADMINISTRATOR • FULL DISPATCH ACCESS'
+          : 'VERIFIED CUSTOMER • PRIVATE ORDER VAULT';
 
-          signedOutState.classList.add('hidden');
-          signedInState.classList.remove('hidden');
-          refreshOrdersBtn.classList.remove('hidden');
+        if (!bookingNameInput.value) bookingNameInput.value = displayName;
+        bookingAuthNote.innerHTML = `<span class="text-whatsapp font-bold">&#10003; SIGNED IN AS ${escapeHtml(displayName)}</span>`;
 
-          const initials = (user.full_name || 'ST')
-            .split(' ')
-            .map((p) => p[0])
-            .join('')
-            .slice(0, 2)
-            .toUpperCase();
-          document.getElementById('portalUserAvatar').textContent = initials;
-          document.getElementById('portalUserFullName').textContent = user.full_name;
-          document.getElementById('portalUserRoleBadge').textContent = (user.role || 'customer').toUpperCase();
-          document.getElementById('portalUserMeta').textContent = `${user.email} • ${user.whatsapp || ''}`;
+        await loadCustomerOrders();
 
-          // Auto-fill booking form fields
-          if (!bookingNameInput.value) bookingNameInput.value = user.full_name || '';
-          if (!bookingPhoneInput.value) bookingPhoneInput.value = user.whatsapp || '';
-
-          bookingAuthNote.innerHTML = `<span class="text-whatsapp font-bold">&#10003; SIGNED IN AS ${escapeHtml(user.full_name)} (RLS ISOLATED)</span>`;
-
-          loadCustomerOrders();
-
-          if (user.role === 'admin') {
-            adminSection.classList.remove('hidden');
-            loadAdminOrders();
-          } else {
-            adminSection.classList.add('hidden');
-          }
+        if (isAdmin) {
+          adminConsolePanel.classList.remove('hidden');
+          await loadAdminOrders();
         } else {
-          navGuestBtn.classList.remove('hidden');
-          navUserCluster.classList.add('hidden');
-          navUserCluster.classList.remove('flex');
-
-          signedOutState.classList.remove('hidden');
-          signedInState.classList.add('hidden');
-          refreshOrdersBtn.classList.add('hidden');
-          adminSection.classList.add('hidden');
-
-          bookingAuthNote.innerHTML = `
-            <span class="text-neutral-300">Sign in to save order to your private vault</span>
-            <button type="button" data-action="open-auth" data-auth-tab="login" class="px-2.5 py-1 rounded bg-cyan text-obsidian font-bold uppercase cursor-pointer">SIGN IN</button>
-          `;
+          adminConsolePanel.classList.add('hidden');
         }
+      } else {
+        currentUser = null;
+        navGuestBtn.classList.remove('hidden');
+        navUserCluster.classList.add('hidden');
+        navUserCluster.classList.remove('flex');
+
+        ordersSignedOut.classList.remove('hidden');
+        ordersSignedIn.classList.add('hidden');
+        adminConsolePanel.classList.add('hidden');
+
+        bookingAuthNote.innerHTML = `
+          <span class="text-neutral-300">Sign in to save order to your account</span>
+          <button type="button" data-action="open-auth" data-auth-tab="login" class="px-2.5 py-1 rounded bg-cyan text-obsidian font-bold uppercase cursor-pointer">SIGN IN</button>
+        `;
+      }
+    });
+
+    // 3. Auth Modal Helpers & Handlers
+    function showAuthFeedback(message, isError) {
+      authFeedbackBanner.textContent = message;
+      authFeedbackBanner.classList.remove(
+        'hidden',
+        'bg-red-500/15',
+        'border',
+        'border-red-500/50',
+        'text-red-200',
+        'bg-whatsapp/15',
+        'border-whatsapp/40',
+        'text-whatsapp'
+      );
+      if (isError) {
+        authFeedbackBanner.classList.add('bg-red-500/15', 'border', 'border-red-500/50', 'text-red-200');
+      } else {
+        authFeedbackBanner.classList.add('bg-whatsapp/15', 'border', 'border-whatsapp/40', 'text-whatsapp');
+      }
+    }
+
+    function switchAuthTab(tabName) {
+      authFeedbackBanner.classList.add('hidden');
+      resendVerificationBtn.classList.add('hidden');
+
+      document.querySelectorAll('.auth-tab-btn').forEach((btn) => {
+        const active = btn.getAttribute('data-tab') === tabName;
+        btn.classList.toggle('bg-gallery', active);
+        btn.classList.toggle('text-obsidian', active);
+        btn.classList.toggle('text-neutral-400', !active);
+      });
+
+      loginForm.classList.toggle('hidden', tabName !== 'login');
+      registerForm.classList.toggle('hidden', tabName !== 'register');
+      forgotPasswordForm.classList.toggle('hidden', tabName !== 'reset');
+    }
+
+    function openAuthModal(tabName = 'login') {
+      switchAuthTab(tabName);
+      authModal.classList.add('is-open');
+      authModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeAuthModal() {
+      authModal.classList.remove('is-open');
+      authModal.setAttribute('aria-hidden', 'true');
+    }
+
+    // Registration: Create User -> Save Profile -> Send Verification Email -> Sign Out until Verified
+    registerForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      resendVerificationBtn.classList.add('hidden');
+
+      const fullName = document.getElementById('regFullName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const whatsapp = document.getElementById('regWhatsapp').value.trim();
+      const password = document.getElementById('regPassword').value;
+
+      if (fullName.length < 2 || !email || !whatsapp || password.length < 8) {
+        return showAuthFeedback('Please fill in your full name, email, WhatsApp number, and an 8+ character password.', true);
       }
 
-      async function loadCustomerOrders() {
-        const container = document.getElementById('customerOrdersContainer');
-        if (!container || !currentUser) return;
+      const btn = document.getElementById('registerSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'CREATING ACCOUNT...';
 
-        let orders = [];
-        if (serverAvailable) {
-          try {
-            const res = await fetch('/api/orders/mine', { credentials: 'same-origin' });
-            if (res.ok) {
-              const data = await res.json();
-              orders = data.orders || [];
-            }
-          } catch (_err) {
-            orders = [];
-          }
+      try {
+        const cred = await createUserWithEmailAndPassword(auth, email, password);
+        await updateProfile(cred.user, { displayName: fullName });
+        await sendEmailVerification(cred.user);
+        pendingUnverifiedUser = cred.user;
+        await signOut(auth);
+
+        registerForm.reset();
+        switchAuthTab('login');
+        document.getElementById('loginEmail').value = email;
+        showAuthFeedback(
+          `Verification link sent to ${email}. Click the link in your inbox (or spam folder) before signing in.`,
+          false
+        );
+      } catch (err) {
+        const code = err?.code || '';
+        if (code === 'auth/email-already-in-use') {
+          showAuthFeedback('An account with this email already exists. Please sign in.', true);
+        } else if (code === 'auth/weak-password') {
+          showAuthFeedback('Password is too weak. Use at least 8 characters with letters and numbers.', true);
         } else {
-          const raw = JSON.parse(localStorage.getItem('fkt_demo_orders') || '[]');
-          orders = raw.filter((o) => o.user_email === currentUser.email);
+          showAuthFeedback(err?.message || 'Registration failed. Please check your details.', true);
+        }
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'REGISTER & SEND VERIFICATION EMAIL →';
+      }
+    });
+
+    // Login: Rejects wrong passwords AND unverified emails
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      resendVerificationBtn.classList.add('hidden');
+
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      if (!email || !password) {
+        return showAuthFeedback('Please enter both your email address and password.', true);
+      }
+
+      const btn = document.getElementById('loginSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'VERIFYING...';
+
+      try {
+        const cred = await signInWithEmailAndPassword(auth, email, password);
+        await cred.user.reload();
+
+        if (!cred.user.emailVerified) {
+          pendingUnverifiedUser = cred.user;
+          await signOut(auth);
+          showAuthFeedback(
+            'Your email address is not verified yet. Please click the confirmation link sent to your email before logging in.',
+            true
+          );
+          resendVerificationBtn.classList.remove('hidden');
+          return;
         }
 
-        if (orders.length === 0) {
-          container.innerHTML = `
-            <div class="col-span-full rounded-2xl bg-carbon steel-border p-6 text-center font-mono text-xs text-neutral-400">
-              No campus orders recorded under your account yet. Click <strong class="text-gallery">+ NEW CAMPUS BOOKING</strong> to schedule your first free pickup.
+        loginForm.reset();
+        closeAuthModal();
+      } catch (err) {
+        const code = err?.code || '';
+        if (
+          code === 'auth/invalid-credential' ||
+          code === 'auth/wrong-password' ||
+          code === 'auth/user-not-found'
+        ) {
+          showAuthFeedback('Incorrect email or password. Please try again.', true);
+        } else if (code === 'auth/too-many-requests') {
+          showAuthFeedback('Too many failed attempts. Please wait a few minutes and try again.', true);
+        } else {
+          showAuthFeedback(err?.message || 'Unable to sign in.', true);
+        }
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'SIGN IN →';
+      }
+    });
+
+    // Resend Verification Email
+    async function handleResendVerification() {
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      if (!email || !password) {
+        return showAuthFeedback('Enter your email and password above, then click Resend Verification Email.', true);
+      }
+
+      try {
+        const cred = await signInWithEmailAndPassword(auth, email, password);
+        if (!cred.user.emailVerified) {
+          await sendEmailVerification(cred.user);
+        }
+        await signOut(auth);
+        resendVerificationBtn.classList.add('hidden');
+        showAuthFeedback(`A new verification email has been sent to ${email}.`, false);
+      } catch (_err) {
+        showAuthFeedback('Could not resend verification email. Verify your password and try again.', true);
+      }
+    }
+
+    // Password Reset Email
+    forgotPasswordForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('forgotEmail').value.trim();
+      if (!email) {
+        return showAuthFeedback('Please enter your account email address.', true);
+      }
+
+      const btn = document.getElementById('resetSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'SENDING LINK...';
+
+      try {
+        await sendPasswordResetEmail(auth, email);
+        forgotPasswordForm.reset();
+        showAuthFeedback(`Password reset link sent to ${email}. Check your inbox.`, false);
+      } catch (err) {
+        showAuthFeedback(err?.message || 'Unable to send password reset email.', true);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'SEND PASSWORD RESET LINK →';
+      }
+    });
+
+    // 4. Firestore Orders Queries (Customer Isolated + Admin Console)
+    async function loadCustomerOrders() {
+      const listEl = document.getElementById('customerOrdersList');
+      if (!listEl || !currentUser) return;
+
+      listEl.innerHTML = `<div class="p-4 rounded-xl bg-obsidian steel-border font-mono text-xs text-neutral-400">Loading your campus orders...</div>`;
+
+      try {
+        const q = query(
+          collection(db, 'orders'),
+          where('userId', '==', currentUser.uid),
+          orderBy('createdAt', 'desc')
+        );
+        const snap = await getDocs(q);
+
+        if (snap.empty) {
+          listEl.innerHTML = `
+            <div class="p-5 rounded-2xl bg-obsidian steel-border font-mono text-xs text-neutral-400">
+              No orders found under your account yet. Click <strong class="text-gallery">BOOK NOW</strong> to place your first pickup with Free Campus Delivery.
             </div>
           `;
           return;
         }
 
-        container.innerHTML = orders
-          .map((ord) => {
-            const statusColor =
+        listEl.innerHTML = snap.docs
+          .map((docSnap) => {
+            const ord = docSnap.data();
+            const badgeStyle =
               ord.status === 'delivered'
                 ? 'bg-whatsapp/20 text-whatsapp'
                 : ord.status === 'cleaning'
                 ? 'bg-cyan/20 text-cyan'
                 : 'bg-gold/20 text-gold';
+
             return `
-              <div class="rounded-2xl bg-carbon steel-border-strong p-5 flex flex-col justify-between space-y-3">
-                <div>
-                  <div class="flex items-center justify-between gap-2 font-mono text-[10px]">
-                    <span class="text-neutral-400">#${escapeHtml(String(ord.id).slice(0, 8).toUpperCase())}</span>
-                    <span class="px-2.5 py-0.5 rounded-full font-bold uppercase ${statusColor}">${escapeHtml(ord.status)}</span>
-                  </div>
-                  <h4 class="font-display font-bold text-lg text-gallery mt-2">${escapeHtml(ord.service_name)}</h4>
-                  <p class="font-mono text-xs text-neutral-400 mt-1">Qty: ${escapeHtml(ord.quantity)} &bull; Dispatcher: ${escapeHtml(ord.assigned_agent)}</p>
-                  <p class="font-mono text-xs text-neutral-300 mt-1">Location: ${escapeHtml(ord.campus_location)}</p>
-                  <p class="font-mono text-[11px] text-neutral-400 mt-0.5">Pickup: ${escapeHtml(ord.pickup_datetime)}</p>
+              <div class="rounded-2xl bg-obsidian steel-border-strong p-4 space-y-2 font-mono text-xs">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="text-neutral-500">#${escapeHtml(docSnap.id.slice(0, 8).toUpperCase())}</span>
+                  <span class="px-2.5 py-0.5 rounded-full font-bold uppercase text-[10px] ${badgeStyle}">${escapeHtml(ord.status || 'pending')}</span>
                 </div>
-                <div class="pt-3 border-t border-white/10 flex items-center justify-between font-mono text-xs">
+                <div class="font-display font-bold text-base text-gallery">${escapeHtml(ord.serviceName)}</div>
+                <div class="text-neutral-300">Item: ${escapeHtml(ord.itemType || '')} (Qty: ${escapeHtml(ord.quantity)})</div>
+                <div class="text-neutral-400">Location: ${escapeHtml(ord.campusLocation)}</div>
+                <div class="text-neutral-400">Pickup: ${escapeHtml(ord.pickupDateTime)} &bull; Agent: ${escapeHtml(ord.assignedAgent)}</div>
+                <div class="pt-2 border-t border-white/10 flex items-center justify-between">
                   <span class="text-cyan">FREE CAMPUS DELIVERY</span>
-                  <span class="font-bold text-base text-gold">R${Number(ord.total_price_zar).toFixed(2)}</span>
+                  <span class="font-bold text-sm text-gold">R${Number(ord.totalPriceZar || 0).toFixed(2)}</span>
                 </div>
               </div>
             `;
           })
           .join('');
+      } catch (err) {
+        listEl.innerHTML = `
+          <div class="p-4 rounded-xl bg-red-500/15 border border-red-500/40 font-mono text-xs text-red-200">
+            Unable to load orders: ${escapeHtml(err?.message || 'Check Firestore rules & index')}
+          </div>
+        `;
       }
+    }
 
-      async function loadAdminOrders() {
-        const tbody = document.getElementById('adminOrdersTableBody');
-        if (!tbody || !currentUser || currentUser.role !== 'admin') return;
+    async function loadAdminOrders() {
+      const adminListEl = document.getElementById('adminOrdersList');
+      if (!adminListEl || !currentUser || currentUser.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) return;
 
-        let orders = [];
-        if (serverAvailable) {
-          try {
-            const res = await fetch('/api/admin/orders', { credentials: 'same-origin' });
-            if (res.ok) {
-              const data = await res.json();
-              orders = data.orders || [];
-            }
-          } catch (_err) {
-            orders = [];
-          }
-        } else {
-          orders = JSON.parse(localStorage.getItem('fkt_demo_orders') || '[]');
-        }
+      adminListEl.innerHTML = `<div class="p-4 rounded-xl bg-obsidian steel-border font-mono text-xs text-neutral-400">Loading all campus orders...</div>`;
 
-        if (orders.length === 0) {
-          tbody.innerHTML = `<tr><td colspan="6" class="py-5 px-4 text-center text-neutral-400">No campus dispatch orders found.</td></tr>`;
+      try {
+        const q = query(collection(db, 'orders'), orderBy('createdAt', 'desc'));
+        const snap = await getDocs(q);
+
+        if (snap.empty) {
+          adminListEl.innerHTML = `<div class="p-4 rounded-xl bg-obsidian steel-border font-mono text-xs text-neutral-400">No campus orders yet.</div>`;
           return;
         }
 
-        tbody.innerHTML = orders
-          .map(
-            (ord) => `
-            <tr>
-              <td class="py-3 px-4">
-                <div class="font-bold text-gallery">${escapeHtml(ord.full_name || 'Student')}</div>
-                <div class="text-[11px] text-whatsapp">${escapeHtml(ord.whatsapp || '')}</div>
-              </td>
-              <td class="py-3 px-4">
-                <div>${escapeHtml(ord.service_name)}</div>
-                <div class="text-[11px] text-neutral-400">Qty: ${escapeHtml(ord.quantity)}</div>
-              </td>
-              <td class="py-3 px-4 font-bold text-gold">R${Number(ord.total_price_zar).toFixed(2)}</td>
-              <td class="py-3 px-4">${escapeHtml(ord.campus_location)}</td>
-              <td class="py-3 px-4">${escapeHtml(ord.assigned_agent)}</td>
-              <td class="py-3 px-4">
-                <select data-admin-status-id="${escapeHtml(ord.id)}" class="px-2.5 py-1.5 rounded-lg bg-obsidian steel-border text-gallery text-xs">
-                  ${['pending', 'collected', 'cleaning', 'delivered', 'cancelled']
-                    .map(
-                      (st) =>
-                        `<option value="${st}" ${ord.status === st ? 'selected' : ''}>${st.toUpperCase()}</option>`
-                    )
-                    .join('')}
-                </select>
-              </td>
-            </tr>
-          `
-          )
+        adminListEl.innerHTML = snap.docs
+          .map((docSnap) => {
+            const ord = docSnap.data();
+            return `
+              <div class="rounded-2xl bg-obsidian steel-border p-4 space-y-2 font-mono text-xs">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <div>
+                    <strong class="text-gallery">${escapeHtml(ord.customerName)}</strong>
+                    <span class="text-whatsapp ml-2">${escapeHtml(ord.whatsapp)}</span>
+                  </div>
+                  <select data-admin-order-id="${escapeHtml(docSnap.id)}" class="px-2.5 py-1 rounded-lg bg-carbon steel-border-strong text-gallery text-[11px] uppercase">
+                    ${['pending', 'collected', 'cleaning', 'delivered']
+                      .map((st) => `<option value="${st}" ${ord.status === st ? 'selected' : ''}>${st.toUpperCase()}</option>`)
+                      .join('')}
+                  </select>
+                </div>
+                <div class="text-neutral-200">${escapeHtml(ord.serviceName)} &bull; Qty: ${escapeHtml(ord.quantity)} &bull; <strong class="text-gold">R${Number(ord.totalPriceZar || 0).toFixed(2)}</strong></div>
+                <div class="text-neutral-400">Location: ${escapeHtml(ord.campusLocation)} &bull; ${escapeHtml(ord.pickupDateTime)}</div>
+                <div class="text-neutral-400">Dispatcher: ${escapeHtml(ord.assignedAgent)} ${ord.notes ? '&bull; Notes: ' + escapeHtml(ord.notes) : ''}</div>
+              </div>
+            `;
+          })
           .join('');
+      } catch (err) {
+        adminListEl.innerHTML = `
+          <div class="p-4 rounded-xl bg-red-500/15 border border-red-500/40 font-mono text-xs text-red-200">
+            Admin query blocked by Firestore rules: ${escapeHtml(err?.message || '')}
+          </div>
+        `;
       }
+    }
 
-      // Admin Order Status Change Handler
-      document.addEventListener('change', async (e) => {
-        const sel = e.target.closest('[data-admin-status-id]');
-        if (!sel) return;
-        const orderId = sel.getAttribute('data-admin-status-id');
-        const newStatus = sel.value;
+    // Admin Order Status Update
+    document.addEventListener('change', async (e) => {
+      const selectEl = e.target.closest('[data-admin-order-id]');
+      if (!selectEl || !currentUser) return;
 
-        if (serverAvailable) {
-          await fetch(`/api/admin/orders/${encodeURIComponent(orderId)}/status`, {
-            method: 'PATCH',
-            credentials: 'same-origin',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-csrf-token': csrfToken
-            },
-            body: JSON.stringify({ status: newStatus })
-          });
-          loadAdminOrders();
-          loadCustomerOrders();
-        } else {
-          const all = JSON.parse(localStorage.getItem('fkt_demo_orders') || '[]');
-          const item = all.find((o) => String(o.id) === String(orderId));
-          if (item) {
-            item.status = newStatus;
-            localStorage.setItem('fkt_demo_orders', JSON.stringify(all));
-            loadAdminOrders();
-            loadCustomerOrders();
-          }
-        }
-      });
-
-      // 6. Auth Modal Tabs & Submissions
-      function showAuthFeedback(msg, isError) {
-        authFeedbackBanner.textContent = msg;
-        authFeedbackBanner.classList.remove(
-          'hidden',
-          'bg-red-500/15',
-          'border',
-          'border-red-500/50',
-          'text-red-200',
-          'bg-whatsapp/15',
-          'border-whatsapp/40',
-          'text-whatsapp'
-        );
-        if (isError) {
-          authFeedbackBanner.classList.add('bg-red-500/15', 'border', 'border-red-500/50', 'text-red-200');
-        } else {
-          authFeedbackBanner.classList.add('bg-whatsapp/15', 'border', 'border-whatsapp/40', 'text-whatsapp');
-        }
+      const orderId = selectEl.getAttribute('data-admin-order-id');
+      const newStatus = selectEl.value;
+      try {
+        await updateDoc(doc(db, 'orders', orderId), { status: newStatus });
+        await loadCustomerOrders();
+        await loadAdminOrders();
+      } catch (_err) {
+        // Ignore if unauthorized
       }
-
-      function switchAuthTab(tabName) {
-        authFeedbackBanner.classList.add('hidden');
-        document.querySelectorAll('.auth-tab-btn').forEach((btn) => {
-          const active = btn.getAttribute('data-tab') === tabName;
-          btn.classList.toggle('bg-gallery', active);
-          btn.classList.toggle('text-obsidian', active);
-          btn.classList.toggle('text-neutral-400', !active);
-        });
-
-        loginForm.classList.toggle('hidden', tabName !== 'login');
-        registerForm.classList.toggle('hidden', tabName !== 'register');
-        resetPanel.classList.toggle('hidden', tabName !== 'reset');
-      }
-
-      function openAuthModal(tabName = 'login') {
-        switchAuthTab(tabName);
-        authModal.classList.add('is-open');
-        authModal.setAttribute('aria-hidden', 'false');
-      }
-
-      function closeAuthModal() {
-        authModal.classList.remove('is-open');
-        authModal.setAttribute('aria-hidden', 'true');
-      }
-
-      loginForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.getElementById('loginEmail').value.trim();
-        const password = document.getElementById('loginPassword').value;
-
-        if (!email || !password) {
-          return showAuthFeedback('Please enter your email and password.', true);
-        }
-
-        if (serverAvailable) {
-          const res = await fetch('/api/auth/login', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-csrf-token': csrfToken
-            },
-            body: JSON.stringify({ email, password })
-          });
-          const data = await res.json();
-          if (!res.ok) return showAuthFeedback(data.error || 'Login failed.', true);
-          csrfToken = data.csrfToken || csrfToken;
-          setAuthenticatedUser(data.user);
-          closeAuthModal();
-        } else {
-          const role = email.toLowerCase().startsWith('admin@') ? 'admin' : 'customer';
-          const demoUser = {
-            id: 'demo-' + Date.now(),
-            full_name: email.split('@')[0].replace(/[._]/g, ' '),
-            email,
-            whatsapp: '+27 75 380 6251',
-            role
-          };
-          sessionStorage.setItem('fkt_demo_user', JSON.stringify(demoUser));
-          setAuthenticatedUser(demoUser);
-          closeAuthModal();
-        }
-      });
-
-      registerForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const fullName = document.getElementById('regFullName').value.trim();
-        const email = document.getElementById('regEmail').value.trim();
-        const whatsapp = document.getElementById('regWhatsapp').value.trim();
-        const password = document.getElementById('regPassword').value;
-
-        if (fullName.length < 2 || !email || password.length < 10) {
-          return showAuthFeedback('Full name, valid email, and a password of at least 10 characters are required.', true);
-        }
-
-        if (serverAvailable) {
-          const res = await fetch('/api/auth/register', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-csrf-token': csrfToken
-            },
-            body: JSON.stringify({ fullName, email, whatsapp, password })
-          });
-          const data = await res.json();
-          if (!res.ok) return showAuthFeedback(data.error || 'Registration failed.', true);
-          csrfToken = data.csrfToken || csrfToken;
-          setAuthenticatedUser(data.user);
-          closeAuthModal();
-        } else {
-          const demoUser = {
-            id: 'demo-' + Date.now(),
-            full_name: fullName,
-            email,
-            whatsapp,
-            role: 'customer'
-          };
-          sessionStorage.setItem('fkt_demo_user', JSON.stringify(demoUser));
-          setAuthenticatedUser(demoUser);
-          closeAuthModal();
-        }
-      });
-
-      forgotPasswordForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.getElementById('forgotEmail').value.trim();
-        if (!email) return showAuthFeedback('Enter your account email.', true);
-
-        if (serverAvailable) {
-          const res = await fetch('/api/auth/forgot-password', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-csrf-token': csrfToken
-            },
-            body: JSON.stringify({ email })
-          });
-          const data = await res.json();
-          showAuthFeedback(data.message || 'Reset link dispatched (valid 15 minutes).', !res.ok);
-        } else {
-          showAuthFeedback('Reset link generated on server (valid for 15 minutes).', false);
-        }
-      });
-
-      completeResetForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const token = document.getElementById('resetTokenInput').value.trim();
-        const newPassword = document.getElementById('resetNewPassword').value;
-
-        if (!token || newPassword.length < 10) {
-          return showAuthFeedback('Provide a valid 64-character token and new password (min 10 chars).', true);
-        }
-
-        if (serverAvailable) {
-          const res = await fetch('/api/auth/reset-password', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-csrf-token': csrfToken
-            },
-            body: JSON.stringify({ token, newPassword })
-          });
-          const data = await res.json();
-          showAuthFeedback(data.message || data.error, !res.ok);
-          if (res.ok) switchAuthTab('login');
-        } else {
-          showAuthFeedback('Password updated. Please sign in.', false);
-          switchAuthTab('login');
-        }
-      });
-
-      async function logoutUser() {
-        if (serverAvailable) {
-          await fetch('/api/auth/logout', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: { 'x-csrf-token': csrfToken }
-          });
-        }
-        sessionStorage.removeItem('fkt_demo_user');
-        setAuthenticatedUser(null);
-      }
-
-      // 7. Interactive 3D Spatial Tilt & Hero Showcase Subcard Motion
-      document.querySelectorAll('[data-spatial-card]').forEach((card) => {
-        card.addEventListener('mousemove', (e) => {
-          const rect = card.getBoundingClientRect();
-          const relX = e.clientX - rect.left;
-          const relY = e.clientY - rect.top;
-
-          card.style.setProperty('--mx', `${relX}px`);
-          card.style.setProperty('--my', `${relY}px`);
-
-          if (card.classList.contains('is-flipped')) return;
-
-          const normX = relX / rect.width - 0.5;
-          const normY = relY / rect.height - 0.5;
-          const rotX = (-normY * 6.5).toFixed(2);
-          const rotY = (normX * 6.5).toFixed(2);
-          card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-          if (card.classList.contains('is-flipped')) {
-            card.style.transform = 'rotateY(180deg)';
-          } else {
-            card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-          }
-        });
-      });
-
-      document.querySelectorAll('[data-tilt-subcard]').forEach((subcard) => {
-        const applyTilt = (clientX, clientY) => {
-          const rect = subcard.getBoundingClientRect();
-          const normX = (clientX - rect.left) / Math.max(1, rect.width) - 0.5;
-          const normY = (clientY - rect.top) / Math.max(1, rect.height) - 0.5;
-          const rotX = (-normY * 11).toFixed(2);
-          const rotY = (normX * 11).toFixed(2);
-          subcard.style.transform = `translate3d(0, -6px, 34px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-        };
-
-        subcard.addEventListener('mousemove', (e) => applyTilt(e.clientX, e.clientY));
-        subcard.addEventListener(
-          'touchmove',
-          (e) => {
-            if (e.touches && e.touches[0]) applyTilt(e.touches[0].clientX, e.touches[0].clientY);
-          },
-          { passive: true }
-        );
-
-        const resetTilt = () => {
-          subcard.style.transform = '';
-        };
-        subcard.addEventListener('mouseleave', resetTilt);
-        subcard.addEventListener('touchend', resetTilt);
-        subcard.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openBookingDrawer(subcard.getAttribute('data-service'));
-          }
-        });
-      });
-
-      // 8. Mobile Navigation & Pricing Deck Tabs
-      function toggleMobileNav(forceOpen) {
-        const isHidden = mobileNavMenu.classList.contains('hidden');
-        const openState = typeof forceOpen === 'boolean' ? forceOpen : isHidden;
-        mobileNavMenu.classList.toggle('hidden', !openState);
-        iconMenuOpen.classList.toggle('hidden', openState);
-        iconMenuClose.classList.toggle('hidden', !openState);
-        mobileMenuToggle.setAttribute('aria-expanded', String(openState));
-      }
-
-      function switchDeckTab(tabName) {
-        const panels = {
-          shoes: document.getElementById('deckPanelShoes'),
-          clothes: document.getElementById('deckPanelClothes'),
-          membership: document.getElementById('deckPanelMembership')
-        };
-
-        document.querySelectorAll('.deck-pill').forEach((pill) => {
-          const active = pill.getAttribute('data-tab') === tabName;
-          pill.setAttribute('aria-selected', String(active));
-          pill.classList.toggle('bg-gallery', active);
-          pill.classList.toggle('text-obsidian', active);
-          pill.classList.toggle('text-neutral-300', !active);
-          pill.classList.toggle('hover:text-gallery', !active);
-          pill.classList.toggle('hover:bg-white/5', !active);
-        });
-
-        Object.entries(panels).forEach(([key, panel]) => {
-          if (!panel) return;
-          if (key === tabName) {
-            panel.classList.remove('hidden', 'stage-enter');
-            void panel.offsetWidth;
-            panel.classList.add('stage-enter');
-          } else {
-            panel.classList.add('hidden');
-          }
-        });
-      }
-
-      // 9. Synchronized 4-Person WhatsApp Team Contact Switcher
-      function setTeamContact(contactKey) {
-        const person = TEAM_CONTACTS[contactKey];
-        if (!person) return;
-        selectedContactKey = contactKey;
-
-        document.querySelectorAll('.team-selector-card').forEach((card, idx) => {
-          const isSelected = card.getAttribute('data-contact') === contactKey;
-
-          card.classList.toggle('bg-gallery', isSelected);
-          card.classList.toggle('text-obsidian', isSelected);
-          card.classList.toggle('border-gallery', isSelected);
-
-          card.classList.toggle('bg-obsidian', !isSelected);
-          card.classList.toggle('text-gallery', !isSelected);
-          card.classList.toggle('steel-border', !isSelected);
-
-          const roleTag = card.querySelector('.team-role-tag');
-          const statusDot = card.querySelector('.team-status-dot');
-          const phoneLabel = card.querySelector('.team-phone-label');
-
-          if (roleTag) {
-            roleTag.textContent = isSelected ? `0${idx + 1} // SELECTED` : `0${idx + 1} // DISPATCH`;
-            roleTag.classList.toggle('text-obsidian/70', isSelected);
-            roleTag.classList.toggle('font-bold', isSelected);
-            roleTag.classList.toggle('text-neutral-400', !isSelected);
-          }
-          if (statusDot) {
-            statusDot.classList.toggle('bg-whatsapp', isSelected);
-            statusDot.classList.toggle('bg-neutral-600', !isSelected);
-          }
-          if (phoneLabel) {
-            phoneLabel.classList.toggle('text-obsidian/80', isSelected);
-            phoneLabel.classList.toggle('text-neutral-300', !isSelected);
-          }
-        });
-
-        const headerLink = document.getElementById('headerActiveContactLink');
-        if (headerLink) {
-          headerLink.href = person.waUrl;
-          headerLink.textContent = `${person.name.toUpperCase()} (${person.phone})`;
-        }
-
-        document.getElementById('dispatchSummaryLabel').textContent = `${person.name.toUpperCase()} (${person.phone})`;
-        document.getElementById('dispatchWhatsAppLink').href = person.waUrl;
-        document.getElementById('dispatchCallLink').href = person.telUrl;
-
-        if (footerTeamSwitcher) footerTeamSwitcher.value = contactKey;
-        const footerBtn = document.getElementById('footerQuickWhatsAppBtn');
-        if (footerBtn) footerBtn.href = person.waUrl;
-        const footerBtnText = document.getElementById('footerQuickWhatsAppText');
-        if (footerBtnText) footerBtnText.textContent = `WHATSAPP ${person.name.toUpperCase()}`;
-
-        if (bookingContactSelect) bookingContactSelect.value = contactKey;
-        refreshBookingPreview();
-      }
-
-      // 10. File Upload Client Validation (Server also enforces <= 3MB JPG/PNG/WEBP)
-      function validatePhotoFile() {
-        const file = bookingPhotoInput.files && bookingPhotoInput.files[0];
-        if (!file) {
-          photoUploadError.classList.add('hidden');
-          return true;
-        }
-        const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
-        const maxSize = 3 * 1024 * 1024;
-        if (!allowedTypes.includes(file.type) || file.size > maxSize) {
-          photoUploadError.classList.remove('hidden');
-          return false;
-        }
-        photoUploadError.classList.add('hidden');
-        return true;
-      }
-
-      bookingPhotoInput.addEventListener('change', validatePhotoFile);
-
-      // 11. Live Rate Calculation & Formatted WhatsApp Message Generator
-      function composeWhatsAppOrder() {
-        const person = TEAM_CONTACTS[selectedContactKey] || TEAM_CONTACTS.dokodela;
-        const serviceKey = bookingServiceSelect.value;
-        const service = SERVICE_CATALOG[serviceKey] || SERVICE_CATALOG.SHOE_24H;
-        const qty = Math.max(1, parseInt(bookingQtyInput.value, 10) || 1);
-
-        const totalString =
-          typeof service.price === 'number'
-            ? `R${(service.price * qty).toFixed(2)}`
-            : service.priceFormatted;
-
-        document.getElementById('liveSubtotalDisplay').textContent = `${totalString} (${qty} ${service.unit})`;
-        document.getElementById('liveTotalDisplay').textContent = totalString;
-
-        const nameVal = bookingNameInput.value.trim() || '[Full Name]';
-        const phoneVal = bookingPhoneInput.value.trim() || '[Customer WhatsApp Number]';
-        const itemVal = bookingItemInput.value.trim() || '[Item / Shoe / Load Type]';
-        const locVal = bookingLocationInput.value.trim() || '[Campus Collection Location]';
-        const dateVal = bookingDateInput.value || '[Preferred Date]';
-        const timeVal = bookingTimeInput.value || '[Preferred Time]';
-        const notesVal = bookingNotesInput.value.trim();
-
-        const msgLines = [
-          '*FRESH KICKS & THREADS — ONCAMPUS BOOKING*',
-          `*Dispatcher:* ${person.name} (${person.phone})`,
-          '----------------------------------------',
-          `*Full Name:* ${nameVal}`,
-          `*WhatsApp Number:* ${phoneVal}`,
-          `*Service Option:* ${service.title}`,
-          `*Quantity:* ${qty} ${service.unit}`,
-          `*Item / Shoe / Load Type:* ${itemVal}`,
-          `*Campus Location:* ${locVal}`,
-          `*Preferred Date & Time:* ${dateVal} at ${timeVal}`,
-          `*Campus Delivery:* FREE (R0.00)`,
-          `*Total Estimate:* ${totalString}`
-        ];
-
-        if (notesVal) {
-          msgLines.push(`*Additional Instructions:* ${notesVal}`);
-        }
-
-        msgLines.push('----------------------------------------');
-        msgLines.push('Please confirm my OnCampus pickup!');
-
-        return msgLines.join('\n');
-      }
-
-      function refreshBookingPreview() {
-        const previewBox = document.getElementById('whatsappMessagePreview');
-        if (previewBox) previewBox.textContent = composeWhatsAppOrder();
-      }
-
-      function openBookingDrawer(serviceKey) {
-        formValidationError.classList.add('hidden');
-        copyFeedbackBanner.classList.add('hidden');
-        photoUploadError.classList.add('hidden');
-
-        if (serviceKey && SERVICE_CATALOG[serviceKey]) {
-          bookingServiceSelect.value = serviceKey;
-        }
-
-        setDefaultPickupDate();
-        refreshBookingPreview();
-
-        bookingDrawer.classList.add('is-open');
-        bookingDrawer.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeBookingDrawer() {
-        bookingDrawer.classList.remove('is-open');
-        bookingDrawer.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-
-      function copyMessageToClipboard() {
-        const text = composeWhatsAppOrder();
-        const temp = document.createElement('textarea');
-        temp.value = text;
-        temp.setAttribute('readonly', '');
-        temp.style.position = 'fixed';
-        temp.style.opacity = '0';
-        document.body.appendChild(temp);
-        temp.select();
-        try {
-          document.execCommand('copy');
-          copyFeedbackBanner.classList.remove('hidden');
-          setTimeout(() => copyFeedbackBanner.classList.add('hidden'), 3000);
-        } catch (_err) {
-          // Ignore if clipboard blocked
-        }
-        document.body.removeChild(temp);
-      }
-
-      // 12. Unified Event Delegation (Zero Inline Handlers for Strict CSP)
-      document.addEventListener('click', (event) => {
-        const target = event.target.closest('[data-action]');
-        if (!target) return;
-
-        const action = target.getAttribute('data-action');
-
-        if (action === 'toggle-mobile-nav') {
-          toggleMobileNav();
-        } else if (action === 'close-mobile-nav') {
-          toggleMobileNav(false);
-        } else if (action === 'switch-deck-tab') {
-          switchDeckTab(target.getAttribute('data-tab'));
-        } else if (action === 'flip-3d-card') {
-          const cardId = target.getAttribute('data-target');
-          const rotor = document.getElementById(cardId);
-          if (rotor) {
-            const flipped = rotor.classList.toggle('is-flipped');
-            rotor.style.transform = flipped ? 'rotateY(180deg)' : 'rotateX(0deg) rotateY(0deg)';
-          }
-        } else if (action === 'choose-team-contact') {
-          setTeamContact(target.getAttribute('data-contact'));
-        } else if (action === 'open-booking') {
-          toggleMobileNav(false);
-          openBookingDrawer(target.getAttribute('data-service'));
-        } else if (action === 'close-booking') {
-          closeBookingDrawer();
-        } else if (action === 'open-auth') {
-          toggleMobileNav(false);
-          openAuthModal(target.getAttribute('data-auth-tab') || 'login');
-        } else if (action === 'close-auth') {
-          closeAuthModal();
-        } else if (action === 'switch-auth-tab') {
-          switchAuthTab(target.getAttribute('data-tab'));
-        } else if (action === 'logout-user') {
-          logoutUser();
-        } else if (action === 'refresh-orders') {
-          loadCustomerOrders();
-        } else if (action === 'refresh-admin-orders') {
-          loadAdminOrders();
-        } else if (action === 'adjust-qty') {
-          const delta = parseInt(target.getAttribute('data-delta'), 10) || 0;
-          const current = parseInt(bookingQtyInput.value, 10) || 1;
-          bookingQtyInput.value = String(Math.min(50, Math.max(1, current + delta)));
-          refreshBookingPreview();
-        } else if (action === 'copy-whatsapp-message') {
-          copyMessageToClipboard();
-        }
-      });
-
-      footerTeamSwitcher.addEventListener('change', (e) => setTeamContact(e.target.value));
-      bookingContactSelect.addEventListener('change', (e) => setTeamContact(e.target.value));
-
-      [
-        bookingServiceSelect,
-        bookingQtyInput,
-        bookingNameInput,
-        bookingPhoneInput,
-        bookingItemInput,
-        bookingLocationInput,
-        bookingDateInput,
-        bookingTimeInput,
-        bookingNotesInput
-      ].forEach((el) => {
-        el.addEventListener('input', refreshBookingPreview);
-        el.addEventListener('change', refreshBookingPreview);
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          if (bookingDrawer.classList.contains('is-open')) closeBookingDrawer();
-          if (authModal.classList.contains('is-open')) closeAuthModal();
-          if (!mobileNavMenu.classList.contains('hidden')) toggleMobileNav(false);
-        }
-      });
-
-      // 13. Booking Form Submission -> Persist to RLS Backend (if logged in) + Open WhatsApp
-      whatsappBookingForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const valid =
-          bookingNameInput.value.trim().length > 0 &&
-          bookingPhoneInput.value.trim().length > 0 &&
-          bookingItemInput.value.trim().length > 0 &&
-          bookingLocationInput.value.trim().length > 0 &&
-          bookingDateInput.value.trim().length > 0 &&
-          (parseInt(bookingQtyInput.value, 10) || 0) >= 1 &&
-          validatePhotoFile();
-
-        if (!valid) {
-          formValidationError.classList.remove('hidden');
-          return;
-        }
-
-        formValidationError.classList.add('hidden');
-        const person = TEAM_CONTACTS[selectedContactKey] || TEAM_CONTACTS.dokodela;
-        const serviceCode = bookingServiceSelect.value;
-        const service = SERVICE_CATALOG[serviceCode] || SERVICE_CATALOG.SHOE_24H;
-        const qty = Math.max(1, parseInt(bookingQtyInput.value, 10) || 1);
-        const pickupDatetime = `${bookingDateInput.value} at ${bookingTimeInput.value}`;
-        const combinedNotes = `${bookingItemInput.value.trim()}${
-          bookingNotesInput.value.trim() ? ' — ' + bookingNotesInput.value.trim() : ''
-        }`;
-
-        // Save order to PostgreSQL RLS Vault if authenticated
-        if (currentUser) {
-          if (serverAvailable) {
-            const fd = new FormData();
-            fd.append('serviceCode', serviceCode);
-            fd.append('quantity', String(qty));
-            fd.append('campusLocation', bookingLocationInput.value.trim());
-            fd.append('pickupDatetime', pickupDatetime);
-            fd.append('assignedAgent', person.name);
-            fd.append('notes', combinedNotes);
-            if (bookingPhotoInput.files && bookingPhotoInput.files[0]) {
-              fd.append('itemPhoto', bookingPhotoInput.files[0]);
-            }
-
-            try {
-              const res = await fetch('/api/orders', {
-                method: 'POST',
-                credentials: 'same-origin',
-                headers: { 'x-csrf-token': csrfToken },
-                body: fd
-              });
-              if (res.ok) {
-                loadCustomerOrders();
-                if (currentUser.role === 'admin') loadAdminOrders();
-              }
-            } catch (_err) {
-              // Continue to WhatsApp dispatch even if offline
-            }
-          } else {
-            const existing = JSON.parse(localStorage.getItem('fkt_demo_orders') || '[]');
-            existing.unshift({
-              id: 'FKT-' + Math.floor(100000 + Math.random() * 900000),
-              user_email: currentUser.email,
-              full_name: bookingNameInput.value.trim(),
-              whatsapp: bookingPhoneInput.value.trim(),
-              service_name: service.title,
-              quantity: qty,
-              total_price_zar: (service.price || 0) * qty,
-              campus_location: bookingLocationInput.value.trim(),
-              pickup_datetime: pickupDatetime,
-              assigned_agent: person.name,
-              status: 'pending'
-            });
-            localStorage.setItem('fkt_demo_orders', JSON.stringify(existing));
-            loadCustomerOrders();
-            if (currentUser.role === 'admin') loadAdminOrders();
-          }
-        }
-
-        const message = composeWhatsAppOrder();
-        const whatsappUrl = `https://wa.me/${person.waDigits}?text=${encodeURIComponent(message)}`;
-
-        copyMessageToClipboard();
-        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      });
-
-      // Initialize App State
-      setTeamContact('dokodela');
-      refreshBookingPreview();
-      initSession();
     });
+
+    // 5. 3D Spatial Card Tilt & Kinetic Subcard Interaction
+    document.querySelectorAll('[data-spatial-card]').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const relX = e.clientX - rect.left;
+        const relY = e.clientY - rect.top;
+
+        card.style.setProperty('--mx', `${relX}px`);
+        card.style.setProperty('--my', `${relY}px`);
+
+        if (card.classList.contains('is-flipped')) return;
+
+        const normX = relX / rect.width - 0.5;
+        const normY = relY / rect.height - 0.5;
+        const rotX = (-normY * 6.5).toFixed(2);
+        const rotY = (normX * 6.5).toFixed(2);
+        card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = card.classList.contains('is-flipped')
+          ? 'rotateY(180deg)'
+          : 'rotateX(0deg) rotateY(0deg)';
+      });
+    });
+
+    document.querySelectorAll('[data-tilt-subcard]').forEach((subcard) => {
+      const applyTilt = (clientX, clientY) => {
+        const rect = subcard.getBoundingClientRect();
+        const normX = (clientX - rect.left) / Math.max(1, rect.width) - 0.5;
+        const normY = (clientY - rect.top) / Math.max(1, rect.height) - 0.5;
+        const rotX = (-normY * 11).toFixed(2);
+        const rotY = (normX * 11).toFixed(2);
+        subcard.style.transform = `translate3d(0, -6px, 34px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+      };
+
+      subcard.addEventListener('mousemove', (e) => applyTilt(e.clientX, e.clientY));
+      subcard.addEventListener(
+        'touchmove',
+        (e) => {
+          if (e.touches && e.touches[0]) applyTilt(e.touches[0].clientX, e.touches[0].clientY);
+        },
+        { passive: true }
+      );
+
+      const resetTilt = () => {
+        subcard.style.transform = '';
+      };
+      subcard.addEventListener('mouseleave', resetTilt);
+      subcard.addEventListener('touchend', resetTilt);
+      subcard.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openBookingDrawer(subcard.getAttribute('data-service'));
+        }
+      });
+    });
+
+    // 6. Navigation, Tabs & 4-Person WhatsApp Contact Switcher
+    function toggleMobileNav(forceOpen) {
+      const isHidden = mobileNavMenu.classList.contains('hidden');
+      const openState = typeof forceOpen === 'boolean' ? forceOpen : isHidden;
+      mobileNavMenu.classList.toggle('hidden', !openState);
+      iconMenuOpen.classList.toggle('hidden', openState);
+      iconMenuClose.classList.toggle('hidden', !openState);
+      mobileMenuToggle.setAttribute('aria-expanded', String(openState));
+    }
+
+    function switchDeckTab(tabName) {
+      const panels = {
+        shoes: document.getElementById('deckPanelShoes'),
+        clothes: document.getElementById('deckPanelClothes'),
+        membership: document.getElementById('deckPanelMembership')
+      };
+
+      document.querySelectorAll('.deck-pill').forEach((pill) => {
+        const active = pill.getAttribute('data-tab') === tabName;
+        pill.setAttribute('aria-selected', String(active));
+        pill.classList.toggle('bg-gallery', active);
+        pill.classList.toggle('text-obsidian', active);
+        pill.classList.toggle('text-neutral-300', !active);
+        pill.classList.toggle('hover:text-gallery', !active);
+        pill.classList.toggle('hover:bg-white/5', !active);
+      });
+
+      Object.entries(panels).forEach(([key, panel]) => {
+        if (!panel) return;
+        if (key === tabName) {
+          panel.classList.remove('hidden', 'stage-enter');
+          void panel.offsetWidth;
+          panel.classList.add('stage-enter');
+        } else {
+          panel.classList.add('hidden');
+        }
+      });
+    }
+
+    function setTeamContact(contactKey) {
+      const person = TEAM_CONTACTS[contactKey];
+      if (!person) return;
+      selectedContactKey = contactKey;
+
+      document.querySelectorAll('.team-selector-card').forEach((card, idx) => {
+        const isSelected = card.getAttribute('data-contact') === contactKey;
+
+        card.classList.toggle('bg-gallery', isSelected);
+        card.classList.toggle('text-obsidian', isSelected);
+        card.classList.toggle('border-gallery', isSelected);
+
+        card.classList.toggle('bg-obsidian', !isSelected);
+        card.classList.toggle('text-gallery', !isSelected);
+        card.classList.toggle('steel-border', !isSelected);
+
+        const roleTag = card.querySelector('.team-role-tag');
+        const statusDot = card.querySelector('.team-status-dot');
+        const phoneLabel = card.querySelector('.team-phone-label');
+
+        if (roleTag) {
+          roleTag.textContent = isSelected ? `0${idx + 1} // SELECTED` : `0${idx + 1} // WHATSAPP`;
+          roleTag.classList.toggle('text-obsidian/70', isSelected);
+          roleTag.classList.toggle('font-bold', isSelected);
+          roleTag.classList.toggle('text-neutral-400', !isSelected);
+        }
+        if (statusDot) {
+          statusDot.classList.toggle('bg-whatsapp', isSelected);
+          statusDot.classList.toggle('bg-neutral-600', !isSelected);
+        }
+        if (phoneLabel) {
+          phoneLabel.classList.toggle('text-obsidian/80', isSelected);
+          phoneLabel.classList.toggle('text-neutral-300', !isSelected);
+        }
+      });
+
+      const headerLink = document.getElementById('headerActiveContactLink');
+      if (headerLink) {
+        headerLink.href = person.waUrl;
+        headerLink.textContent = `${person.name.toUpperCase()} (${person.phone})`;
+      }
+
+      document.getElementById('dispatchSummaryLabel').textContent = `${person.name.toUpperCase()} (${person.phone})`;
+      document.getElementById('dispatchWhatsAppLink').href = person.waUrl;
+      document.getElementById('dispatchCallLink').href = person.telUrl;
+
+      if (footerTeamSwitcher) footerTeamSwitcher.value = contactKey;
+      const footerBtn = document.getElementById('footerQuickWhatsAppBtn');
+      if (footerBtn) footerBtn.href = person.waUrl;
+      const footerBtnText = document.getElementById('footerQuickWhatsAppText');
+      if (footerBtnText) footerBtnText.textContent = `WHATSAPP ${person.name.toUpperCase()}`;
+
+      if (bookingContactSelect) bookingContactSelect.value = contactKey;
+      refreshBookingPreview();
+    }
+
+    // 7. Booking Message Composer & Drawers
+    function composeWhatsAppOrder() {
+      const person = TEAM_CONTACTS[selectedContactKey] || TEAM_CONTACTS.dokodela;
+      const serviceKey = bookingServiceSelect.value;
+      const service = SERVICE_CATALOG[serviceKey] || SERVICE_CATALOG.SHOE_24H;
+      const qty = Math.max(1, parseInt(bookingQtyInput.value, 10) || 1);
+
+      const totalString =
+        service.price > 0
+          ? `R${(service.price * qty).toFixed(2)}`
+          : service.priceFormatted;
+
+      document.getElementById('liveSubtotalDisplay').textContent = `${totalString} (${qty} ${service.unit})`;
+      document.getElementById('liveTotalDisplay').textContent = totalString;
+
+      const nameVal = bookingNameInput.value.trim() || '[Full Name]';
+      const phoneVal = bookingPhoneInput.value.trim() || '[WhatsApp Number]';
+      const itemVal = bookingItemInput.value.trim() || '[Shoe / Item Type]';
+      const locVal = bookingLocationInput.value.trim() || '[Campus Collection Location]';
+      const dateVal = bookingDateInput.value || '[Preferred Date]';
+      const timeVal = bookingTimeInput.value || '[Preferred Time]';
+      const notesVal = bookingNotesInput.value.trim();
+
+      const msgLines = [
+        '*FRESH KICKS & THREADS — ONCAMPUS BOOKING*',
+        `*Selected Contact:* ${person.name} (${person.phone})`,
+        '----------------------------------------',
+        `*Full Name:* ${nameVal}`,
+        `*WhatsApp Number:* ${phoneVal}`,
+        `*Selected Option:* ${service.title}`,
+        `*Quantity:* ${qty} ${service.unit}`,
+        `*Shoe / Item Type:* ${itemVal}`,
+        `*Campus Location:* ${locVal}`,
+        `*Preferred Date & Time:* ${dateVal} at ${timeVal}`,
+        `*Campus Delivery:* FREE (R0.00)`,
+        `*Total Estimate:* ${totalString}`
+      ];
+
+      if (notesVal) {
+        msgLines.push(`*Additional Instructions:* ${notesVal}`);
+      }
+
+      msgLines.push('----------------------------------------');
+      msgLines.push('Please confirm my Free Campus Collection!');
+
+      return msgLines.join('\n');
+    }
+
+    function refreshBookingPreview() {
+      const previewBox = document.getElementById('whatsappMessagePreview');
+      if (previewBox) previewBox.textContent = composeWhatsAppOrder();
+    }
+
+    function openBookingDrawer(serviceKey) {
+      formValidationError.classList.add('hidden');
+      copyFeedbackBanner.classList.add('hidden');
+
+      if (serviceKey && SERVICE_CATALOG[serviceKey]) {
+        bookingServiceSelect.value = serviceKey;
+      }
+
+      setDefaultPickupDate();
+      refreshBookingPreview();
+
+      bookingDrawer.classList.add('is-open');
+      bookingDrawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingDrawer() {
+      bookingDrawer.classList.remove('is-open');
+      bookingDrawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function openOrdersDrawer() {
+      ordersDrawer.classList.add('is-open');
+      ordersDrawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (currentUser) loadCustomerOrders();
+    }
+
+    function closeOrdersDrawer() {
+      ordersDrawer.classList.remove('is-open');
+      ordersDrawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function copyMessageToClipboard() {
+      const text = composeWhatsAppOrder();
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      temp.setAttribute('readonly', '');
+      temp.style.position = 'fixed';
+      temp.style.opacity = '0';
+      document.body.appendChild(temp);
+      temp.select();
+      try {
+        document.execCommand('copy');
+        copyFeedbackBanner.classList.remove('hidden');
+        setTimeout(() => copyFeedbackBanner.classList.add('hidden'), 3000);
+      } catch (_err) {
+        // Ignore clipboard errors
+      }
+      document.body.removeChild(temp);
+    }
+
+    // 8. Unified Event Delegation
+    document.addEventListener('click', async (event) => {
+      const target = event.target.closest('[data-action]');
+      if (!target) return;
+
+      const action = target.getAttribute('data-action');
+
+      if (action === 'toggle-mobile-nav') {
+        toggleMobileNav();
+      } else if (action === 'close-mobile-nav') {
+        toggleMobileNav(false);
+      } else if (action === 'switch-deck-tab') {
+        switchDeckTab(target.getAttribute('data-tab'));
+      } else if (action === 'flip-3d-card') {
+        const cardId = target.getAttribute('data-target');
+        const rotor = document.getElementById(cardId);
+        if (rotor) {
+          const flipped = rotor.classList.toggle('is-flipped');
+          rotor.style.transform = flipped ? 'rotateY(180deg)' : 'rotateX(0deg) rotateY(0deg)';
+        }
+      } else if (action === 'choose-team-contact') {
+        setTeamContact(target.getAttribute('data-contact'));
+      } else if (action === 'open-booking') {
+        toggleMobileNav(false);
+        openBookingDrawer(target.getAttribute('data-service'));
+      } else if (action === 'close-booking') {
+        closeBookingDrawer();
+      } else if (action === 'open-orders-drawer') {
+        toggleMobileNav(false);
+        openOrdersDrawer();
+      } else if (action === 'close-orders-drawer') {
+        closeOrdersDrawer();
+      } else if (action === 'open-auth') {
+        toggleMobileNav(false);
+        openAuthModal(target.getAttribute('data-auth-tab') || 'login');
+      } else if (action === 'close-auth') {
+        closeAuthModal();
+      } else if (action === 'switch-auth-tab') {
+        switchAuthTab(target.getAttribute('data-tab'));
+      } else if (action === 'resend-verification') {
+        await handleResendVerification();
+      } else if (action === 'logout-user') {
+        await signOut(auth);
+      } else if (action === 'refresh-orders') {
+        await loadCustomerOrders();
+      } else if (action === 'refresh-admin-orders') {
+        await loadAdminOrders();
+      } else if (action === 'adjust-qty') {
+        const delta = parseInt(target.getAttribute('data-delta'), 10) || 0;
+        const current = parseInt(bookingQtyInput.value, 10) || 1;
+        bookingQtyInput.value = String(Math.min(50, Math.max(1, current + delta)));
+        refreshBookingPreview();
+      } else if (action === 'copy-whatsapp-message') {
+        copyMessageToClipboard();
+      }
+    });
+
+    footerTeamSwitcher.addEventListener('change', (e) => setTeamContact(e.target.value));
+    bookingContactSelect.addEventListener('change', (e) => setTeamContact(e.target.value));
+
+    [
+      bookingServiceSelect,
+      bookingQtyInput,
+      bookingNameInput,
+      bookingPhoneInput,
+      bookingItemInput,
+      bookingLocationInput,
+      bookingDateInput,
+      bookingTimeInput,
+      bookingNotesInput
+    ].forEach((el) => {
+      el.addEventListener('input', refreshBookingPreview);
+      el.addEventListener('change', refreshBookingPreview);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (bookingDrawer.classList.contains('is-open')) closeBookingDrawer();
+        if (ordersDrawer.classList.contains('is-open')) closeOrdersDrawer();
+        if (authModal.classList.contains('is-open')) closeAuthModal();
+        if (!mobileNavMenu.classList.contains('hidden')) toggleMobileNav(false);
+      }
+    });
+
+    // 9. Booking Submission -> Save to Cloud Firestore (if verified) + Launch WhatsApp
+    whatsappBookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const valid =
+        bookingNameInput.value.trim().length > 0 &&
+        bookingPhoneInput.value.trim().length > 0 &&
+        bookingItemInput.value.trim().length > 0 &&
+        bookingLocationInput.value.trim().length > 0 &&
+        bookingDateInput.value.trim().length > 0 &&
+        (parseInt(bookingQtyInput.value, 10) || 0) >= 1;
+
+      if (!valid) {
+        formValidationError.classList.remove('hidden');
+        return;
+      }
+
+      formValidationError.classList.add('hidden');
+      const person = TEAM_CONTACTS[selectedContactKey] || TEAM_CONTACTS.dokodela;
+      const serviceCode = bookingServiceSelect.value;
+      const service = SERVICE_CATALOG[serviceCode] || SERVICE_CATALOG.SHOE_24H;
+      const qty = Math.max(1, parseInt(bookingQtyInput.value, 10) || 1);
+      const unitPriceZar = Number(service.price || 0);
+      const totalPriceZar = unitPriceZar * qty;
+
+      if (currentUser && currentUser.emailVerified) {
+        try {
+          await addDoc(collection(db, 'orders'), {
+            userId: currentUser.uid,
+            customerName: bookingNameInput.value.trim(),
+            customerEmail: currentUser.email,
+            whatsapp: bookingPhoneInput.value.trim(),
+            serviceCode,
+            serviceName: service.title,
+            quantity: qty,
+            unitPriceZar,
+            totalPriceZar,
+            itemType: bookingItemInput.value.trim(),
+            campusLocation: bookingLocationInput.value.trim(),
+            pickupDateTime: `${bookingDateInput.value} at ${bookingTimeInput.value}`,
+            assignedAgent: person.name,
+            notes: bookingNotesInput.value.trim(),
+            status: 'pending',
+            createdAt: serverTimestamp()
+          });
+          await loadCustomerOrders();
+        } catch (_err) {
+          // Proceed to WhatsApp dispatch even if Firestore rules block unconfigured write
+        }
+      }
+
+      const message = composeWhatsAppOrder();
+      const whatsappUrl = `https://wa.me/${person.waDigits}?text=${encodeURIComponent(message)}`;
+
+      copyMessageToClipboard();
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    });
+
+    // Initialize Default State
+    setTeamContact('dokodela');
+    refreshBookingPreview();
   </script>
 </body>
 </html>
