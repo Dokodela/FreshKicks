@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRESH KICKS &amp; THREADS — OnCampus Laundry &amp; Sneaker Care</title>
+  <meta name="description" content="Professional Shoe Washing & OnCampus Laundry. Fresh Looks. Convenient Campus Delivery. Free Collection & Delivery on Campus for OnCampus & OffCampus Students." />
+
+  <!-- Editorial Typography: Oswald (Display), Inter (UI/Body), Space Mono (Tabular Rates & SKU Ledger) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F6F6F4',
+            pure: '#FFFFFF',
+            ink: '#0C0C0C',
+            inkLine: '#222222',
+            paperLine: '#DCDCD8',
+            whatsapp: '#25D366',
+            whatsappHover: '#1EBE5D',
+            signal: '#E6481E',
+            cobalt: '#1A56DB',
+          },
+          fontFamily: {
+            display: ['"Oswald"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Base Swiss Architectural Styling — Zero soft drop shadows, crisp 1px rules */
+    body {
+      background-color: #F6F6F4;
+      color: #0C0C0C;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-display {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'Space Mono', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Crisp Ledger Row Interaction */
+    .rate-row {
+      transition: background-color 0.16s ease;
+    }
+    .rate-row:hover {
+      background-color: #F6F6F4;
+    }
+
+    /* Slide-over Booking Drawer */
+    #bookingDrawerPanel {
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #bookingDrawer.is-open #bookingDrawerPanel {
+      transform: translateX(0);
+    }
+
+    /* Custom Architectural Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F6F6F4;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0C0C0C;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-ink selection:text-pure">
+
+  <!-- ==================== 1. TOP UTILITY BAR ==================== -->
+  <div class="bg-ink text-pure border-b border-inkLine">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2 font-mono text-[11px] uppercase tracking-wider">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-block w-2 h-2 bg-whatsapp"></span>
+        <span>ONCAMPUS LAUNDRY &amp; SNEAKER CARE &bull; FREE COLLECTION &amp; DELIVERY ON CAMPUS</span>
+      </div>
+      <div class="flex items-center gap-3 text-neutral-300">
+        <span>WHATSAPP DESK:</span>
+        <a href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="text-pure font-bold hover:text-whatsapp transition-colors">
+          +27 75 380 6251
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== STICKY EDITORIAL HEADER ==================== -->
+  <header class="sticky top-0 z-40 bg-pure border-b border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+      <!-- Bold Monogram + Logo -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 bg-ink text-pure border border-ink flex items-center justify-center font-display font-bold text-xl tracking-tight group-hover:bg-pure group-hover:text-ink transition-colors">
+          FK
+        </div>
+        <div>
+          <span class="font-display font-bold text-xl sm:text-2xl uppercase tracking-tight text-ink block leading-none">
+            FRESH KICKS &amp; THREADS
+          </span>
+          <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-600 block mt-0.5">
+            ONCAMPUS LAUNDRY &amp; SNEAKER CARE
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-wider text-ink">
+        <a href="#pricing" class="hover:underline underline-offset-4 decoration-2">Pricing</a>
+        <a href="#campus-logistics" class="hover:underline underline-offset-4 decoration-2">Campus Logistics</a>
+        <a href="#services" class="hover:underline underline-offset-4 decoration-2">Services</a>
+        <a href="#contact" class="hover:underline underline-offset-4 decoration-2">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="flex items-center gap-2.5">
+        <button type="button" onclick="openBookingDrawer('Shoe Express Service — 24Hrs (R40)')" class="px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-display font-bold text-sm uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+          BOOK COLLECTION
+        </button>
+        <button type="button" id="mobileMenuToggle" aria-label="Open Navigation Menu" class="md:hidden p-2.5 bg-paper border border-ink text-ink">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileNavDrawer" class="hidden md:hidden bg-pure border-t border-ink px-4 py-4 space-y-2 font-mono text-xs uppercase">
+      <a href="#pricing" onclick="closeMobileNav()" class="block py-2.5 border-b border-paperLine">01 // Pricing &amp; Rates</a>
+      <a href="#campus-logistics" onclick="closeMobileNav()" class="block py-2.5 border-b border-paperLine">02 // Campus Logistics</a>
+      <a href="#services" onclick="closeMobileNav()" class="block py-2.5 border-b border-paperLine">03 // Our Services</a>
+      <a href="#contact" onclick="closeMobileNav()" class="block py-2.5">04 // Direct Team Contact</a>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION (ASYMMETRIC SWISS 2-COLUMN GRID) ==================== -->
+  <section class="bg-paper border-b border-ink">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12">
+
+        <!-- Left Column -->
+        <div class="lg:col-span-7 px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20 lg:border-r border-ink flex flex-col justify-between">
+          <div>
+            <!-- Eyebrow Pill -->
+            <div class="inline-flex items-center gap-2.5 px-3 py-1.5 bg-pure border border-ink mb-7">
+              <span class="w-2 h-2 bg-cobalt"></span>
+              <span class="font-mono font-bold text-[11px] uppercase tracking-widest text-ink">
+                ONCAMPUS LAUNDRY &amp; SNEAKER CARE
+              </span>
+            </div>
+
+            <!-- Giant Oswald Headline -->
+            <h1 class="font-display font-bold text-5xl sm:text-7xl xl:text-[82px] uppercase tracking-tight leading-[0.94] text-ink">
+              YOUR SHOES &amp; CLOTHES.<br />
+              <span class="bg-ink text-pure px-2.5 inline-block mt-1">FRESH AGAIN.</span>
+            </h1>
+
+            <!-- Supporting Text -->
+            <p class="mt-6 text-lg sm:text-xl text-neutral-800 max-w-xl leading-relaxed font-normal">
+              Professional Shoe Washing &amp; OnCampus Laundry. Fresh Looks. Convenient Campus Delivery.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+              <button type="button" onclick="openBookingDrawer('Shoe Express Service — 24Hrs (R40)')" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-ink hover:bg-neutral-800 text-pure font-display font-bold text-lg uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                <span>BOOK NOW</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </button>
+
+              <a id="heroWhatsAppQuickBtn" href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 bg-whatsapp hover:bg-whatsappHover text-ink font-display font-bold text-lg uppercase tracking-wider border border-ink transition-colors">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 20.2c-.151.512.326.989.838.838l3.032-.892A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" /></svg>
+                <span>WHATSAPP QUICK-CHAT</span>
+              </a>
+            </div>
+
+            <!-- Free Collection & Delivery Notice -->
+            <div class="mt-5 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink">
+              <span class="w-2 h-2 bg-whatsapp"></span>
+              <span class="font-bold">Official OnCampus Laundry &bull; Free Collection &amp; Delivery on Campus.</span>
+            </div>
+          </div>
+
+          <!-- Compact 3-Stat Architectural Strip -->
+          <div class="mt-12 pt-6 border-t border-ink grid grid-cols-3 gap-4 font-mono">
+            <div class="border-r border-paperLine pr-2">
+              <span class="font-bold text-lg sm:text-xl text-ink block leading-none">24HRS</span>
+              <span class="text-[11px] uppercase tracking-wider text-neutral-600 block mt-1.5">EXPRESS SHOES</span>
+            </div>
+            <div class="border-r border-paperLine pr-2">
+              <span class="font-bold text-lg sm:text-xl text-ink block leading-none">R0.00</span>
+              <span class="text-[11px] uppercase tracking-wider text-neutral-600 block mt-1.5">ONCAMPUS DELIVERY</span>
+            </div>
+            <div>
+              <span class="font-bold text-lg sm:text-xl text-ink block leading-none">7 DAYS</span>
+              <span class="text-[11px] uppercase tracking-wider text-neutral-600 block mt-1.5">ONCAMP &amp; OFFCAMP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Editorial Split Photography Showcase -->
+        <div class="lg:col-span-5 bg-pure flex flex-col justify-between border-t lg:border-t-0 border-ink">
+          <!-- FIG 01: Deep Sneaker Restoration -->
+          <figure class="border-b border-ink flex flex-col flex-1">
+            <div class="relative overflow-hidden aspect-[16/10] lg:aspect-auto lg:flex-1 bg-paper">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85"
+                onerror="this.src='https://placehold.co/1000x700/0C0C0C/FFFFFF?text=FIG+01.+SNEAKER+RESTORATION'"
+                alt="Freshly restored crimson and white athletic sneaker"
+                class="w-full h-full object-cover object-center"
+              />
+              <span class="absolute top-3 left-3 px-2.5 py-1 bg-signal text-pure font-mono font-bold text-[10px] uppercase tracking-wider border border-ink">
+                24HRS R40 / 48HRS R30
+              </span>
+            </div>
+            <figcaption class="px-4 py-2.5 bg-pure border-t border-ink flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-ink">
+              <span class="font-bold">FIG 01. DEEP SNEAKER RESTORATION</span>
+              <span class="text-neutral-500">ALL COLOURS</span>
+            </figcaption>
+          </figure>
+
+          <!-- FIG 02: Garment Wash, Dry & Press -->
+          <figure class="flex flex-col flex-1">
+            <div class="relative overflow-hidden aspect-[16/10] lg:aspect-auto lg:flex-1 bg-paper">
+              <img
+                src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1000&q=85"
+                onerror="this.src='https://placehold.co/1000x700/F6F6F4/0C0C0C?text=FIG+02.+GARMENT+WASH+%26+PRESS'"
+                alt="Neatly pressed and stacked clean clothes"
+                class="w-full h-full object-cover object-center"
+              />
+              <span class="absolute top-3 left-3 px-2.5 py-1 bg-cobalt text-pure font-mono font-bold text-[10px] uppercase tracking-wider border border-ink">
+                LOADS FROM R25 &bull; VIP R200 PM
+              </span>
+            </div>
+            <figcaption class="px-4 py-2.5 bg-pure border-t border-ink flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-ink">
+              <span class="font-bold">FIG 02. ONCAMPUS LAUNDRY &amp; PRESS</span>
+              <span class="text-neutral-500">ONCAMP &amp; OFFCAMP</span>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. COLLECTION AND PRICING (MOST PROMINENT SECTION) ==================== -->
+  <section id="pricing" class="py-20 lg:py-28 bg-pure border-b border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Title & Interactive Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-ink">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-2">
+            INDEX 01 // ONCAMPUS LAUNDRY &amp; FOOTWEAR RATE SHEET
+          </span>
+          <h2 class="font-display font-bold text-4xl sm:text-6xl uppercase tracking-tight text-ink leading-none">
+            COLLECTION AND PRICING
+          </h2>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="inline-flex border border-ink bg-paper" role="tablist" aria-label="Filter Service Pricing">
+          <button type="button" id="filterTab-all" onclick="filterPricingCategory('all')" class="px-4 sm:px-5 py-3 font-mono font-bold text-xs uppercase tracking-wider bg-ink text-pure border-r border-ink transition-colors cursor-pointer">
+            ALL SERVICES
+          </button>
+          <button type="button" id="filterTab-shoes" onclick="filterPricingCategory('shoes')" class="px-4 sm:px-5 py-3 font-mono font-bold text-xs uppercase tracking-wider text-ink hover:bg-neutral-200 border-r border-ink transition-colors cursor-pointer">
+            SHOE WASHING
+          </button>
+          <button type="button" id="filterTab-clothes" onclick="filterPricingCategory('clothes')" class="px-4 sm:px-5 py-3 font-mono font-bold text-xs uppercase tracking-wider text-ink hover:bg-neutral-200 transition-colors cursor-pointer">
+            ONCAMPUS CLOTHES LAUNDRY
+          </button>
+        </div>
+      </div>
+
+      <!-- PART A — SHOE WASHING (2-Column Architectural Split) -->
+      <div id="pricingSectionShoes" class="mt-14">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+          <h3 class="font-display font-bold text-2xl sm:text-3xl uppercase tracking-tight text-ink">
+            PART A &mdash; SHOE WASHING
+          </h3>
+          <span class="font-mono text-xs uppercase tracking-wider px-3 py-1 bg-paper border border-ink">
+            SKU: FW-CARE // ONE PAIR &bull; ALL COLOURS WELCOME
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 border border-ink">
+
+          <!-- OPTION 1: EXPRESS SERVICE (Elevated Ink Black #0C0C0C + Signal Orange Tag) -->
+          <div class="bg-ink text-pure p-8 sm:p-10 lg:p-12 flex flex-col justify-between border-b md:border-b-0 md:border-r border-ink">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-8">
+                <span class="font-mono text-xs uppercase tracking-widest text-neutral-400">OPTION 1 // SKU-FW24</span>
+                <span class="px-3 py-1 bg-signal text-pure font-mono font-bold text-xs uppercase tracking-wider">
+                  EXPRESS TIER
+                </span>
+              </div>
+
+              <h4 class="font-display font-bold text-3xl sm:text-4xl uppercase tracking-tight text-pure">
+                EXPRESS SERVICE
+              </h4>
+
+              <div class="mt-6 pb-6 border-b border-inkLine flex items-baseline gap-3">
+                <span class="font-mono font-bold text-5xl sm:text-6xl text-pure">R40</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-neutral-300">(ONE PAIR)</span>
+              </div>
+
+              <ul class="mt-7 space-y-3.5 font-mono text-sm">
+                <li class="flex items-center justify-between border-b border-inkLine pb-2.5">
+                  <span class="text-neutral-400">TURNAROUND</span>
+                  <span class="font-bold text-pure">24Hrs Collection</span>
+                </li>
+                <li class="flex items-center justify-between border-b border-inkLine pb-2.5">
+                  <span class="text-neutral-400">UNIT</span>
+                  <span class="font-bold text-pure">One pair</span>
+                </li>
+                <li class="flex items-center justify-between border-b border-inkLine pb-2.5">
+                  <span class="text-neutral-400">PALETTE &amp; MATERIALS</span>
+                  <span class="font-bold text-pure">All colours welcome.</span>
+                </li>
+                <li class="flex items-center justify-between pb-1">
+                  <span class="text-neutral-400">LOGISTICS</span>
+                  <span class="font-bold text-whatsapp">Free Campus Collection &amp; Delivery</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" onclick="openBookingDrawer('Shoe Express Service — 24Hrs (R40)')" class="mt-10 w-full py-4 px-6 bg-pure hover:bg-neutral-200 text-ink font-display font-bold text-lg uppercase tracking-wider transition-colors cursor-pointer">
+              CHOOSE 24HRS &rarr;
+            </button>
+          </div>
+
+          <!-- OPTION 2: STANDARD SERVICE (Crisp White #FFFFFF + 1px Ink Border) -->
+          <div class="bg-pure text-ink p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-8">
+                <span class="font-mono text-xs uppercase tracking-widest text-neutral-500">OPTION 2 // SKU-FW48</span>
+                <span class="px-3 py-1 bg-paper text-ink border border-ink font-mono font-bold text-xs uppercase tracking-wider">
+                  STANDARD TIER
+                </span>
+              </div>
+
+              <h4 class="font-display font-bold text-3xl sm:text-4xl uppercase tracking-tight text-ink">
+                STANDARD SERVICE
+              </h4>
+
+              <div class="mt-6 pb-6 border-b border-paperLine flex items-baseline gap-3">
+                <span class="font-mono font-bold text-5xl sm:text-6xl text-ink">R30</span>
+                <span class="font-mono text-xs uppercase tracking-widest text-neutral-600">(ONE PAIR)</span>
+              </div>
+
+              <ul class="mt-7 space-y-3.5 font-mono text-sm">
+                <li class="flex items-center justify-between border-b border-paperLine pb-2.5">
+                  <span class="text-neutral-500">TURNAROUND</span>
+                  <span class="font-bold text-ink">48Hrs Collection</span>
+                </li>
+                <li class="flex items-center justify-between border-b border-paperLine pb-2.5">
+                  <span class="text-neutral-500">UNIT</span>
+                  <span class="font-bold text-ink">One pair</span>
+                </li>
+                <li class="flex items-center justify-between border-b border-paperLine pb-2.5">
+                  <span class="text-neutral-500">PALETTE &amp; MATERIALS</span>
+                  <span class="font-bold text-ink">All colours welcome.</span>
+                </li>
+                <li class="flex items-center justify-between pb-1">
+                  <span class="text-neutral-500">LOGISTICS</span>
+                  <span class="font-bold text-ink">Free Campus Collection &amp; Delivery</span>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" onclick="openBookingDrawer('Shoe Standard Service — 48Hrs (R30)')" class="mt-10 w-full py-4 px-6 bg-ink hover:bg-neutral-800 text-pure font-display font-bold text-lg uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+              CHOOSE 48HRS &rarr;
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PART B — CLOTHES LAUNDRY & CARE (VIP Membership Banner + Interactive Tabular Rate Ledger) -->
+      <div id="pricingSectionClothes" class="mt-20">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+          <h3 class="font-display font-bold text-2xl sm:text-3xl uppercase tracking-tight text-ink">
+            PART B &mdash; ONCAMPUS CLOTHES LAUNDRY &amp; CARE
+          </h3>
+          <span class="font-mono text-xs uppercase tracking-wider px-3 py-1 bg-cobalt text-pure">
+            ONCAMPUS LAUNDRY &bull; ONCAMP &bull; OFFCAMP
+          </span>
+        </div>
+
+        <!-- VIP CAMPUS MEMBERSHIP BANNER -->
+        <div class="bg-ink text-pure border border-ink p-6 sm:p-8 lg:p-10 mb-6 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="space-y-2.5">
+            <div class="inline-flex items-center gap-2.5">
+              <span class="px-3 py-1 bg-signal text-pure font-mono font-bold text-xs uppercase tracking-wider">
+                MONTHLY MEMBERSHIP
+              </span>
+              <span class="font-mono text-xs text-neutral-400 uppercase">SKU-VIP200</span>
+            </div>
+            <h4 class="font-display font-bold text-3xl sm:text-4xl uppercase tracking-tight text-pure">
+              BECOME A MEMBER &mdash; R200 pm
+            </h4>
+            <p class="font-mono text-sm text-neutral-300">
+              4 Pick up and Drop a Month inc. free delivery
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 shrink-0">
+            <div class="font-mono">
+              <span class="font-bold text-4xl sm:text-5xl text-pure">R200</span>
+              <span class="text-xs uppercase text-neutral-400"> / PM</span>
+            </div>
+            <button type="button" onclick="openBookingDrawer('Become a Member — R200 pm (4 Pick up and Drop a Month inc. free delivery)')" class="px-7 py-4 bg-pure hover:bg-neutral-200 text-ink font-display font-bold text-base uppercase tracking-wider transition-colors cursor-pointer">
+              JOIN R200 PM PLAN &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE CLOTHES & SPECIALTY RATE LEDGER -->
+        <div class="border border-ink bg-pure divide-y divide-ink">
+
+          <!-- Ledger Header (Desktop) -->
+          <div class="hidden sm:grid sm:grid-cols-12 px-6 py-3 bg-paper font-mono text-[11px] font-bold uppercase tracking-wider text-neutral-600">
+            <div class="col-span-2">CODE</div>
+            <div class="col-span-6">SERVICE DESCRIPTION</div>
+            <div class="col-span-2 text-right pr-4">RATE</div>
+            <div class="col-span-2 text-right">ACTION</div>
+          </div>
+
+          <!-- Row 1: Drop Off — Same Day Collection -->
+          <div class="rate-row px-5 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-12 items-center gap-3">
+            <div class="sm:col-span-2 font-mono text-xs text-neutral-500">LD-01</div>
+            <div class="sm:col-span-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h4 class="font-display font-bold text-xl uppercase tracking-tight text-ink">
+                  Drop Off &mdash; Same Day Collection
+                </h4>
+                <span class="px-2 py-0.5 bg-signal text-pure font-mono font-bold text-[10px] uppercase">SAME DAY</span>
+              </div>
+              <p class="text-sm text-neutral-600 mt-0.5">Priority full wash, dry &amp; fold returned the same day with free campus delivery.</p>
+            </div>
+            <div class="sm:col-span-2 sm:text-right sm:pr-4 font-mono font-bold text-lg text-ink">
+              R70 <span class="text-xs font-normal text-neutral-500">Per Load</span>
+            </div>
+            <div class="sm:col-span-2 sm:text-right">
+              <button type="button" onclick="openBookingDrawer('Drop Off — Same Day Collection (R70 Per Load)')" class="w-full sm:w-auto px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                SELECT
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2: Drop Off — Next Day Collection -->
+          <div class="rate-row px-5 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-12 items-center gap-3">
+            <div class="sm:col-span-2 font-mono text-xs text-neutral-500">LD-02</div>
+            <div class="sm:col-span-6">
+              <h4 class="font-display font-bold text-xl uppercase tracking-tight text-ink">
+                Drop Off &mdash; Next Day Collection
+              </h4>
+              <p class="text-sm text-neutral-600 mt-0.5">Full wash, dry &amp; neat fold returned next day with free campus delivery.</p>
+            </div>
+            <div class="sm:col-span-2 sm:text-right sm:pr-4 font-mono font-bold text-lg text-ink">
+              R50 <span class="text-xs font-normal text-neutral-500">Per Load</span>
+            </div>
+            <div class="sm:col-span-2 sm:text-right">
+              <button type="button" onclick="openBookingDrawer('Drop Off — Next Day Collection (R50 Per Load)')" class="w-full sm:w-auto px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                SELECT
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 3: Self-Service Wash & Dry -->
+          <div class="rate-row px-5 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-12 items-center gap-3">
+            <div class="sm:col-span-2 font-mono text-xs text-neutral-500">LD-03</div>
+            <div class="sm:col-span-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h4 class="font-display font-bold text-xl uppercase tracking-tight text-ink">
+                  Self-Service Wash
+                </h4>
+                <span class="px-2 py-0.5 bg-cobalt text-pure font-mono font-bold text-[10px] uppercase">+ DRY = R40</span>
+              </div>
+              <p class="text-sm text-neutral-600 mt-0.5">Self-Service Wash at R25 Per Load, or complete Wash + Dry at R40 Per Load.</p>
+            </div>
+            <div class="sm:col-span-2 sm:text-right sm:pr-4 font-mono font-bold text-base text-ink">
+              R25 <span class="text-xs font-normal text-neutral-500">/ Load</span>
+              <span class="block text-xs text-cobalt font-bold">+ Dry = R40</span>
+            </div>
+            <div class="sm:col-span-2 sm:text-right">
+              <button type="button" onclick="openBookingDrawer('Self-Service Wash — R25 Per Load (+ Dry = R40)')" class="w-full sm:w-auto px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                SELECT
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 4: Ironing Service -->
+          <div class="rate-row px-5 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-12 items-center gap-3">
+            <div class="sm:col-span-2 font-mono text-xs text-neutral-500">LD-04</div>
+            <div class="sm:col-span-6">
+              <h4 class="font-display font-bold text-xl uppercase tracking-tight text-ink">
+                Ironing Service
+              </h4>
+              <p class="text-sm text-neutral-600 mt-0.5">Crisp professional steam pressing for shirts, trousers, uniforms &amp; daily wear.</p>
+            </div>
+            <div class="sm:col-span-2 sm:text-right sm:pr-4 font-mono font-bold text-lg text-ink">
+              R30 <span class="text-xs font-normal text-neutral-500">Per Load</span>
+            </div>
+            <div class="sm:col-span-2 sm:text-right">
+              <button type="button" onclick="openBookingDrawer('Ironing Service — R30 Per Load')" class="w-full sm:w-auto px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                SELECT
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 5: Blankets Cleaning -->
+          <div class="rate-row px-5 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-12 items-center gap-3">
+            <div class="sm:col-span-2 font-mono text-xs text-neutral-500">LD-05</div>
+            <div class="sm:col-span-6">
+              <h4 class="font-display font-bold text-xl uppercase tracking-tight text-ink">
+                Blankets Cleaning
+              </h4>
+              <p class="text-sm text-neutral-600 mt-0.5">Deep sanitization and thorough drying across light, single, double &amp; heavy blankets.</p>
+            </div>
+            <div class="sm:col-span-2 sm:text-right sm:pr-4 font-mono font-bold text-lg text-ink">
+              R30 &ndash; R120
+            </div>
+            <div class="sm:col-span-2 sm:text-right">
+              <button type="button" onclick="openBookingDrawer('Blankets Cleaning — R30 – R120')" class="w-full sm:w-auto px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                SELECT
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 6: Mats, Fleece & Comfort -->
+          <div class="rate-row px-5 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-12 items-center gap-3">
+            <div class="sm:col-span-2 font-mono text-xs text-neutral-500">LD-06</div>
+            <div class="sm:col-span-6">
+              <h4 class="font-display font-bold text-xl uppercase tracking-tight text-ink">
+                Mats, Fleece &amp; Comfort
+              </h4>
+              <p class="text-sm text-neutral-600 mt-0.5">Fresh wash &amp; dry care for room mats, fleece throws, and comforters.</p>
+            </div>
+            <div class="sm:col-span-2 sm:text-right sm:pr-4 font-mono font-bold text-lg text-ink">
+              R30
+            </div>
+            <div class="sm:col-span-2 sm:text-right">
+              <button type="button" onclick="openBookingDrawer('Mats, Fleece & Comfort — R30')" class="w-full sm:w-auto px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                SELECT
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 7: Dry Cleaning & Wash-and-Dry Care -->
+          <div class="rate-row px-5 sm:px-6 py-5 grid grid-cols-1 sm:grid-cols-12 items-center gap-3">
+            <div class="sm:col-span-2 font-mono text-xs text-neutral-500">LD-07</div>
+            <div class="sm:col-span-6">
+              <div class="flex flex-wrap items-center gap-2">
+                <h4 class="font-display font-bold text-xl uppercase tracking-tight text-ink">
+                  Dry Cleaning &amp; Wash-and-Dry Care
+                </h4>
+                <span class="px-2 py-0.5 bg-cobalt text-pure font-mono font-bold text-[10px] uppercase">DELICATES</span>
+              </div>
+              <p class="text-sm text-neutral-600 mt-0.5">Specialist garment care for suits, blazers, coats, and custom laundry requests.</p>
+            </div>
+            <div class="sm:col-span-2 sm:text-right sm:pr-4 font-mono font-bold text-xs uppercase text-cobalt">
+              Custom / Standard Load
+            </div>
+            <div class="sm:col-span-2 sm:text-right">
+              <button type="button" onclick="openBookingDrawer('Dry Cleaning & Wash-and-Dry Care (Custom / Standard Load)')" class="w-full sm:w-auto px-5 py-2.5 bg-ink hover:bg-neutral-800 text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+                SELECT
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 4. FREE CAMPUS COLLECTION AND DELIVERY SECTION ==================== -->
+  <section id="campus-logistics" class="py-20 lg:py-28 bg-paper border-b border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Top Headline & Sub-Banner -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-ink items-end">
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-cobalt text-pure font-mono font-bold text-xs uppercase tracking-wider border border-ink mb-5">
+            <span>FREE ONCAMPUS COLLECTION AND DELIVERY.</span>
+          </div>
+          <h2 class="font-display font-bold text-4xl sm:text-6xl xl:text-7xl uppercase tracking-tight leading-[0.95] text-ink">
+            WE COLLECT.<br />
+            WE CLEAN.<br />
+            WE DELIVER.
+          </h2>
+        </div>
+
+        <div class="lg:col-span-4 space-y-4">
+          <p class="text-neutral-800 text-base leading-relaxed">
+            As a dedicated <strong>OnCampus Laundry</strong>, students on campus and at nearby OffCampus residences pay <strong>zero additional campus delivery fees</strong>—whether booking sneakers, laundry loads, or monthly membership pickups.
+          </p>
+          <button type="button" onclick="openBookingDrawer('Shoe Express Service — 24Hrs (R40)')" class="inline-flex items-center gap-2 px-6 py-3.5 bg-ink hover:bg-neutral-800 text-pure font-display font-bold text-sm uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+            SCHEDULE FREE ONCAMPUS PICKUP &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Bespoke Architectural Vector Route Illustration -->
+      <div class="mt-10 bg-pure border border-ink p-6 sm:p-10">
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-8 border-b border-paperLine font-mono text-xs text-neutral-600">
+          <span>FIG 03 // CAMPUS LOGISTICS ROUTE SCHEMATIC</span>
+          <span class="font-bold text-ink">DELIVERY SURCHARGE: R0.00 (FREE ON CAMPUS)</span>
+        </div>
+
+        <!-- Crisp Technical Route Vector SVG -->
+        <div class="w-full overflow-hidden">
+          <svg viewBox="0 0 1000 180" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technical vector route diagram showing Pickup at Oncamp/Offcamp, Care Lab cleaning, and Free Campus Drop-Off">
+            <!-- Grid Reference Lines -->
+            <line x1="0" y1="30" x2="1000" y2="30" stroke="#DCDCD8" stroke-width="1" />
+            <line x1="0" y1="150" x2="1000" y2="150" stroke="#DCDCD8" stroke-width="1" />
+            <line x1="120" y1="0" x2="120" y2="180" stroke="#DCDCD8" stroke-width="1" />
+            <line x1="500" y1="0" x2="500" y2="180" stroke="#DCDCD8" stroke-width="1" />
+            <line x1="880" y1="0" x2="880" y2="180" stroke="#DCDCD8" stroke-width="1" />
+
+            <!-- Primary Route Line -->
+            <line x1="120" y1="84" x2="880" y2="84" stroke="#0C0C0C" stroke-width="2" />
+            <!-- Active Cobalt Motion Line -->
+            <line x1="120" y1="84" x2="880" y2="84" stroke="#1A56DB" stroke-width="3" stroke-dasharray="12 10" />
+
+            <!-- NODE 1: PICKUP (Cobalt Pin) -->
+            <rect x="96" y="60" width="48" height="48" fill="#FFFFFF" stroke="#0C0C0C" stroke-width="2" />
+            <path d="M120 71C114.477 71 110 75.477 110 81C110 88.5 120 97 120 97C120 97 130 88.5 130 81C130 75.477 125.523 71 120 71ZM120 84.5C118.067 84.5 116.5 82.933 116.5 81C116.5 79.067 118.067 77.5 120 77.5C121.933 77.5 123.5 79.067 123.5 81C123.5 82.933 121.933 84.5 120 84.5Z" fill="#1A56DB" />
+            <text x="120" y="130" text-anchor="middle" fill="#0C0C0C" font-family="Space Mono, monospace" font-size="11" font-weight="700">01. PICKUP</text>
+            <text x="120" y="145" text-anchor="middle" fill="#525252" font-family="Space Mono, monospace" font-size="10">ONCAMP / OFFCAMP</text>
+
+            <!-- NODE 2: WASH LAB (Ink Black Square) -->
+            <rect x="476" y="60" width="48" height="48" fill="#0C0C0C" stroke="#0C0C0C" stroke-width="2" />
+            <rect x="490" y="72" width="20" height="24" stroke="#FFFFFF" stroke-width="1.8" />
+            <circle cx="500" cy="86" r="5" stroke="#FFFFFF" stroke-width="1.8" />
+            <text x="500" y="130" text-anchor="middle" fill="#0C0C0C" font-family="Space Mono, monospace" font-size="11" font-weight="700">02. WASH LAB</text>
+            <text x="500" y="145" text-anchor="middle" fill="#525252" font-family="Space Mono, monospace" font-size="10">SHOES &amp; LAUNDRY</text>
+
+            <!-- NODE 3: DROP-OFF (Cobalt Pin + WhatsApp Check) -->
+            <rect x="856" y="60" width="48" height="48" fill="#FFFFFF" stroke="#0C0C0C" stroke-width="2" />
+            <path d="M880 71C874.477 71 870 75.477 870 81C870 88.5 880 97 880 97C880 97 890 88.5 890 81C890 75.477 885.523 71 880 71ZM880 84.5C878.067 84.5 876.5 82.933 876.5 81C876.5 79.067 878.067 77.5 880 77.5C881.933 77.5 883.5 79.067 883.5 81C883.5 82.933 881.933 84.5 880 84.5Z" fill="#1A56DB" />
+            <text x="880" y="130" text-anchor="middle" fill="#0C0C0C" font-family="Space Mono, monospace" font-size="11" font-weight="700">03. DROP-OFF</text>
+            <text x="880" y="145" text-anchor="middle" fill="#1A56DB" font-family="Space Mono, monospace" font-size="10" font-weight="700">R0.00 FREE DELIVERY</text>
+          </svg>
+        </div>
+
+        <!-- 3-Column Step Explanation -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 border border-ink divide-y md:divide-y-0 md:divide-x divide-ink">
+          <div class="p-6">
+            <span class="font-mono font-bold text-xs text-cobalt uppercase tracking-wider block mb-2">STEP 01 // DISPATCH</span>
+            <h3 class="font-display font-bold text-xl uppercase text-ink mb-2">Doorstep Campus Pickup</h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Book online in seconds and our campus courier collects directly from your Oncamp residence or Offcamp student accommodation.
+            </p>
+          </div>
+          <div class="p-6">
+            <span class="font-mono font-bold text-xs text-ink uppercase tracking-wider block mb-2">STEP 02 // TREATMENT</span>
+            <h3 class="font-display font-bold text-xl uppercase text-ink mb-2">Specialized Care &amp; Wash</h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Every sneaker pair is hand-detailed and every garment load is washed, dried, and neatly folded or pressed to specification.
+            </p>
+          </div>
+          <div class="p-6">
+            <span class="font-mono font-bold text-xs text-signal uppercase tracking-wider block mb-2">STEP 03 // RETURN</span>
+            <h3 class="font-display font-bold text-xl uppercase text-ink mb-2">Zero Campus Delivery Fee</h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Your fresh kicks and clean clothes are delivered right back to your door on campus at R0.00 delivery cost.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 5. OUR SERVICES SECTION (6-CELL EDITORIAL GRID) ==================== -->
+  <section id="services" class="py-20 lg:py-28 bg-pure border-b border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-ink">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-neutral-500 block mb-2">
+            INDEX 02 // COMPLETE CAPABILITIES
+          </span>
+          <h2 class="font-display font-bold text-4xl sm:text-6xl uppercase tracking-tight text-ink leading-none">
+            OUR SERVICES
+          </h2>
+        </div>
+        <p class="text-neutral-700 max-w-md text-sm sm:text-base">
+          Six core sneaker restoration and garment laundry standards engineered for student life.
+        </p>
+      </div>
+
+      <!-- Clean 6-Cell Editorial Grid with 1px Borders & Minimalist Line Icons -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-ink">
+
+        <!-- Cell 1 -->
+        <div class="p-8 border-r border-b border-ink bg-pure flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-bold text-xs text-neutral-500">01 // FOOTWEAR</span>
+              <svg class="w-6 h-6 text-ink" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5h18v2.5H3v-2.5ZM4 16.5V12c0-1.5 1-2.5 2.5-2.5h2l2.5-3 3.5 3h3c2 0 3.5 1.5 3.5 3.5v3.5" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl uppercase tracking-tight text-ink mb-2.5">
+              Professional Shoe Washing
+            </h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Deep midsole scrubbing, upper conditioning, outsole cleaning, and lace restoration for everyday trainers and statement kicks.
+            </p>
+          </div>
+          <span class="mt-6 font-mono text-[11px] uppercase tracking-wider text-ink font-bold">24HRS (R40) &bull; 48HRS (R30)</span>
+        </div>
+
+        <!-- Cell 2 -->
+        <div class="p-8 border-r border-b border-ink bg-pure flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-bold text-xs text-neutral-500">02 // MATERIALS</span>
+              <svg class="w-6 h-6 text-ink" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12l2.5 2.5L16 9" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl uppercase tracking-tight text-ink mb-2.5">
+              Sneaker Cleaning &amp; All Colours Accepted
+            </h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Safe, colour-locked formulas for suede, mesh, canvas, knit, leather, triple-white, and vibrant multi-colour sneakers.
+            </p>
+          </div>
+          <span class="mt-6 font-mono text-[11px] uppercase tracking-wider text-neutral-500">ALL COLOURS WELCOME</span>
+        </div>
+
+        <!-- Cell 3 -->
+        <div class="p-8 border-r border-b border-ink bg-pure flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-bold text-xs text-cobalt">03 // ONCAMPUS LAUNDRY</span>
+              <svg class="w-6 h-6 text-cobalt" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="4" y="3" width="16" height="18" />
+                <circle cx="12" cy="13" r="4.5" />
+                <line x1="7" y1="6.5" x2="10" y2="6.5" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl uppercase tracking-tight text-ink mb-2.5">
+              OnCampus Clothes Wash, Dry &amp; Ironing
+            </h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Full OnCampus Laundry service: same-day (R70), next-day (R50), self-service wash (R25 / +dry R40), and steam ironing (R30 per load).
+            </p>
+          </div>
+          <span class="mt-6 font-mono text-[11px] uppercase tracking-wider text-cobalt font-bold">WASH &bull; DRY &bull; PRESS</span>
+        </div>
+
+        <!-- Cell 4 -->
+        <div class="p-8 border-r border-b border-ink bg-pure flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-bold text-xs text-neutral-500">04 // SPECIALTY</span>
+              <svg class="w-6 h-6 text-ink" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl uppercase tracking-tight text-ink mb-2.5">
+              Dry Cleaning &amp; Heavy Bedding
+            </h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Dedicated care for formal delicates, residence blankets (R30&ndash;R120), as well as room mats, fleece &amp; comfort items (R30).
+            </p>
+          </div>
+          <span class="mt-6 font-mono text-[11px] uppercase tracking-wider text-neutral-500">BLANKETS &bull; MATS &bull; FLEECE</span>
+        </div>
+
+        <!-- Cell 5 -->
+        <div class="p-8 border-r border-b border-ink bg-pure flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-bold text-xs text-signal">05 // PICKUP</span>
+              <svg class="w-6 h-6 text-ink" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl uppercase tracking-tight text-ink mb-2.5">
+              Convenient Campus Collection
+            </h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Scheduled doorstep pickup across Oncamp residences and Offcamp student housing, plus our R200 pm 4-pickup membership.
+            </p>
+          </div>
+          <span class="mt-6 font-mono text-[11px] uppercase tracking-wider text-signal font-bold">ONCAMP &amp; OFFCAMP</span>
+        </div>
+
+        <!-- Cell 6 -->
+        <div class="p-8 border-r border-b border-ink bg-paper flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-bold text-xs text-ink">06 // DELIVERY</span>
+              <svg class="w-6 h-6 text-cobalt" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10Z" />
+                <circle cx="12" cy="11" r="2" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl uppercase tracking-tight text-ink mb-2.5">
+              Free Campus Delivery
+            </h3>
+            <p class="text-sm text-neutral-700 leading-relaxed">
+              Zero extra delivery fee straight back to your door on campus. Every sneaker and laundry order ships free on campus.
+            </p>
+          </div>
+          <button type="button" onclick="openBookingDrawer('Shoe Express Service — 24Hrs (R40)')" class="mt-6 text-left font-mono text-xs font-bold uppercase tracking-wider text-cobalt hover:underline cursor-pointer">
+            BOOK FREE CAMPUS DELIVERY &rarr;
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. BOTTOM INTERACTIVE CONTACT CONSOLE (4 TEAM CONTACTS) ==================== -->
+  <section id="contact" class="py-20 lg:py-24 bg-paper border-b border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-ink">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-neutral-600 block mb-2">
+            INDEX 03 // CAMPUS DISPATCH TEAM (4 CONTACTS)
+          </span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl uppercase tracking-tight text-ink leading-none">
+            CHOOSE WHO TO CONTACT
+          </h2>
+        </div>
+        <p class="font-mono text-xs uppercase text-neutral-600">
+          SELECT A TEAM MEMBER TO CHAT ON WHATSAPP, CALL DIRECT, OR ASSIGN YOUR BOOKING
+        </p>
+      </div>
+
+      <!-- 4 Clickable Team Selector Cards -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-ink">
+
+        <!-- 1. Dokodela -->
+        <button type="button" id="teamCard-dokodela" onclick="selectTeamContact('dokodela')" class="p-6 border-r border-b border-ink text-left bg-ink text-pure transition-colors cursor-pointer">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-whatsapp font-bold">01 // ACTIVE</span>
+            <span class="w-2 h-2 bg-whatsapp"></span>
+          </div>
+          <span class="font-display font-bold text-2xl uppercase block mt-2">Dokodela</span>
+          <span class="font-mono text-xs text-neutral-300 block mt-1">+27 75 380 6251</span>
+        </button>
+
+        <!-- 2. Ndzalama -->
+        <button type="button" id="teamCard-ndzalama" onclick="selectTeamContact('ndzalama')" class="p-6 border-r border-b border-ink text-left bg-pure text-ink hover:bg-neutral-100 transition-colors cursor-pointer">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-500">02 // TEAM</span>
+            <span class="w-2 h-2 bg-neutral-300"></span>
+          </div>
+          <span class="font-display font-bold text-2xl uppercase block mt-2">Ndzalama</span>
+          <span class="font-mono text-xs text-neutral-700 block mt-1">+27 71 407 9195</span>
+        </button>
+
+        <!-- 3. Taylor -->
+        <button type="button" id="teamCard-taylor" onclick="selectTeamContact('taylor')" class="p-6 border-r border-b border-ink text-left bg-pure text-ink hover:bg-neutral-100 transition-colors cursor-pointer">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-500">03 // TEAM</span>
+            <span class="w-2 h-2 bg-neutral-300"></span>
+          </div>
+          <span class="font-display font-bold text-2xl uppercase block mt-2">Taylor</span>
+          <span class="font-mono text-xs text-neutral-700 block mt-1">+27 66 118 4876</span>
+        </button>
+
+        <!-- 4. Mahlodi -->
+        <button type="button" id="teamCard-mahlodi" onclick="selectTeamContact('mahlodi')" class="p-6 border-r border-b border-ink text-left bg-pure text-ink hover:bg-neutral-100 transition-colors cursor-pointer">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-neutral-500">04 // TEAM</span>
+            <span class="w-2 h-2 bg-neutral-300"></span>
+          </div>
+          <span class="font-display font-bold text-2xl uppercase block mt-2">Mahlodi</span>
+          <span class="font-mono text-xs text-neutral-700 block mt-1">+27 66 070 6867</span>
+        </button>
+
+      </div>
+
+      <!-- DIRECT DISPATCH CONSOLE -->
+      <div class="border-x border-b border-ink bg-pure p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-neutral-500 mb-1.5">
+            <span class="w-2 h-2 bg-whatsapp"></span>
+            <span>DIRECT DISPATCH CONSOLE</span>
+          </div>
+          <h3 id="dispatchActiveTitle" class="font-display font-bold text-3xl sm:text-4xl uppercase tracking-tight text-ink">
+            DOKODELA &mdash; +27 75 380 6251
+          </h3>
+          <p class="font-mono text-xs text-neutral-600 mt-1.5">
+            Assigned recipient for instant WhatsApp messages, direct calls, and OnCampus pickup bookings.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <a id="dispatchWhatsAppBtn" href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 bg-whatsapp hover:bg-whatsappHover text-ink font-display font-bold text-base uppercase tracking-wider border border-ink transition-colors">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 20.2c-.151.512.326.989.838.838l3.032-.892A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" /></svg>
+            <span id="dispatchWhatsAppLabel">CHAT ON WHATSAPP</span>
+          </a>
+
+          <a id="dispatchCallBtn" href="tel:+27753806251" class="inline-flex items-center justify-center gap-2 px-6 py-4 bg-paper hover:bg-neutral-200 text-ink font-mono font-bold text-xs uppercase tracking-wider border border-ink transition-colors">
+            <span id="dispatchCallLabel">CALL DIRECT (+27 75 380 6251)</span>
+          </a>
+
+          <button type="button" onclick="openBookingDrawer('Shoe Express Service — 24Hrs (R40)')" class="inline-flex items-center justify-center gap-2 px-6 py-4 bg-ink hover:bg-neutral-800 text-pure font-display font-bold text-base uppercase tracking-wider border border-ink transition-colors cursor-pointer">
+            <span id="dispatchBookLabel">BOOK WITH DOKODELA &rarr;</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 8. INK-BLACK ARCHITECTURAL FOOTER ==================== -->
+  <footer class="bg-ink text-pure pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-inkLine">
+
+        <!-- Brand & Tagline -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="font-display font-bold text-3xl sm:text-4xl uppercase tracking-tight text-pure">
+            FRESH KICKS &amp; THREADS
+          </div>
+          <p class="font-mono text-xs uppercase tracking-widest text-neutral-400">
+            ONCAMPUS LAUNDRY &amp; SNEAKER CARE
+          </p>
+          <p class="text-lg font-medium text-pure">
+            “Clean Shoes. Fresh Clothes. Always Ready.”
+          </p>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-pure text-ink font-mono font-bold text-xs uppercase tracking-wider">
+            <span class="w-2 h-2 bg-whatsapp"></span>
+            <span>OnCampus Laundry &bull; Free Collection &amp; Delivery on Campus.</span>
+          </div>
+        </div>
+
+        <!-- Team Numbers Directory -->
+        <div class="md:col-span-4 space-y-3">
+          <p class="font-mono text-xs uppercase tracking-widest text-neutral-400">CAMPUS TEAM CONTACTS</p>
+          <ul class="space-y-2.5 font-mono text-xs sm:text-sm">
+            <li class="flex items-center justify-between border-b border-inkLine pb-2">
+              <span class="font-bold text-pure">Dokodela</span>
+              <a href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="text-whatsapp hover:underline">+27 75 380 6251</a>
+            </li>
+            <li class="flex items-center justify-between border-b border-inkLine pb-2">
+              <span class="font-bold text-pure">Ndzalama</span>
+              <a href="https://wa.me/27714079195" target="_blank" rel="noopener noreferrer" class="text-whatsapp hover:underline">+27 71 407 9195</a>
+            </li>
+            <li class="flex items-center justify-between border-b border-inkLine pb-2">
+              <span class="font-bold text-pure">Taylor</span>
+              <a href="https://wa.me/27661184876" target="_blank" rel="noopener noreferrer" class="text-whatsapp hover:underline">+27 66 118 4876</a>
+            </li>
+            <li class="flex items-center justify-between pb-1">
+              <span class="font-bold text-pure">Mahlodi</span>
+              <a href="https://wa.me/27660706867" target="_blank" rel="noopener noreferrer" class="text-whatsapp hover:underline">+27 66 070 6867</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Interactive Bottom Quick-Contact Selector -->
+        <div class="md:col-span-3 space-y-3">
+          <label for="footerQuickContactSelect" class="block font-mono text-xs uppercase tracking-widest text-neutral-400">
+            QUICK-CONTACT SELECTOR
+          </label>
+          <select id="footerQuickContactSelect" onchange="selectTeamContact(this.value)" class="w-full px-3.5 py-3 bg-neutral-900 border border-neutral-600 text-pure font-mono text-xs focus:outline-none focus:border-pure">
+            <option value="dokodela">Dokodela (+27 75 380 6251)</option>
+            <option value="ndzalama">Ndzalama (+27 71 407 9195)</option>
+            <option value="taylor">Taylor (+27 66 118 4876)</option>
+            <option value="mahlodi">Mahlodi (+27 66 070 6867)</option>
+          </select>
+          <a id="footerQuickWhatsAppBtn" href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 bg-whatsapp hover:bg-whatsappHover text-ink font-display font-bold text-sm uppercase tracking-wider transition-colors">
+            <span id="footerQuickWhatsAppLabel">WHATSAPP DOKODELA</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-neutral-400">
+        <p>&copy; <span id="copyrightYear"></span> FRESH KICKS &amp; THREADS &mdash; ONCAMPUS LAUNDRY.</p>
+        <p class="text-pure">Free Collection &amp; Delivery on Campus.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 7. INTERACTIVE SLIDE-OVER BOOKING DRAWER ==================== -->
+  <div id="bookingDrawer" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="bookingDrawerHeading">
+    <!-- Backdrop -->
+    <div onclick="closeBookingDrawer()" class="fixed inset-0 bg-black/75"></div>
+
+    <!-- Drawer Panel -->
+    <div id="bookingDrawerPanel" class="fixed inset-y-0 right-0 z-10 w-full max-w-xl bg-paper border-l border-ink transform translate-x-full flex flex-col">
+
+      <!-- Drawer Top Bar -->
+      <div class="px-6 py-5 bg-ink text-pure border-b border-ink flex items-center justify-between shrink-0">
+        <div>
+          <span class="font-mono text-[10px] uppercase tracking-widest text-whatsapp block">WHATSAPP CAMPUS DISPATCH</span>
+          <h3 id="bookingDrawerHeading" class="font-display font-bold text-2xl uppercase tracking-tight">
+            BOOK CAMPUS COLLECTION
+          </h3>
+        </div>
+        <button type="button" onclick="closeBookingDrawer()" aria-label="Close Booking Drawer" class="w-10 h-10 bg-neutral-900 hover:bg-pure hover:text-ink text-pure border border-neutral-700 flex items-center justify-center font-mono font-bold text-lg transition-colors cursor-pointer">
+          &times;
+        </button>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="campusBookingForm" class="p-6 space-y-5 overflow-y-auto flex-1" novalidate>
+
+        <!-- Validation Banner -->
+        <div id="validationAlertBanner" class="hidden p-3.5 bg-signal text-pure font-mono text-xs border border-ink">
+          Please fill in all required fields marked with * before dispatching your booking.
+        </div>
+
+        <!-- 1. Selected Service Option -->
+        <div>
+          <label for="bookingServiceSelect" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+            01. Selected Service Option *
+          </label>
+          <select id="bookingServiceSelect" onchange="syncOrderSummary()" class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm font-medium focus:outline-none">
+            <optgroup label="SHOE WASHING (All Colours Welcome)">
+              <option value="Shoe Express Service — 24Hrs (R40)">Shoe Express Service — 24Hrs (R40 / One pair)</option>
+              <option value="Shoe Standard Service — 48Hrs (R30)">Shoe Standard Service — 48Hrs (R30 / One pair)</option>
+            </optgroup>
+            <optgroup label="CLOTHES LAUNDRY & CARE">
+              <option value="Become a Member — R200 pm (4 Pick up and Drop a Month inc. free delivery)">Become a Member — R200 pm (4 Pick up and Drop a Month inc. free delivery)</option>
+              <option value="Drop Off — Same Day Collection (R70 Per Load)">Drop Off — Same Day Collection (R70 Per Load)</option>
+              <option value="Drop Off — Next Day Collection (R50 Per Load)">Drop Off — Next Day Collection (R50 Per Load)</option>
+              <option value="Self-Service Wash — R25 Per Load (+ Dry = R40)">Self-Service Wash — R25 Per Load (+ Dry = R40)</option>
+              <option value="Ironing Service — R30 Per Load">Ironing Service — R30 Per Load</option>
+              <option value="Blankets Cleaning — R30 – R120">Blankets Cleaning — R30 – R120</option>
+              <option value="Mats, Fleece & Comfort — R30">Mats, Fleece &amp; Comfort — R30</option>
+              <option value="Dry Cleaning & Wash-and-Dry Care (Custom / Standard Load)">Dry Cleaning &amp; Wash-and-Dry Care (Custom / Standard Load)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- 2. Choose Team Contact to Send Order To -->
+        <div>
+          <span class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+            02. Choose Team Contact to Send Order To *
+          </span>
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" id="drawerRecipient-dokodela" onclick="selectTeamContact('dokodela')" class="p-3 border border-ink bg-ink text-pure text-left transition-colors cursor-pointer">
+              <span class="font-display font-bold text-base uppercase block leading-none">Dokodela</span>
+              <span class="font-mono text-[11px] text-neutral-300 block mt-1">+27 75 380 6251</span>
+            </button>
+            <button type="button" id="drawerRecipient-ndzalama" onclick="selectTeamContact('ndzalama')" class="p-3 border border-ink bg-pure text-ink text-left transition-colors cursor-pointer">
+              <span class="font-display font-bold text-base uppercase block leading-none">Ndzalama</span>
+              <span class="font-mono text-[11px] text-neutral-600 block mt-1">+27 71 407 9195</span>
+            </button>
+            <button type="button" id="drawerRecipient-taylor" onclick="selectTeamContact('taylor')" class="p-3 border border-ink bg-pure text-ink text-left transition-colors cursor-pointer">
+              <span class="font-display font-bold text-base uppercase block leading-none">Taylor</span>
+              <span class="font-mono text-[11px] text-neutral-600 block mt-1">+27 66 118 4876</span>
+            </button>
+            <button type="button" id="drawerRecipient-mahlodi" onclick="selectTeamContact('mahlodi')" class="p-3 border border-ink bg-pure text-ink text-left transition-colors cursor-pointer">
+              <span class="font-display font-bold text-base uppercase block leading-none">Mahlodi</span>
+              <span class="font-mono text-[11px] text-neutral-600 block mt-1">+27 66 070 6867</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Customer's Full Name & WhatsApp Number -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="inputFullName" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+              03. Customer's Full Name *
+            </label>
+            <input type="text" id="inputFullName" required placeholder="e.g. Karabo Mokoena" class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm focus:outline-none" />
+          </div>
+          <div>
+            <label for="inputWhatsAppNumber" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+              04. Customer's WhatsApp Number *
+            </label>
+            <input type="tel" id="inputWhatsAppNumber" required placeholder="e.g. +27 75 380 6251" class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- 4. Item / Load Details -->
+        <div>
+          <label for="inputItemDetails" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+            05. Item / Load Details *
+          </label>
+          <input type="text" id="inputItemDetails" required placeholder="e.g. White Air Force 1s / 2 loads of everyday clothes" class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm focus:outline-none" />
+        </div>
+
+        <!-- 5. Campus Zone & Exact Collection Location -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="inputCampusZone" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+              06. Campus Zone *
+            </label>
+            <select id="inputCampusZone" class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm font-medium focus:outline-none">
+              <option value="Oncamp">Oncamp</option>
+              <option value="Offcamp">Offcamp</option>
+            </select>
+          </div>
+          <div>
+            <label for="inputExactLocation" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+              07. Residence, Room / House or Gate *
+            </label>
+            <input type="text" id="inputExactLocation" required placeholder="e.g. Res Block B Room 108 / Gate 2" class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- 6. Preferred Collection Date & Time -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="inputPickupDate" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+              08. Preferred Collection Date *
+            </label>
+            <input type="date" id="inputPickupDate" required class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm focus:outline-none" />
+          </div>
+          <div>
+            <label for="inputPickupTime" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+              09. Preferred Collection Time *
+            </label>
+            <input type="time" id="inputPickupTime" required class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- 7. Additional Instructions -->
+        <div>
+          <label for="inputExtraNotes" class="block font-mono font-bold text-xs uppercase tracking-wider text-ink mb-1.5">
+            10. Additional Instructions (Optional)
+          </label>
+          <textarea id="inputExtraNotes" rows="2" placeholder="e.g. Suede material on toe box, separate whites, or WhatsApp when outside..." class="w-full px-3.5 py-3 bg-pure border border-ink text-ink text-sm focus:outline-none resize-none"></textarea>
+        </div>
+
+        <!-- Live Order Summary Box -->
+        <div class="bg-pure border border-ink p-4 space-y-2 font-mono text-xs">
+          <div class="flex items-center justify-between border-b border-paperLine pb-2">
+            <span class="text-neutral-500">SELECTED SERVICE:</span>
+            <span id="liveSummaryService" class="font-bold text-ink text-right">Shoe Express Service — 24Hrs (R40)</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-paperLine pb-2">
+            <span class="text-neutral-500">CHOSEN RECIPIENT:</span>
+            <span id="liveSummaryRecipient" class="font-bold text-ink">Dokodela (+27 75 380 6251)</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-paperLine pb-2">
+            <span class="text-neutral-500">CAMPUS DELIVERY:</span>
+            <span class="font-bold text-ink">FREE (R0.00)</span>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <span class="font-bold text-sm text-ink">RATE:</span>
+            <span id="liveSummaryRate" class="font-bold text-xl text-ink">R40</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full py-4 px-6 bg-whatsapp hover:bg-whatsappHover text-ink font-display font-bold text-lg uppercase tracking-wider border border-ink transition-colors flex items-center justify-center gap-3 cursor-pointer">
+          <span>DISPATCH ORDER ON WHATSAPP</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
+
+        <!-- Copy-Message Fallback & Direct Link Toast -->
+        <div id="bookingDispatchFallback" class="hidden p-4 bg-ink text-pure font-mono text-xs space-y-3 border border-ink">
+          <p class="text-whatsapp font-bold">ORDER FORMATTED &amp; WHATSAPP LAUNCHED.</p>
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <a id="fallbackWhatsAppLink" href="https://wa.me/27753806251" target="_blank" rel="noopener noreferrer" class="underline text-pure hover:text-whatsapp font-bold">
+              OPEN WHATSAPP LINK &rarr;
+            </a>
+            <button type="button" onclick="copyBookingMessage()" class="px-3 py-1.5 bg-pure text-ink font-bold uppercase cursor-pointer">
+              COPY MESSAGE
+            </button>
+          </div>
+          <p id="copyConfirmToast" class="hidden text-whatsapp text-[11px]">Booking text copied to clipboard.</p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+    // 4 Dedicated Campus Team Contacts
+    const TEAM_DIRECTORY = {
+      dokodela: {
+        name: 'Dokodela',
+        displayPhone: '+27 75 380 6251',
+        waDigits: '27753806251',
+        waHref: 'https://wa.me/27753806251',
+        telHref: 'tel:+27753806251'
+      },
+      ndzalama: {
+        name: 'Ndzalama',
+        displayPhone: '+27 71 407 9195',
+        waDigits: '27714079195',
+        waHref: 'https://wa.me/27714079195',
+        telHref: 'tel:+27714079195'
+      },
+      taylor: {
+        name: 'Taylor',
+        displayPhone: '+27 66 118 4876',
+        waDigits: '27661184876',
+        waHref: 'https://wa.me/27661184876',
+        telHref: 'tel:+27661184876'
+      },
+      mahlodi: {
+        name: 'Mahlodi',
+        displayPhone: '+27 66 070 6867',
+        waDigits: '27660706867',
+        waHref: 'https://wa.me/27660706867',
+        telHref: 'tel:+27660706867'
+      }
+    };
+
+    let selectedContactKey = 'dokodela';
+    let lastFormattedWhatsAppText = '';
+
+    // Synchronize Team Contact Selection across Bottom Console, Footer, Hero, and Booking Drawer
+    function selectTeamContact(key) {
+      const contact = TEAM_DIRECTORY[key];
+      if (!contact) return;
+      selectedContactKey = key;
+
+      Object.keys(TEAM_DIRECTORY).forEach((k, index) => {
+        const isActive = k === key;
+
+        // 1. Bottom Contact Cards
+        const card = document.getElementById(`teamCard-${k}`);
+        if (card) {
+          card.classList.toggle('bg-ink', isActive);
+          card.classList.toggle('text-pure', isActive);
+          card.classList.toggle('bg-pure', !isActive);
+          card.classList.toggle('text-ink', !isActive);
+          card.classList.toggle('hover:bg-neutral-100', !isActive);
+
+          const labelSpan = card.querySelector('div span:first-child');
+          const dotSpan = card.querySelector('div span:last-child');
+          const phoneSpan = card.querySelector('span:last-child');
+
+          if (labelSpan) {
+            labelSpan.textContent = isActive ? `0${index + 1} // ACTIVE` : `0${index + 1} // TEAM`;
+            labelSpan.classList.toggle('text-whatsapp', isActive);
+            labelSpan.classList.toggle('font-bold', isActive);
+            labelSpan.classList.toggle('text-neutral-500', !isActive);
+          }
+          if (dotSpan) {
+            dotSpan.classList.toggle('bg-whatsapp', isActive);
+            dotSpan.classList.toggle('bg-neutral-300', !isActive);
+          }
+          if (phoneSpan) {
+            phoneSpan.classList.toggle('text-neutral-300', isActive);
+            phoneSpan.classList.toggle('text-neutral-700', !isActive);
+          }
+        }
+
+        // 2. Booking Drawer Recipient Buttons
+        const drawerBtn = document.getElementById(`drawerRecipient-${k}`);
+        if (drawerBtn) {
+          drawerBtn.classList.toggle('bg-ink', isActive);
+          drawerBtn.classList.toggle('text-pure', isActive);
+          drawerBtn.classList.toggle('bg-pure', !isActive);
+          drawerBtn.classList.toggle('text-ink', !isActive);
+
+          const sub = drawerBtn.querySelector('span:last-child');
+          if (sub) {
+            sub.classList.toggle('text-neutral-300', isActive);
+            sub.classList.toggle('text-neutral-600', !isActive);
+          }
+        }
+      });
+
+      // Update Direct Dispatch Console
+      document.getElementById('dispatchActiveTitle').textContent = `${contact.name.toUpperCase()} — ${contact.displayPhone}`;
+      document.getElementById('dispatchWhatsAppBtn').href = contact.waHref;
+      document.getElementById('dispatchCallBtn').href = contact.telHref;
+      document.getElementById('dispatchCallLabel').textContent = `CALL DIRECT (${contact.displayPhone})`;
+      document.getElementById('dispatchBookLabel').textContent = `BOOK WITH ${contact.name.toUpperCase()} →`;
+
+      // Update Footer Quick-Contact Selector
+      const footerSelect = document.getElementById('footerQuickContactSelect');
+      if (footerSelect) footerSelect.value = key;
+      document.getElementById('footerQuickWhatsAppBtn').href = contact.waHref;
+      document.getElementById('footerQuickWhatsAppLabel').textContent = `WHATSAPP ${contact.name.toUpperCase()}`;
+
+      // Update Hero Quick-Chat Link
+      const heroWaBtn = document.getElementById('heroWhatsAppQuickBtn');
+      if (heroWaBtn) heroWaBtn.href = contact.waHref;
+
+      syncOrderSummary();
+    }
+
+    // Pricing Category Tabs
+    function filterPricingCategory(category) {
+      const shoesSection = document.getElementById('pricingSectionShoes');
+      const clothesSection = document.getElementById('pricingSectionClothes');
+
+      const tabMap = {
+        all: document.getElementById('filterTab-all'),
+        shoes: document.getElementById('filterTab-shoes'),
+        clothes: document.getElementById('filterTab-clothes')
+      };
+
+      Object.keys(tabMap).forEach((k) => {
+        const active = k === category;
+        tabMap[k].classList.toggle('bg-ink', active);
+        tabMap[k].classList.toggle('text-pure', active);
+        tabMap[k].classList.toggle('text-ink', !active);
+        tabMap[k].classList.toggle('hover:bg-neutral-200', !active);
+      });
+
+      if (category === 'all') {
+        shoesSection.classList.remove('hidden');
+        clothesSection.classList.remove('hidden');
+      } else if (category === 'shoes') {
+        shoesSection.classList.remove('hidden');
+        clothesSection.classList.add('hidden');
+      } else if (category === 'clothes') {
+        shoesSection.classList.add('hidden');
+        clothesSection.classList.remove('hidden');
+      }
+    }
+
+    // Mobile Menu Drawer Toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileNavDrawer.classList.toggle('hidden');
+    });
+    function closeMobileNav() {
+      mobileNavDrawer.classList.add('hidden');
+    }
+
+    // Slide-Over Booking Drawer Logic
+    const bookingDrawer = document.getElementById('bookingDrawer');
+    const bookingServiceSelect = document.getElementById('bookingServiceSelect');
+    const validationAlertBanner = document.getElementById('validationAlertBanner');
+    const bookingDispatchFallback = document.getElementById('bookingDispatchFallback');
+    const copyConfirmToast = document.getElementById('copyConfirmToast');
+
+    function openBookingDrawer(serviceOption) {
+      validationAlertBanner.classList.add('hidden');
+      bookingDispatchFallback.classList.add('hidden');
+      copyConfirmToast.classList.add('hidden');
+
+      if (serviceOption) {
+        for (let i = 0; i < bookingServiceSelect.options.length; i++) {
+          if (bookingServiceSelect.options[i].value === serviceOption) {
+            bookingServiceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      selectTeamContact(selectedContactKey);
+      syncOrderSummary();
+
+      bookingDrawer.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        bookingDrawer.classList.add('is-open');
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingDrawer() {
+      bookingDrawer.classList.remove('is-open');
+      setTimeout(() => {
+        bookingDrawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !bookingDrawer.classList.contains('hidden')) {
+        closeBookingDrawer();
+      }
+    });
+
+    function syncOrderSummary() {
+      const selectedService = bookingServiceSelect.value;
+      const contact = TEAM_DIRECTORY[selectedContactKey];
+
+      document.getElementById('liveSummaryService').textContent = selectedService;
+      document.getElementById('liveSummaryRecipient').textContent = `${contact.name} (${contact.displayPhone})`;
+
+      const rateMatch = selectedService.match(/R\d+(?:[–-]R\d+)?(?:\s*pm)?/);
+      document.getElementById('liveSummaryRate').textContent = rateMatch ? rateMatch[0] : 'Custom / Standard Load';
+    }
+
+    // Copy Booking Message Fallback
+    function copyBookingMessage() {
+      if (!lastFormattedWhatsAppText) return;
+      const tempTextarea = document.createElement('textarea');
+      tempTextarea.value = lastFormattedWhatsAppText;
+      tempTextarea.style.position = 'fixed';
+      tempTextarea.style.opacity = '0';
+      document.body.appendChild(tempTextarea);
+      tempTextarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempTextarea);
+      copyConfirmToast.classList.remove('hidden');
+    }
+
+    // Form Submission -> Format WhatsApp Message & Open wa.me
+    document.getElementById('campusBookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById('inputFullName').value.trim();
+      const whatsAppNumber = document.getElementById('inputWhatsAppNumber').value.trim();
+      const serviceOption = bookingServiceSelect.value;
+      const itemDetails = document.getElementById('inputItemDetails').value.trim();
+      const campusZone = document.getElementById('inputCampusZone').value;
+      const exactLocation = document.getElementById('inputExactLocation').value.trim();
+      const pickupDate = document.getElementById('inputPickupDate').value;
+      const pickupTime = document.getElementById('inputPickupTime').value;
+      const extraNotes = document.getElementById('inputExtraNotes').value.trim();
+
+      if (!fullName || !whatsAppNumber || !itemDetails || !exactLocation || !pickupDate || !pickupTime) {
+        validationAlertBanner.classList.remove('hidden');
+        return;
+      }
+
+      validationAlertBanner.classList.add('hidden');
+      const contact = TEAM_DIRECTORY[selectedContactKey];
+
+      lastFormattedWhatsAppText = [
+        '*NEW ONCAMPUS BOOKING — FRESH KICKS & THREADS*',
+        `*Recipient:* ${contact.name} (${contact.displayPhone})`,
+        '----------------------------------------',
+        `*Customer Name:* ${fullName}`,
+        `*Customer WhatsApp:* ${whatsAppNumber}`,
+        `*Service Option:* ${serviceOption}`,
+        `*Item / Load Details:* ${itemDetails}`,
+        `*Campus Zone:* ${campusZone}`,
+        `*Collection Location:* ${exactLocation}`,
+        `*Preferred Date & Time:* ${pickupDate} at ${pickupTime}`,
+        '*Campus Delivery:* FREE (R0.00)',
+        extraNotes ? `*Additional Instructions:* ${extraNotes}` : null,
+        '----------------------------------------',
+        'Please confirm my OnCampus pickup!'
+      ].filter(Boolean).join('\n');
+
+      const whatsappUrl = `https://wa.me/${contact.waDigits}?text=${encodeURIComponent(lastFormattedWhatsAppText)}`;
+// ... existing code ... -->
